@@ -1,0 +1,1 @@
+ | `emppen`='001020003244', `empbusinessname`='TRADE MARKETING SOLUTIONS INC', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220001702'

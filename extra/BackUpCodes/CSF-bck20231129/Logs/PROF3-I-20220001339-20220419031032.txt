@@ -1,0 +1,1 @@
+ | `doctor7`='AREX E. ACQUIATAN', `datesigned7`='2022-04-19', `copay7`='16800.00', `doctor8`='RUEL M. RAMON', `datesigned8`='2022-04-19', `copay8`='500.00', `doctor9`='TOM A LLANTO', `datesigned9`='2022-04-19', `copay9`='500.00'

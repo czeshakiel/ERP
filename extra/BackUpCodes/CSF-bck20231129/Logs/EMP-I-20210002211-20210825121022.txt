@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `emppen`='203022300431', `empbusinessname`='STO NIÑO DE CEBU FINANCE CORPORATION', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210002211'

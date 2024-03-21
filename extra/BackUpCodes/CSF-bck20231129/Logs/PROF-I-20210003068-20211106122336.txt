@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='MARIA JOSEFA CAMINO-MOJICA', `datesigned1`='2021-11-06', `copay1`='10000', `doctor2`='JANIZA JUMAO-AS VILLALON', `datesigned2`='2021-11-06', `copay2`='2240', `doctor3`='FLORA MAE ZAMBRANO JACOBO', `datesigned3`='2021-11-06', `copay3`='1000'

@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `comchoose`='M', `comname`='KHARES MAE RINSULAT CARTAGENA', `comcontact`='09105641454', `comdatesigned`='Nov-11-2021', `comrelation`='', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='M', `carname`='KHARES MAE RINSULAT CARTAGENA', `cardatesigned`='Nov-11-2021'

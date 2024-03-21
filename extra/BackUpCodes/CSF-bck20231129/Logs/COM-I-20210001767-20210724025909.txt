@@ -1,0 +1,1 @@
+MIA MALATE | `comchoose`='R', `comname`='BAI JUIARIA MATALAM', `comcontact`='09279228745', `comdatesigned`='Jul-24-2021', `comrelation`='Others', `comrelationos`='RELATIVE (AUNT)', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='R', `carname`='BAI JUIARIA MATALAM', `cardatesigned`='Jul-24-2021'

@@ -1,0 +1,1 @@
+ | `doctor7`='RYAN L. LONZAGA', `datesigned7`='2022-10-11', `copay7`='560.00', `doctor8`='JOHN RYAN T. DIZON', `datesigned8`='2022-10-11', `copay8`='1344.00', `doctor9`='JULICES F. LAFORTEZA', `datesigned9`='2022-10-11', `copay9`='5600.00'

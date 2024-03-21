@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='AREX E. ACQUIATAN', `datesigned1`='2021-10-16', `copay1`='3360', `doctor2`='HENRY B. MUDANZA JR', `datesigned2`='2021-10-16', `copay2`='2000', `doctor3`='RODRIGO A. DUARTE JR', `datesigned3`='2021-10-16', `copay3`='8960'

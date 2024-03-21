@@ -1,0 +1,1 @@
+ | `emppen`='019000005707', `empbusinessname`='FS DE LEON PAWNSHOP AND JEWELRIES-FLORENTINO DE S LEON JR', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220001055'

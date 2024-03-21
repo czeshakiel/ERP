@@ -1,0 +1,1 @@
+ | `lastname`='YUSALAN', `firstname`='ROGELIO', `middlename`='AMADA', `suffix`='SR', `birthdate`='Feb-18-1944', `age`='78', `sex`='M', `patientname`='YUSALAN ROGELIO SR AMADA', `dateofbirth`='1944-02-18'

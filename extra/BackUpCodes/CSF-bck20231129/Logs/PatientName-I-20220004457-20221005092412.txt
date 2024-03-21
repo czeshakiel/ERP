@@ -1,0 +1,1 @@
+ | `lastname`='LU', `firstname`='KANGUAN', `middlename`='CADULONG', `suffix`='', `birthdate`='Aug-29-1936', `age`='86', `sex`='M', `patientname`='LU KANGUAN CADULONG', `dateofbirth`='1936-08-29'

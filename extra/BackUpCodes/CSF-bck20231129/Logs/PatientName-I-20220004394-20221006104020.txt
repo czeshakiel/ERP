@@ -1,0 +1,1 @@
+ | `lastname`='DOCTOR', `firstname`='PONCIANO', `middlename`='ASUNCION', `suffix`='', `birthdate`='Sep-19-1955', `age`='67', `sex`='M', `patientname`='DOCTOR PONCIANO ASUNCION', `dateofbirth`='1955-09-19'

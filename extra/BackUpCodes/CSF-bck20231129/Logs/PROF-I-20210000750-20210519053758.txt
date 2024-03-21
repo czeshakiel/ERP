@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='R.DANA ANDREW B. NATANAGARA', `datesigned1`='2021-05-19', `copay1`='3992', `doctor2`='MARIA JOSEFA  CAMINO-MOJICA', `datesigned2`='2021-05-19', `copay2`='4200', `doctor3`='JANIZA  VILLALON', `datesigned3`='2021-05-19', `copay3`='1680'

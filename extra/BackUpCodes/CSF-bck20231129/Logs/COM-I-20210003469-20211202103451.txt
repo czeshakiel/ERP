@@ -1,0 +1,1 @@
+MIA MALATE | `comchoose`='R', `comname`='GIE A. FUENTIVILLA', `comcontact`='09515026329', `comdatesigned`='Dec-02-2021', `comrelation`='Spouse', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='R', `carname`='GIE A. FUENTIVILLA', `cardatesigned`='Dec-02-2021'

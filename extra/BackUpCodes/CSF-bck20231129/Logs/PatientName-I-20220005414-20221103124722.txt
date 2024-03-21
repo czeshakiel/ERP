@@ -1,0 +1,1 @@
+ | `lastname`='PALIS', `firstname`='DOROTHY ANNE', `middlename`='INGKAL', `suffix`='', `birthdate`='Oct-31-2017', `age`='5', `sex`='F', `patientname`='PALIS DOROTHY ANNE INGKAL', `dateofbirth`='2017-10-31'

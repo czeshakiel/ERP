@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='FEROCE PAWNSHOP MAIN', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220000134'

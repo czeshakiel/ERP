@@ -1,0 +1,2838 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title><?php include("../Settings.php"); $cuz = new database(); mysql_connect($cuz->myHost(),$cuz->getUser(),$cuz->getPass()); mysql_select_db($cuz->getDB()); $snamesql=mysql_query("SELECT * FROM heading"); while($snamefetch=mysql_fetch_array($snamesql)){$sname=$snamefetch['heading'];$address=$snamefetch['address'];} echo ""; ?>Claim Signature Form</title>
+<link href="CSS/style.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="Favicon/favicon.png" type="image/png" />
+</head>
+
+<body>
+<?php
+$patientidno=mysql_real_escape_string($_GET['patientidno']);
+$caseno=mysql_real_escape_string($_GET['caseno']);
+
+//admission
+mysql_connect($cuz->myHost(),$cuz->getUser(),$cuz->getPass());
+mysql_select_db($cuz->getDB());
+$admsql=mysql_query("SELECT type, paymentmode, room, UPPER(street) AS street, UPPER(barangay) AS barangay, UPPER(municipality) AS municipality, UPPER(province) AS province, zipcode,UPPER(pastmed) AS pastmed, UPPER(initialdiagnosis) AS initialdiagnosis, UPPER(finaldiagnosis) AS finaldiagnosis, UPPER(ap) AS ap, timeadmitted, dateadmit FROM admission WHERE caseno='$caseno'");
+while($admfetch=mysql_fetch_array($admsql)){
+$type=$admfetch['type'];
+$paymentmode=$admfetch['paymentmode'];
+$room=$admfetch['room'];
+$street=$admfetch['street'];
+$barangay=$admfetch['barangay'];
+$municipality=$admfetch['municipality'];
+$province=$admfetch['province'];
+$zipcode=$admfetch['zipcode'];
+$pastmed=$admfetch['pastmed'];
+$initialdiagnosis=$admfetch['initialdiagnosis'];
+$finaldiagnosis=$admfetch['finaldiagnosis'];
+$ap=$admfetch['ap'];
+$timeadmitted=$admfetch['timeadmitted'];
+$dateadmit=$admfetch['dateadmit'];
+}
+
+$dateadmitfmt=date("m-d-Y",strtotime($dateadmit));
+$datetimead=$dateadmit." ".$timeadmitted;
+$gettimead=date("H:i:sA",strtotime($datetimead));
+$mailadd=$street." ".$barangay." ".$municipality." ".$province;
+
+//patientprofile
+mysql_connect($cuz->myHost(),$cuz->getUser(),$cuz->getPass());
+mysql_select_db($cuz->getDB());
+//mysql_query('SET NAMES utf8');
+$patfsql=mysql_query("SELECT UPPER(lastname) AS lastname, UPPER(firstname) AS firstname, UPPER(middlename) AS middlename, birthdate, age, UPPER(sex) AS sex FROM patientprofile WHERE patientidno='$patientidno'");
+while($patffetch=mysql_fetch_array($patfsql)){
+$lastname=$patffetch['lastname'];
+$firstname=$patffetch['firstname'];
+$middlename=$patffetch['middlename'];
+$birthdate=$patffetch['birthdate'];
+$age=$patffetch['age'];
+$sex=$patffetch['sex'];
+}
+
+$birthdatefmt=date("m-d-Y",strtotime($birthdate));
+
+$birthdatespl=preg_split('/\-/', $birthdate);
+
+$bm=$birthdatespl[0];
+$bd=$birthdatespl[1];
+$by=$birthdatespl[2];
+
+if(strlen($bd)==1){$bdf="0".$bd;}else{$bdf=$bd;}
+
+$birthdaterel=$bm."-".$bdf."-".$by;
+
+//patientprofileaddinfo
+mysql_connect($cuz->myHost(),$cuz->getUser(),$cuz->getPass());
+mysql_select_db($cuz->getDB());
+$pataisql=mysql_query("SELECT UPPER(suffix) AS suffix FROM patientprofileaddinfo WHERE patientidno='$patientidno'");
+$pataicount=mysql_num_rows($pataisql);
+if($pataicount==0){
+$suffix="";
+}
+else{
+while($pataifetch=mysql_fetch_array($pataisql)){
+$suffix=$pataifetch['suffix'];
+}
+}
+
+//claiminfo
+mysql_connect($cuz->myHost(),$cuz->getUser(),$cuz->getPass());
+mysql_select_db($cuz->getDB());
+mysql_query('SET NAMES utf8');
+$cfsql=mysql_query("SELECT identificationno, UPPER(lastname) AS lastname, UPPER(firstname) AS firstname, UPPER(middlename) AS middlename FROM claiminfo WHERE patientidno='$patientidno' AND caseno='$caseno'");
+$cfcount=mysql_num_rows($cfsql);
+if($cfcount==0){
+$identificationno="";
+$mlname="";
+$mfname="";
+$mmname="";
+$mbdate="";
+$mgender="";
+$msuffix='';
+}
+else{
+while($cffetch=mysql_fetch_array($cfsql)){
+$identificationno=$cffetch['identificationno'];
+$mlname=strtoupper($cffetch['lastname']);
+$mfname=strtoupper($cffetch['firstname']);
+$mmname=strtoupper($cffetch['middlename']);
+$mbdate="";
+$mgender="";
+$msuffix='';
+}
+}
+
+$identificationnofmt=str_replace("-","",$identificationno);
+$mbdatefmt=date("m-d-Y",strtotime($mbdate));
+
+//claiminfoadd
+mysql_connect($cuz->myHost(),$cuz->getUser(),$cuz->getPass());
+mysql_select_db($cuz->getDB());
+mysql_query('SET NAMES utf8');
+$cfasql=mysql_query("SELECT hciyes, hcino, disposition, expireddays, timeexpired, transferto, transferadd, reasons, private, nonprivate, doctor1, datesigned1, doctor2, datesigned2, copay2, doctor3, datesigned3, copay3 FROM claiminfoadd WHERE patientidno='$patientidno' AND caseno='$caseno'");
+$cfacount=mysql_num_rows($cfasql);
+if($cfacount==0){
+$hciyes="";
+$hcino="";
+$disposition="";
+$expireddays="";
+$timeexpired="";
+$transferto="";
+$transferadd="";
+$reasons="";
+$private="";
+$nonprivate="";
+$doctor="";
+$datesigned="";
+$doctor2="";
+$datesigned2="";
+$copay2="";
+$doctor3="";
+$datesigned3="";
+$copay3="";
+}
+else{
+while($cfafetch=mysql_fetch_array($cfasql)){
+$hciyes=$cfafetch['hciyes'];
+$hcino=$cfafetch['hcino'];
+$disposition=$cfafetch['disposition'];
+$expireddays=$cfafetch['expireddays'];
+$timeexpired=$cfafetch['timeexpired'];
+$transferto=$cfafetch['transferto'];
+$transferadd=$cfafetch['transferadd'];
+$reasons=$cfafetch['reasons'];
+$private=$cfafetch['private'];
+$nonprivate=$cfafetch['nonprivate'];
+$doctor=$cfafetch['doctor1'];
+$datesigned=$cfafetch['datesigned1'];
+$doctor2=$cfafetch['doctor2'];
+$datesigned2=$cfafetch['datesigned2'];
+$copay2=$cfafetch['copay2'];
+$doctor3=$cfafetch['doctor3'];
+$datesigned3=$cfafetch['datesigned3'];
+$copay3=$cfafetch['copay3'];
+}
+}
+
+//claiminfomoreinfo
+mysql_connect($cuz->myHost(),$cuz->getUser(),$cuz->getPass());
+mysql_select_db($cuz->getDB());
+$cimisql=mysql_query("SELECT * FROM claiminfomoreinfo WHERE caseno='$caseno'");
+$cimicount=mysql_num_rows($cimisql);
+if($cimicount==0){
+$membersuffix="";
+$memberbday="";
+$membergender="";
+$rtm="";
+$comchoose="M";
+$comname="";
+$comdatesigned="";
+$comrelation="";
+$comrelationos="";
+$comreason="";
+$comreasonos="";
+$comuw="";
+$emppen="";
+$empbusinessname="";
+$empname="";
+$empcontactno="";
+$empsigdesignation="";
+$empdatesigned="";
+$carchoose="";
+$carname="";
+$cardatesigned="";
+$carrelation="";
+$carrelationos="";
+$carreason="";
+$carreasonos="";
+$caruw="";
+$hcirep="";
+$hcidesignation="";
+$hcidatesigned="";
+$showad="";
+}
+else{
+while($cimifetch=mysql_fetch_array($cimisql)){
+$membersuffix=$cimifetch['membersuffix'];
+$memberbday=$cimifetch['memberbday'];
+$membergender=$cimifetch['membergender'];
+$rtm=$cimifetch['rtm'];
+$comchoose=$cimifetch['comchoose'];
+$comname=strtoupper($cimifetch['comname']);
+$comdatesigned=$cimifetch['comdatesigned'];
+$comrelation=$cimifetch['comrelation'];
+$comrelationos=strtoupper($cimifetch['comrelationos']);
+$comreason=$cimifetch['comreason'];
+$comreasonos=strtoupper($cimifetch['comreasonos']);
+$comuw=$cimifetch['comuw'];
+$emppen=$cimifetch['emppen'];
+$empbusinessname=strtoupper($cimifetch['empbusinessname']);
+$empname=strtoupper($cimifetch['empname']);
+$empcontactno=$cimifetch['empcontactno'];
+$empsigdesignation=strtoupper($cimifetch['empsigdesignation']);
+$empdatesigned=$cimifetch['empdatesigned'];
+$carchoose=$cimifetch['carchoose'];
+$carname=strtoupper($cimifetch['carname']);
+$cardatesigned=$cimifetch['cardatesigned'];
+$carrelation=$cimifetch['carrelation'];
+$carrelationos=strtoupper($cimifetch['carrelationos']);
+$carreason=$cimifetch['carreason'];
+$carreasonos=strtoupper($cimifetch['carreasonos']);
+$caruw=$cimifetch['caruw'];
+$hcirep=$cimifetch['hcirep'];
+$hcidesignation=$cimifetch['hcidesignation'];
+$hcidatesigned=$cimifetch['hcidatesigned'];
+$showad=$cimifetch['showad'];
+}
+}
+
+//dischargedtable
+mysql_connect($cuz->myHost(),$cuz->getUser(),$cuz->getPass());
+mysql_select_db($cuz->getDB());
+$dtsql=mysql_query("SELECT datedischarged, timedischarged FROM dischargedtable WHERE caseno='$caseno'");
+$dtcount=mysql_num_rows($dtsql);
+if($dtcount==0){
+$datedischarged="__";
+$timedischarged="";
+}
+else{
+while($dtfetch=mysql_fetch_array($dtsql)){
+$datedischarged=$dtfetch['datedischarged'];
+$timedischarged=$dtfetch['timedischarged'];
+}
+}
+
+$datetimedis=$datedischarged." ".$timedischarged;
+$gettimedis=date("H:i:sA",strtotime($datetimedis));
+
+if($paymentmode=="Member"){
+$mlnamerel=$lastname;
+$mfnamerel=$firstname;
+$mmnamerel=$middlename;
+$msuffixrel=$suffix;
+$mbdaterel=$birthdaterel;
+$mgenderrel=$sex;
+}
+else{
+$mlnamerel=$mlname;
+$mfnamerel=$mfname;
+$mmnamerel=$mmname;
+$mbdaterel=$memberbday;
+$msuffixrel=$membersuffix;
+$mgenderrel=$membergender;
+}
+
+/*1. PhilHealth Identification Number (PIN) of Member: */
+$phicofmember = $identificationno; //Place value of PHIC Number of member from the DB here.
+
+if(strlen($phicofmember)==14){
+$phicmember = str_split($phicofmember);
+
+$phicmember0 = $phicmember[0];
+$phicmember1 = $phicmember[1];
+$phicmember3 = $phicmember[3];
+$phicmember4 = $phicmember[4];
+$phicmember5 = $phicmember[5];
+$phicmember6 = $phicmember[6];
+$phicmember7 = $phicmember[7];
+$phicmember8 = $phicmember[8];
+$phicmember9 = $phicmember[9];
+$phicmember10 = $phicmember[10];
+$phicmember11 = $phicmember[11];
+$phicmember13 = $phicmember[13];
+
+}
+else if(strlen($phicofmember)==12){
+$phicmember = str_split($phicofmember);
+
+$phicmember0 = $phicmember[0];
+$phicmember1 = $phicmember[1];
+$phicmember3 = $phicmember[2];
+$phicmember4 = $phicmember[3];
+$phicmember5 = $phicmember[4];
+$phicmember6 = $phicmember[5];
+$phicmember7 = $phicmember[6];
+$phicmember8 = $phicmember[7];
+$phicmember9 = $phicmember[8];
+$phicmember10 = $phicmember[9];
+$phicmember11 = $phicmember[10];
+$phicmember13 = $phicmember[11];
+}
+else{
+$phicmember0 = "";
+$phicmember1 = "";
+$phicmember3 = "";
+$phicmember4 = "";
+$phicmember5 = "";
+$phicmember6 = "";
+$phicmember7 = "";
+$phicmember8 = "";
+$phicmember9 = "";
+$phicmember10 = "";
+$phicmember11 = "";
+$phicmember13 = "";
+}
+/*------------------------------------------------------*/
+
+
+/*2. Name of Member: */
+$LN = $mlnamerel;
+$FN = $mfnamerel;
+$MN = $mmnamerel;
+$MS = $msuffixrel;
+/*------------------------------------------------------*/
+
+
+/*3. Member Date of Birth: */
+$bdayofmem=date("m-d-Y",strtotime($mbdaterel)); //change this to the value on the DB.
+
+$bdayofmemarr=str_split($bdayofmem);
+
+if(strlen($bdayofmem)>1){
+$bdayofmemarr0 = $bdayofmemarr[0];
+$bdayofmemarr1 = $bdayofmemarr[1];
+$bdayofmemarr3 = $bdayofmemarr[3];
+$bdayofmemarr4 = $bdayofmemarr[4];
+$bdayofmemarr6 = $bdayofmemarr[6];
+$bdayofmemarr7 = $bdayofmemarr[7];
+$bdayofmemarr8 = $bdayofmemarr[8];
+$bdayofmemarr9 = $bdayofmemarr[9];
+}
+else{
+$bdayofmemarr0 = "";
+$bdayofmemarr1 = "";
+$bdayofmemarr3 = "";
+$bdayofmemarr4 = "";
+$bdayofmemarr6 = "";
+$bdayofmemarr7 = "";
+$bdayofmemarr8 = "";
+$bdayofmemarr9 = "";
+}
+/*------------------------------------------------------*/
+
+
+/*4. PhilHealth Identification Number (PIN) of Dependent: */
+$phicofdep = ""; //Place value of PHIC Number of dependent from the DB here.
+
+if(strlen($phicofdep)==14){
+$phicdep = str_split($phicofdep);
+
+$phicdep0 = $phicdep[0];
+$phicdep1 = $phicdep[1];
+$phicdep3 = $phicdep[3];
+$phicdep4 = $phicdep[4];
+$phicdep5 = $phicdep[5];
+$phicdep6 = $phicdep[6];
+$phicdep7 = $phicdep[7];
+$phicdep8 = $phicdep[8];
+$phicdep9 = $phicdep[9];
+$phicdep10 = $phicdep[10];
+$phicdep11 = $phicdep[11];
+$phicdep13 = $phicdep[13];
+
+}
+else{
+$phicdep0 = "";
+$phicdep1 = "";
+$phicdep3 = "";
+$phicdep4 = "";
+$phicdep5 = "";
+$phicdep6 = "";
+$phicdep7 = "";
+$phicdep8 = "";
+$phicdep9 = "";
+$phicdep10 = "";
+$phicdep11 = "";
+$phicdep13 = "";
+}
+/*------------------------------------------------------*/
+
+ 	
+/*5. Name of Patient: */
+$LNPat = $lastname;
+$FNPat = $firstname;
+$MNPat = $middlename;
+$MNSuf = $suffix;
+/*------------------------------------------------------*/
+
+
+/*6. Relationship to Member: */
+$relofmem = $rtm;
+
+if($paymentmode=="Member"){
+$rom1 = ""; $rom2 = ""; $rom3 = "";
+}
+else{
+if($relofmem=="Child"){$rom1 = "&#10004;"; $rom2 = ""; $rom3 = "";}
+else if($relofmem=="Parent"){$rom1 = ""; $rom2 = "&#10004;"; $rom3 = "";}
+else if($relofmem=="Spouse"){$rom1 = ""; $rom2 = ""; $rom3 = "&#10004;";}
+else {$rom1 = ""; $rom2 = ""; $rom3 = "";}
+}
+/*------------------------------------------------------*/
+
+$datedischarged=str_replace("_","-",$datedischarged);
+
+/*7. Confinement Period */
+$dateadmitted = date("m-d-Y",strtotime($dateadmit));
+$ddis=preg_split('/\-/',$datedischarged);
+$ddism=$ddis[0];
+$ddisd=$ddis[1];
+$ddisy=$ddis[2];
+$ddisf=$ddism."-".$ddisd."-".$ddisy;
+
+$datedischargedfmt = date("m-d-Y",strtotime($ddisf));
+
+$dateadmittedarr=str_split($dateadmitted);
+
+if($showad=="y"){
+if($dateadmit!=""){
+$dateadmittedarr0 = $dateadmittedarr[0];
+$dateadmittedarr1 = $dateadmittedarr[1];
+$dateadmittedarr3 = $dateadmittedarr[3];
+$dateadmittedarr4 = $dateadmittedarr[4];
+$dateadmittedarr6 = $dateadmittedarr[6];
+$dateadmittedarr7 = $dateadmittedarr[7];
+$dateadmittedarr8 = $dateadmittedarr[8];
+$dateadmittedarr9 = $dateadmittedarr[9];
+}
+else{
+$dateadmittedarr0 = "";
+$dateadmittedarr1 = "";
+$dateadmittedarr3 = "";
+$dateadmittedarr4 = "";
+$dateadmittedarr6 = "";
+$dateadmittedarr7 = "";
+$dateadmittedarr8 = "";
+$dateadmittedarr9 = "";
+}
+}
+else if($showad=="n"){
+$dateadmittedarr0 = "";
+$dateadmittedarr1 = "";
+$dateadmittedarr3 = "";
+$dateadmittedarr4 = "";
+$dateadmittedarr6 = "";
+$dateadmittedarr7 = "";
+$dateadmittedarr8 = "";
+$dateadmittedarr9 = "";
+}
+else{
+$dateadmittedarr0 = $dateadmittedarr[0];
+$dateadmittedarr1 = $dateadmittedarr[1];
+$dateadmittedarr3 = $dateadmittedarr[3];
+$dateadmittedarr4 = $dateadmittedarr[4];
+$dateadmittedarr6 = $dateadmittedarr[6];
+$dateadmittedarr7 = $dateadmittedarr[7];
+$dateadmittedarr8 = $dateadmittedarr[8];
+$dateadmittedarr9 = $dateadmittedarr[9];
+}
+
+$datedischargedarr=str_split($datedischargedfmt);
+
+if($datedischarged!="--"){
+$datedischargedarr0 = $datedischargedarr[0];
+$datedischargedarr1 = $datedischargedarr[1];
+$datedischargedarr3 = $datedischargedarr[3];
+$datedischargedarr4 = $datedischargedarr[4];
+$datedischargedarr6 = $datedischargedarr[6];
+$datedischargedarr7 = $datedischargedarr[7];
+$datedischargedarr8 = $datedischargedarr[8];
+$datedischargedarr9 = $datedischargedarr[9];
+}
+else{
+$datedischargedarr0 = "";
+$datedischargedarr1 = "";
+$datedischargedarr3 = "";
+$datedischargedarr4 = "";
+$datedischargedarr6 = "";
+$datedischargedarr7 = "";
+$datedischargedarr8 = "";
+$datedischargedarr9 = "";
+}
+/*------------------------------------------------------*/
+
+
+/*8. Patient Date of Birth: */
+$bdayofpat=date("m-d-Y",strtotime($birthdaterel)); //change this to the value on the DB.
+
+$bdayofpatarr=str_split($bdayofpat);
+
+if(strlen($bdayofpat)>1){
+$bdayofpatarr0 = $bdayofpatarr[0];
+$bdayofpatarr1 = $bdayofpatarr[1];
+$bdayofpatarr3 = $bdayofpatarr[3];
+$bdayofpatarr4 = $bdayofpatarr[4];
+$bdayofpatarr6 = $bdayofpatarr[6];
+$bdayofpatarr7 = $bdayofpatarr[7];
+$bdayofpatarr8 = $bdayofpatarr[8];
+$bdayofpatarr9 = $bdayofpatarr[9];
+}
+else{
+$bdayofpatarr0 = "";
+$bdayofpatarr1 = "";
+$bdayofpatarr3 = "";
+$bdayofpatarr4 = "";
+$bdayofpatarr6 = "";
+$bdayofpatarr7 = "";
+$bdayofpatarr8 = "";
+$bdayofpatarr9 = "";
+}
+/*------------------------------------------------------*/
+
+
+
+/*9. CERTIFICATION OF MEMBER:*/
+if($comchoose=="M"){
+$comnamem=$mfnamerel." ".$mmnamerel." ".$mlnamerel." ".$msuffixrel;
+$comnamer="";
+}
+else if($comchoose=="R"){
+$comnamem="";
+$comnamer=$comname;
+}
+else{
+$comnamem="";
+$comnamer="";
+}
+
+$comdate = date("m-d-Y",strtotime($comdatesigned));
+
+$comdatearr=str_split($comdate);
+
+if($comchoose=="M"){
+if(($comdatesigned!="")&&($comdatesigned!="--")){
+$comdatearr01 = $comdatearr[0];
+$comdatearr11 = $comdatearr[1];
+$comdatearr31 = $comdatearr[3];
+$comdatearr41 = $comdatearr[4];
+$comdatearr61 = $comdatearr[6];
+$comdatearr71 = $comdatearr[7];
+$comdatearr81 = $comdatearr[8];
+$comdatearr91 = $comdatearr[9];
+
+
+$comdatearr02 = "";
+$comdatearr12 = "";
+$comdatearr32 = "";
+$comdatearr42 = "";
+$comdatearr62 = "";
+$comdatearr72 = "";
+$comdatearr82 = "";
+$comdatearr92 = "";
+}
+else{
+$comdatearr01 = "";
+$comdatearr11 = "";
+$comdatearr31 = "";
+$comdatearr41 = "";
+$comdatearr61 = "";
+$comdatearr71 = "";
+$comdatearr81 = "";
+$comdatearr91 = "";
+
+
+$comdatearr02 = "";
+$comdatearr12 = "";
+$comdatearr32 = "";
+$comdatearr42 = "";
+$comdatearr62 = "";
+$comdatearr72 = "";
+$comdatearr82 = "";
+$comdatearr92 = "";
+}
+}
+else if($comchoose=="R"){
+if(($comdatesigned!="")&&($comdatesigned!="--")){
+$comdatearr01 = "";
+$comdatearr11 = "";
+$comdatearr31 = "";
+$comdatearr41 = "";
+$comdatearr61 = "";
+$comdatearr71 = "";
+$comdatearr81 = "";
+$comdatearr91 = "";
+
+
+$comdatearr02 = $comdatearr[0];
+$comdatearr12 = $comdatearr[1];
+$comdatearr32 = $comdatearr[3];
+$comdatearr42 = $comdatearr[4];
+$comdatearr62 = $comdatearr[6];
+$comdatearr72 = $comdatearr[7];
+
+$comdatearr82 = $comdatearr[8];
+$comdatearr92 = $comdatearr[9];
+}
+else{
+$comdatearr01 = "";
+$comdatearr11 = "";
+$comdatearr31 = "";
+$comdatearr41 = "";
+$comdatearr61 = "";
+$comdatearr71 = "";
+$comdatearr81 = "";
+$comdatearr91 = "";
+
+
+$comdatearr02 = "";
+$comdatearr12 = "";
+$comdatearr32 = "";
+$comdatearr42 = "";
+$comdatearr62 = "";
+$comdatearr72 = "";
+$comdatearr82 = "";
+$comdatearr92 = "";
+}
+}
+else{
+$comdatearr01 = "";
+$comdatearr11 = "";
+$comdatearr31 = "";
+$comdatearr41 = "";
+$comdatearr61 = "";
+$comdatearr71 = "";
+$comdatearr81 = "";
+$comdatearr91 = "";
+
+
+$comdatearr02 = "";
+$comdatearr12 = "";
+$comdatearr32 = "";
+$comdatearr42 = "";
+$comdatearr62 = "";
+$comdatearr72 = "";
+$comdatearr82 = "";
+$comdatearr92 = "";
+}
+
+if($comchoose=="M"){
+if($comrelation=="Spouse"){$comrtm1="";$comrtm2="";$comrtm3="";$comrtm4="";$comrtm5="";$comrtmos="__________";}
+else if($comrelation=="Child"){$comrtm1="";$comrtm2="";$comrtm3="";$comrtm4="";$comrtm5="";$comrtmos="__________";}
+else if($comrelation=="Parent"){$comrtm1="";$comrtm2="";$comrtm3="";$comrtm4="";$comrtm5="";$comrtmos="__________";}
+else if($comrelation=="Sibling"){$comrtm1="";$comrtm2="";$comrtm3="";$comrtm4="";$comrtm5="";$comrtmos="__________";}
+else{$comrtm1="";$comrtm2="";$comrtm3="";$comrtm4="";$comrtm5="";$comrtmos="__________";}
+}
+else if($comchoose=="R"){
+if($comrelation=="Spouse"){$comrtm1="&#10004;";$comrtm2="";$comrtm3="";$comrtm4="";$comrtm5="";$comrtmos="__________";}
+else if($comrelation=="Child"){$comrtm1="";$comrtm2="&#10004;";$comrtm3="";$comrtm4="";$comrtm5="";$comrtmos="__________";}
+else if($comrelation=="Parent"){$comrtm1="";$comrtm2="";$comrtm3="&#10004;";$comrtm4="";$comrtm5="";$comrtmos="__________";}
+else if($comrelation=="Sibling"){$comrtm1="";$comrtm2="";$comrtm3="";$comrtm4="&#10004;";$comrtm5="";$comrtmos="__________";}
+else{$comrtm1="";$comrtm2="";$comrtm3="";$comrtm4="";$comrtm5="&#10004;";$comrtmos="<u>".$comrelationos."</u>";}
+}
+else{
+if($comrelation=="Spouse"){$comrtm1="";$comrtm2="";$comrtm3="";$comrtm4="";$comrtm5="";$comrtmos="__________";}
+else if($comrelation=="Child"){$comrtm1="";$comrtm2="";$comrtm3="";$comrtm4="";$comrtm5="";$comrtmos="__________";}
+else if($comrelation=="Parent"){$comrtm1="";$comrtm2="";$comrtm3="";$comrtm4="";$comrtm5="";$comrtmos="__________";}
+else if($comrelation=="Sibling"){$comrtm1="";$comrtm2="";$comrtm3="";$comrtm4="";$comrtm5="";$comrtmos="__________";}
+else{$comrtm1="";$comrtm2="";$comrtm3="";$comrtm4="";$comrtm5="";$comrtmos="__________";}
+}
+
+if($comchoose=="M"){
+if($comreason=="1"){$comres1="";$comres2="";$comreso="__________";}
+else if($comreason=="2"){$comres1="";$comres2="";$comreso="__________";}
+else{$comres1="";$comres2="";$comreso="__________";}
+}
+else if($comchoose=="R"){
+if($comreason=="1"){$comres1="&#10004;";$comres2="";$comreso="__________";}
+else if($comreason=="2"){$comres1="";$comres2="&#10004;";$comreso="<u>".$comreasonos."</u>";}
+else{$comres1="";$comres2="";$comreso="__________";}
+}
+else{
+if($comreason=="1"){$comres1="";$comres2="";$comreso="__________";}
+else if($comreason=="2"){$comres1="";$comres2="";$comreso="__________";}
+else{$comres1="";$comres2="";$comreso="__________";}
+}
+
+if($comuw=="1"){$comuw1="&#10004;";$comuw2="";}
+else if($comuw=="2"){$comuw1="";$comuw2="&#10004;";}
+else{$comuw1="";$comuw2="";}
+/*------------------------------------------------------*/
+
+
+/*1.PhilHealth Employer No. (PEN): */
+$phicofemploy = $emppen; //Place value of PhilHealth Employer No. (PEN) from the DB here.
+
+if(strlen($phicofemploy)==14){
+$pen = str_split($phicofemploy);
+$pen0 = $pen[0];
+$pen1 = $pen[1];
+$pen3 = $pen[3];
+$pen4 = $pen[4];
+$pen5 = $pen[5];
+$pen6 = $pen[6];
+$pen7 = $pen[7];
+$pen8 = $pen[8];
+$pen9 = $pen[9];
+$pen10 = $pen[10];
+$pen11 = $pen[11];
+$pen13 = $pen[13];
+}
+else{
+$pen0 = "";
+$pen1 = "";
+$pen3 = "";
+$pen4 = "";
+$pen5 = "";
+$pen6 = "";
+$pen7 = "";
+$pen8 = "";
+$pen9 = "";
+$pen10 = "";
+$pen11 = "";
+$pen13 = "";
+}
+/*------------------------------------------------------*/
+
+
+/*2. Contact No.: */
+$employercontactno = $empcontactno;
+/*------------------------------------------------------*/
+
+
+/*3. Business Name: */
+$employerbusname = $empbusinessname;
+/*------------------------------------------------------*/
+
+
+/*4. CERTIFICATION OF EMPLOYER: */
+$employername = $empname;
+$employerdesignation = $empsigdesignation;
+
+$employerdatesigned = date("m-d-Y",strtotime($empdatesigned));
+
+$empdatesiarr=str_split($employerdatesigned);
+
+if(($empdatesigned!="")&&($empdatesigned!="--")){
+$empdatesiarr0 = $empdatesiarr[0];
+$empdatesiarr1 = $empdatesiarr[1];
+$empdatesiarr3 = $empdatesiarr[3];
+$empdatesiarr4 = $empdatesiarr[4];
+$empdatesiarr6 = $empdatesiarr[6];
+$empdatesiarr7 = $empdatesiarr[7];
+$empdatesiarr8 = $empdatesiarr[8];
+$empdatesiarr9 = $empdatesiarr[9];
+}
+else{
+$empdatesiarr0 = "";
+$empdatesiarr1 = "";
+$empdatesiarr3 = "";
+$empdatesiarr4 = "";
+$empdatesiarr6 = "";
+$empdatesiarr7 = "";
+$empdatesiarr8 = "";
+$empdatesiarr9 = "";
+}
+/*------------------------------------------------------*/
+
+
+/*PART III - CONSENT TO ACCESS PATIENT RECORD/S */
+
+if($carchoose=="M"){
+$consentaccname = $mfnamerel." ".$mmnamerel." ".$mlnamerel." ".$msuffixrel;
+}
+else{
+$consentaccname = $carname;
+}
+
+$consentaccdatesigned = date("m-d-Y",strtotime($cardatesigned));
+
+$consentaccsiarr=str_split($consentaccdatesigned);
+
+if(($cardatesigned!="")&&($cardatesigned!="--")){
+$consentaccsiarr0 = $consentaccsiarr[0];
+$consentaccsiarr1 = $consentaccsiarr[1];
+$consentaccsiarr3 = $consentaccsiarr[3];
+$consentaccsiarr4 = $consentaccsiarr[4];
+$consentaccsiarr6 = $consentaccsiarr[6];
+$consentaccsiarr7 = $consentaccsiarr[7];
+$consentaccsiarr8 = $consentaccsiarr[8];
+$consentaccsiarr9 = $consentaccsiarr[9];
+}
+else{
+$consentaccsiarr0 = "";
+$consentaccsiarr1 = "";
+$consentaccsiarr3 = "";
+$consentaccsiarr4 = "";
+$consentaccsiarr6 = "";
+$consentaccsiarr7 = "";
+$consentaccsiarr8 = "";
+$consentaccsiarr9 = "";
+}
+
+$consentaccrelation = $carrelation;
+
+if($carchoose=="M"){
+if($carrelation=="Spouse"){$carrtm1="";$carrtm2="";$carrtm3="";$carrtm4="";$carrtm5="";$carrtmos="__________";}
+else if($carrelation=="Child"){$carrtm1="";$carrtm2="";$carrtm3="";$carrtm4="";$carrtm5="";$carrtmos="__________";}
+else if($carrelation=="Parent"){$carrtm1="";$carrtm2="";$carrtm3="";$carrtm4="";$carrtm5="";$carrtmos="__________";}
+else if($carrelation=="Sibling"){$carrtm1="";$carrtm2="";$carrtm3="";$carrtm4="";$carrtm5="";$carrtmos="__________";}
+else{$carrtm1="";$carrtm2="";$carrtm3="";$carrtm4="";$carrtm5="";$carrtmos="__________";}
+}
+else if($carchoose=="R"){
+if($carrelation=="Spouse"){$carrtm1="&#10004;";$carrtm2="";$carrtm3="";$carrtm4="";$carrtm5="";$carrtmos="__________";}
+else if($carrelation=="Child"){$carrtm1="";$carrtm2="&#10004;";$carrtm3="";$carrtm4="";$carrtm5="";$carrtmos="__________";}
+else if($carrelation=="Parent"){$carrtm1="";$carrtm2="";$carrtm3="&#10004;";$carrtm4="";$carrtm5="";$carrtmos="__________";}
+else if($carrelation=="Sibling"){$carrtm1="";$carrtm2="";$carrtm3="";$carrtm4="&#10004;";$carrtm5="";$carrtmos="__________";}
+else{$carrtm1="";$carrtm2="";$carrtm3="";$carrtm4="";$carrtm5="&#10004;";$carrtmos="<u>".$carrelationos."</u>";}
+}
+else{
+if($carrelation=="Spouse"){$carrtm1="";$carrtm2="";$carrtm3="";$carrtm4="";$carrtm5="";$carrtmos="__________";}
+else if($carrelation=="Child"){$carrtm1="";$carrtm2="";$carrtm3="";$carrtm4="";$carrtm5="";$carrtmos="__________";}
+else if($carrelation=="Parent"){$carrtm1="";$carrtm2="";$carrtm3="";$carrtm4="";$carrtm5="";$carrtmos="__________";}
+else if($carrelation=="Sibling"){$carrtm1="";$carrtm2="";$carrtm3="";$carrtm4="";$carrtm5="";$carrtmos="__________";}
+else{$carrtm1="";$carrtm2="";$carrtm3="";$carrtm4="";$carrtm5="";$carrtmos="__________";}
+}
+
+if($carchoose=="M"){
+if($carreason=="1"){$carres1="";$carres2="";$carresos="__________";}
+else if($carreason=="2"){$carres1="";$carres2="";$carresos="__________";}
+else{$carres1="";$carres2="";$carresos="__________";}
+}
+else if($carchoose=="R"){
+if($carreason=="1"){$carres1="&#10004;";$carres2="";$carresos="__________";}
+else if($carreason=="2"){$carres1="";$carres2="&#10004;";$carresos="<u>".$carreasonos."</u>";}
+else{$carres1="";$carres2="&#10004;";$carresos="<u>".$carreasonos."</u>";}
+}
+else{
+if($carreason=="1"){$carres1="";$carres2="";$carresos="__________";}
+else if($carreason=="2"){$carres1="";$carres2="";$carresos="__________";}
+else{$carres1="";$carres2="";$carresos="__________";}
+}
+
+if($caruw=="1"){$caruw1="&#10004;";$caruw2="";}
+else if($caruw=="2"){$caruw1="";$caruw2="&#10004;";}
+else{$caruw1="";$caruw2="";}
+/*------------------------------------------------------*/
+
+/*PART V - PROVIDER INFORMATION AND CERTIFICATION*/
+$hcidatesignedfmt = date("m-d-Y",strtotime($hcidatesigned));
+
+$hcidtarr=str_split($hcidatesignedfmt);
+
+if(($hcidatesigned!="")&&($hcidatesigned!="--")){
+$hcidtarr0 = $hcidtarr[0];
+$hcidtarr1 = $hcidtarr[1];
+$hcidtarr3 = $hcidtarr[3];
+$hcidtarr4 = $hcidtarr[4];
+$hcidtarr6 = $hcidtarr[6];
+$hcidtarr7 = $hcidtarr[7];
+$hcidtarr8 = $hcidtarr[8];
+$hcidtarr9 = $hcidtarr[9];
+}
+else{
+$hcidtarr0 = "";
+$hcidtarr1 = "";
+$hcidtarr3 = "";
+$hcidtarr4 = "";
+$hcidtarr6 = "";
+$hcidtarr7 = "";
+$hcidtarr8 = "";
+$hcidtarr9 = "";
+}
+/*------------------------------------------------------*/
+
+echo "
+<div align='center'>
+<table width='700' border='0' cellpadding='0' cellspacing='0' class='table2Top2Bottom2Left2Right'>
+  <tr>
+    <td><table width='700' border='0' cellpadding='0' cellspacing='0'>
+      <tr>
+        <td'><table width='100%' boreder='0' cellpadding='0' cellspacing='0'>
+          <tr>
+            <td width='50%' height='78' valign='top' ><div align='left'><img src='Image/Logo.jpg' height='76' width='auto' /></div></td>
+            <td width='45%' height='78' valign='bottom'><div align='right' class='arial40blackbold'>CSF</div></td>
+            <td width='5%' height='78'></td>
+          </tr>
+          <tr>
+            <td valign='bottom'><div align='left' class='arial11blackbold'>IMPORTANT REMINDERS:</div></td>
+            <td valign='bottom'><div align='right'><table border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td><div align='center' class='arial12blackbold'>(Claim Signature<br />Form)</div></td>
+              </tr>
+            </table></div></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan='3'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td width='60%'><div align='left'><span class='arial09black'>PLEASE WRITE IN CAPITAL </span><span class='arial09blackbold'>LETTERS</span><span class='arial09black'> AND </span><span class='arial09blackbold'>CHECK</span><span class='arial09black'> THE APPROPRIATE BOXES.</span></div></td>
+                <td width='38%'><div align='right'><table border='0' cellspacing='0' cellpadding='0'>
+                  <tr>
+                    <td><span class='arial12blackbold'>Series #&nbsp;</span></td>
+                    <td><table cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td width='13' height='13' class='table1Top1Bottom1Left1Right'></td>
+                        <td width='13' height='13' class='table1Top1Bottom1Right'></td>
+                        <td width='13' height='13' class='table1Top1Bottom1Right'></td>
+                        <td width='1' height='13' class='table1Left1Left'></td>
+                        <td width='13' height='13' class='table1Top1Bottom1Left1Right'></td>
+                        <td width='13' height='13' class='table1Top1Bottom1Right'></td>
+                        <td width='1' height='13' class='table1Left1Left'></td>
+                        <td width='13' height='13' class='table1Top1Bottom1Left1Right'></td>
+                        <td width='13' height='13' class='table1Top1Bottom1Right'></td>
+                        <td width='13' height='13' class='table1Top1Bottom1Right'></td>
+                        <td width='13' height='13' class='table1Top1Bottom1Right'></td>
+                        <td width='13' height='13' class='table1Top1Bottom1Right'></td>
+                        <td width='13' height='13' class='table1Top1Bottom1Right'></td>
+                        <td width='13' height='13' class='table1Top1Bottom1Right'></td>
+                        <td width='13' height='13' class='table1Top1Bottom1Right'></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table></div></td>
+                <td width='2%'>&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td colspan='3'><div align='left' class='arial09black'>All information required in this form are necessary and claim forms with incomplete information shall not be processed.</div></td>
+          </tr>
+          <tr>
+            <td colspan='3'><div align='left' class='arial09black'>FALSE/INCORRECT INFORMATION OR MISPRESENTATION SHALL BE SUBJECT TO CRIMINAL OR ADMINISTRATIVE LIABILITIES.</div></td>
+          </tr>
+          <tr>
+            <td colspan='3' height='10'></td>
+          </tr>
+        </table></td>      
+      </tr>
+
+      <tr>
+        <td height='1' class='table1Top1Bottom'></td>
+      </tr>
+
+      <tr>
+        <td><div align='center' class='arial11blackbold'>PART I - MEMBER AND PATIENT INFORMATION AND CERTIFICATION</div></td>
+      </tr>
+
+      <tr>
+        <td height='1' class='table1Top1Bottom'></td>
+      </tr>
+
+      <tr>
+        <td><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td colspan='3' height='5'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td width='2'></td>
+            <td width='auto'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td width='40%'><div align='left' class='arial09black'>1. PhilHealth Identification Number (PIN) of Member:</div></td>
+                <td width='auto'><table cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='11' height='11' class='table1Bottom1Left1Right'><div align='center' class='arial12black'>".$phicmember0."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicmember1."</div></td>
+                    <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                    <td width='11' height='11' class='table1Bottom1Left1Right'><div align='center' class='arial12black'>".$phicmember3."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicmember4."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicmember5."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicmember6."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicmember7."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicmember8."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicmember9."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicmember10."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicmember11."</div></td>
+                    <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                    <td width='11' height='11' class='table1Bottom1Left1Right'><div align='center' class='arial12black'>".$phicmember13."</div></td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table></td>
+            <td width='2'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td colspan='3' height='5'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td width='2'></td>
+            <td width='auto'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td width='65%' valign='top'><div align='left' class='arial09black'>2. Name of Member:</div></td>
+                <td width='2%'></td>
+                <td width='13%' rowspan='3' valign='top'><div align='center' class='arial09black'>3. Member Date of Birth:</div></td>
+                <td width='20%' rowspan='2' valign='bottom'><div align='center'><table border='0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofmemarr0."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofmemarr1."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofmemarr3."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofmemarr4."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofmemarr6."</div></td>
+                    <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofmemarr7."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofmemarr8."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofmemarr9."</div></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table></div></td>
+              </tr>
+              <tr>
+                <td height='22' class='table1Bottom' valign='bottom'><div align='left' class='arial11blackbold'>".strtoupper($LN).", ".strtoupper($FN)." ".strtoupper($MN)." ".strtoupper($MS)."</div></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><div align='left' class='arial09black'>&nbsp;&nbsp;&nbsp;Last Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Middle Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( example : Dela Cruz, Juan Jr., Sipag)</div></td>
+                <td></td>
+                <td><div align='center' class='arial09black'>(month-day-year)</td>
+              </tr>
+            </table></td>
+            <td width='2'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td colspan='3' height='5'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td width='2'></td>
+            <td width='auto'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td width='40%'><div align='left' class='arial09black'>4. PhilHealth Identification Number (PIN) of Dependent:</div></td>
+                <td width='auto'><table cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='11' height='11' class='table1Bottom1Left1Right'><div align='center' class='arial12black'>".$phicdep0."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicdep1."</div></td>
+                    <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                    <td width='11' height='11' class='table1Bottom1Left1Right'><div align='center' class='arial12black'>".$phicdep3."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicdep4."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicdep5."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicdep6."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicdep7."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicdep8."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicdep9."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicdep10."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$phicdep11."</div></td>
+                    <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                    <td width='11' height='11' class='table1Bottom1Left1Right'><div align='center' class='arial12black'>".$phicdep13."</div></td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table></td>
+            <td width='2'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td colspan='3' height='5'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td width='2'></td>
+            <td width='auto'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td width='65%' valign='top'><div align='left' class='arial09black'>5. Name of Patient:</div></td>
+                <td width='2%'></td>
+                <td width='33%' valign='top'><div align='left' class='arial09black'>&nbsp;&nbsp;6. Relationship to Member:</div></td>
+              </tr>
+              <tr>
+                <td height='22' class='table1Bottom' valign='bottom'><div align='left' class='arial11blackbold'>".strtoupper($LNPat).", ".strtoupper($FNPat)." ".strtoupper($MNPat)." ".strtoupper($MNSuf)."</div></td>
+                <td></td>
+                <td rowspan='2' valign='center'><div align='left'><table border='0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='20' height='12'></td>
+                    <td width='12' height='12' class='table1Top1Bottom1Left1Right'><div align='center' class='arial10blackbold'>$rom1</div></td>
+                    <td width='50' height='12' valign='bottom'><div align='left' class='arial09black'>&nbsp;Child</div></td>
+                    <td width='12' height='12' class='table1Top1Bottom1Left1Right'><div align='center' class='arial10blackbold'>$rom2</div></td>
+                    <td width='50' height='12' valign='bottom'><div align='left' class='arial09black'>&nbsp;Parent</div></td>
+                    <td width='12' height='12' class='table1Top1Bottom1Left1Right'><div align='center' class='arial10blackbold'>$rom3</div></td>
+                    <td width='50' height='12' valign='bottom'><div align='left' class='arial09black'>&nbsp;Spouse</div></td>
+                  </tr>
+                </table></div></td>
+              </tr>
+              <tr>
+                <td><div align='left' class='arial09black'>&nbsp;&nbsp;&nbsp;Last Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Middle Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( example : Dela Cruz, Juan Jr., Sipag)</div></td>
+                <td></td>
+              </tr>
+            </table></td>
+            <td width='2'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td colspan='3' height='5'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td width='2'></td>
+            <td width='auto'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td colspan='6' valign='center'><div align='left' class='arial09black'>7. Confinement Period</div></td>
+              </tr>
+              <tr>
+                <td height='5' colspan='6'></td>
+              </tr>
+              <tr>
+                <td width='12%'><div align='center' class='arial09black'>a. Date Admitted:</div></td>
+                <td width='20%' valign='bottom'><div align='center'><table border='0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>".$dateadmittedarr0."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$dateadmittedarr1."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>".$dateadmittedarr3."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$dateadmittedarr4."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>".$dateadmittedarr6."</div></td>
+                    <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$dateadmittedarr7."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$dateadmittedarr8."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$dateadmittedarr9."</div></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table></div></td>
+
+                <td width='13%'><div align='center' class='arial09black'>c. Date Discharged:</div></td>
+
+                <td width='20%' valign='bottom'><div align='center'><table border='0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>".$datedischargedarr0."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$datedischargedarr1."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>".$datedischargedarr3."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$datedischargedarr4."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>".$datedischargedarr6."</div></td>
+                    <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$datedischargedarr7."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$datedischargedarr8."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$datedischargedarr9."</div></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table></div></td>
+
+                <td width='15%'><div align='center' class='arial09black'>8. Patient Date of Birth:</div></td>
+                <td width='20%' valign='bottom'><div align='center'><table border='0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofpatarr0."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofpatarr1."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofpatarr3."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofpatarr4."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofpatarr6."</div></td>
+                    <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofpatarr7."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofpatarr8."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>".$bdayofpatarr9."</div></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table></div></td>
+
+              </tr>
+              <tr>
+
+                <td></td>
+                <td><div align='center' class='arial09black'>(month-day-year)</td>
+                <td></td>
+                <td><div align='center' class='arial09black'>(month-day-year)</td>
+                <td></td>
+                <td><div align='center' class='arial09black'>(month-day-year)</td>
+              </tr>
+            </table></td>
+            <td width='2'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td colspan='3' height='10'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+
+          <tr>
+            <td width='2'></td>
+            <td width='auto'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td valign='top'><div align='left' class='arial09blackbold'>9. CERTIFICATION OF MEMBER:</div></td>
+              </tr>
+              <tr>
+                <td height='28'><div align='left' class='times10blackbold'><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Under the penalty of law, I attest that the information I provided in this Form are true and accurate to the best of my knowledge.</i</div></td>
+              </tr>
+              <tr>
+                <td><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='18%' height='15'></td>
+                    <td width='32%' height='15' class='table1Bottom'><div align='center' class='arial11black'>$comnamem</div></td>
+                    <td width='5%' height='15'></td>
+                    <td width='39%' height='15' class='table1Bottom'><div align='center' class='arial11black'>$comnamer</div></td>
+                    <td width='6%' height='15'></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td valign='top'><div align='center' class='arial09black'>Signature Over Printed Name of Member</div></td>
+                    <td></td>
+                    <td valign='top'><div align='center' class='arial09black'>Signature Over Printed Name of Member's Representative</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+
+                    <td><div align='center'><table border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr01"."</div></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr11"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr31"."</div></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr41"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr61"."</div></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr71"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr81"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr91"."</div></td>
+                          </tr>
+                        </table></td>
+                      </tr>
+                    </table></div></td>
+
+                    <td></td>
+                    <td><div align='center'><table cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr02"."</div></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr12"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr32"."</div></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr42"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr62"."</div></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr72"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr82"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$comdatearr92"."</div></td>
+                          </tr>
+                        </table></td>
+                      </tr>
+                    </table></div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td valign='top'><div align='center' class='arial09black'>Date Signed (month-day-year)</div></td>
+                    <td></td>
+                    <td valign='top'><div align='center' class='arial09black'>Date Signed (month-day-year)</div></td>
+                    <td></td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height='5'></td>
+              </tr>
+              <tr>
+                <td valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='35%' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td><div align='left' class='arial09black'>If member/ representative is unable to write, put right thumbmark. Member/ representative should be assisted by an HCI representative. Check the appropriate box:</div></td>
+                      </tr>
+                      <tr>
+                        <td height='25' valign='bottom'><div align='left'><table border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td width='15' height='12'></td>
+                            <td width='12' height='12' class='table1Top1Bottom1Left1Right'><div align='center' class='arial10blackbold'>$comuw1</div></td>
+                            <td width='80' height='12' valign='bottom'><div align='left' class='arial09black'>&nbsp;Member</div></td>
+                            <td width='12' height='12' class='table1Top1Bottom1Left1Right' valign='bottom'><div align='center' class='arial10blackbold'>$comuw2</div></td>
+                            <td width='80' height='12' valign='bottom'><div align='left' class='arial09black'>&nbsp;Representative</div></td>
+                          </tr>
+                        </table></div></td>
+                      </tr>
+                    </table></td>
+                    <td width='2%'></td>
+                    <td width='13%'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='70' class='table1Top1Bottom1Left1Right'></td>
+                      </tr>
+                    </table></td>
+                    <td width='20%' valign='bottom'><table width='100%' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td width='2'></td>
+                        <td width='auto'><div align='left' class='arial09black'>Relationship of the</div></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><div align='left' class='arial09black'>representative to the member:</div></td>
+                      </tr>
+                      <tr>
+                        <td height='8' colspan='2'></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><div align='left' class='arial09black'>Reason for signing on</div></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><div align='left' class='arial09black'>behalf of the member:</div></td>
+                      </tr>
+                      <tr>
+                        <td height='3' colspan='2'></td>
+                      </tr>
+                    </table></td>
+                    <td width='30%'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td width='12' height='10'></td>
+                        <td width='12' height='12' class='table1Top1Bottom1Left1Right'><div align='center' class='arial10blackbold'>$comrtm1</div></td>
+                        <td width='40' height='12' valign='bottom'><div align='left' class='arial09black'>&nbsp;Spouse</div></td>
+                        <td width='12' height='12' class='table1Top1Bottom1Left1Right' valign='bottom'><div align='center' class='arial10blackbold'>$comrtm2</div></td>
+                        <td width='40' height='12' valign='bottom'><div align='left' class='arial09black'>&nbsp;Child</div></td>
+                        <td width='12' height='12' class='table1Top1Bottom1Left1Right' valign='bottom'><div align='center' class='arial10blackbold'>$comrtm3</div></td>
+                        <td width='auto' height='12' valign='bottom'><div align='left' class='arial09black'>&nbsp;Parent</div></td>
+                      </tr>
+                      <tr>
+                        <td height='2' colspan='7'></td>
+                      </tr>
+                      <tr>
+                        <td height='12'></td>
+                        <td height='12' class='table1Top1Bottom1Left1Right'><div align='center' class='arial10blackbold'>$comrtm4</div></td>
+                        <td height='12' valign='bottom'><div align='left' class='arial09black'>&nbsp;Sibling</div></td>
+                        <td height='12' class='table1Top1Bottom1Left1Right' valign='bottom'><div align='center' class='arial10blackbold'>$comrtm5</div></td>
+                        <td height='12' valign='bottom' colspan='3'><div align='left' class='arial09black'>&nbsp;Others, specify $comrtmos</div></td>
+                      </tr>
+                      <tr>
+                        <td height='2' colspan='7'></td>
+                      </tr>
+                      <tr>
+                        <td height='12'></td>
+                        <td height='12' class='table1Top1Bottom1Left1Right'><div align='center' class='arial10blackbold'>$comres1</div></td>
+                        <td height='12' valign='bottom' colspan='5'><div align='left' class='arial09black'>&nbsp;Member is incapacitated</div></td>
+                      </tr>
+                      <tr>
+                        <td height='2' colspan='7'></td>
+                      </tr>
+                      <tr>
+                        <td height='12'></td>
+                        <td height='12' class='table1Top1Bottom1Left1Right'><div align='center' class='arial10blackbold'>$comres2</div></td>
+                        <td height='12' valign='bottom' colspan='5'><div align='left' class='arial09black'>&nbsp;Other reasons $comreso</div></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table></td>
+            <td width='2'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+        </table></td>
+      </tr>
+
+      <tr>
+        <td height='5'></td>
+      </tr>
+
+      <tr>
+        <td height='1' class='table1Top1Bottom'></td>
+      </tr>
+
+      <tr>
+        <td><div align='center' class='arial11blackbold'>PART II - EMPLOYER'S CERTIFICATION (for employed members only)</div></td>
+      </tr>
+
+      <tr>
+        <td height='1' class='table1Top1Bottom'></td>
+      </tr>
+
+      <tr>
+        <td><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td colspan='3' height='3'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td width='2'></td>
+            <td width='auto'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td width='25%'><div align='left' class='arial09black'>1.PhilHealth Employer No. (PEN):</div></td>
+                <td width='auto'><table cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='11' height='11' class='table1Bottom1Left1Right'><div align='center' class='arial12black'>".$pen0."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$pen1."</div></td>
+                    <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                    <td width='11' height='11' class='table1Bottom1Left1Right'><div align='center' class='arial12black'>".$pen3."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$pen4."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$pen5."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$pen6."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$pen7."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$pen8."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$pen9."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$pen10."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right'><div align='center' class='arial12black'>".$pen11."</div></td>
+                    <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                    <td width='11' height='11' class='table1Bottom1Left1Right'><div align='center' class='arial12black'>".$pen13."</div></td>
+                  </tr>
+                </table></td>
+                <td width='2%'></td>
+                <td width='auto'><div align='left' class='arial09black'>2. Contact No.:</div></td>
+                <td width='20%' class='table1Bottom'><div align='left' class='arial10black'>$employercontactno</div></td>
+                <td width='10%'></td>
+              </tr>
+            </table></td>
+            <td width='2'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td colspan='3' height='3'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td width='2'></td>
+            <td width='auto'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td width='25%'><div align='left' class='arial09black'>3. Business Name:</div></td>
+                <td width='auto' class='table1Bottom'><div align='center' class='arial10blackbold'>$employerbusname</div></td>
+                <td width='10%'></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><div align='center' class='arial08black'>Business Name of Employer</div></td>
+                <td></td>
+              </tr>
+            </table></td>
+            <td width='2'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td colspan='3' height='3'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td width='2'></td>
+            <td width='auto'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td><div align='left' class='arial09blackbold'>4. CERTIFICATION OF EMPLOYER:</div></td>
+              </tr>
+              <tr>
+                <td height='5'></td>
+              </tr>
+              <tr>
+                <td><div align='justify' class='arial09blackbold'><i>&nbsp;&nbsp;&nbsp;&nbsp;This is to certify that all monthly premium contributions for and in behalf of the member, while employed in this company, including the applicable three (3) monthly premium contributions within the past six (6) months period prior to the first day of this confinement, have been deducted/collected and remitted to PhilHealth, and that the information supplied by the member or his/her representative on Part I are consistent with our available records.</i></div></td>
+              </tr>
+            </table></td>
+            <td width='2'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td colspan='3' height='3'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+
+echo "
+          <tr>
+            <td width='2'></td>
+            <td width='auto'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td width='45%' height='22' class='table1Bottom'><div align='center' class='arial10black'>$employername</div></td>
+                <td width='2%' height='20'></td>
+                <td width='25%' height='20' class='table1Bottom'><div align='center' class='arial10black'>$employerdesignation</div></td>
+                <td width='2%' height='20'></td>
+                <td width='auto' height='20' valign='bottom'><div align='center'><table border='0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$empdatesiarr0"."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$empdatesiarr1"."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='15' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$empdatesiarr3"."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$empdatesiarr4"."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='15' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$empdatesiarr6"."</div></td>
+                    <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$empdatesiarr7"."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$empdatesiarr8"."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$empdatesiarr9"."</div></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table></div></td>
+                <td width='6%'></td>
+              </tr>
+              <tr>
+                <td><div align='center' class='arial09black'>Signature Over Printed Name of Employer / Authorized Representative</div></td>
+                <td></td>
+                <td><div align='center' class='arial09black'>Official Capacity / Designation</div></td>
+                <td></td>
+                <td><div align='center' class='arial09black'>Date Signed (month-day-year)</div></td>
+                <td></td>
+              </tr>
+            </table></td>
+            <td width='2'></td>
+          </tr>
+";
+
+echo "
+        </table></td>
+      </tr>
+
+      <tr>
+        <td height='2'></td>
+      </tr>
+
+      <tr>
+        <td height='1' class='table1Top1Bottom'></td>
+      </tr>
+
+      <tr>
+        <td><div align='center' class='arial11blackbold'>PART III - CONSENT TO ACCESS PATIENT RECORD/S</div></td>
+      </tr>
+
+      <tr>
+        <td height='1' class='table1Top1Bottom'></td>
+      </tr>
+
+      <tr>
+        <td><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td colspan='3' height='3'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td width='2'></td>
+            <td width='auto'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td><div align='left' class='arial09blackbold'><i>I hereby consent to the examination by PhilHealth of the patient's medical records for the purpose of verifying the veracity of this claim.</i></div></td>
+              </tr>
+              <tr>
+                <td height='3'></td>
+              </tr>
+              <tr>
+                <td><div align='left' class='arial09blackbold'><i>I hereby hold PhilHealth or any of its officers, employees and/or representatives free from any and all liabilities relative to the herein-mentioned</i></div></td>
+              </tr>
+              <tr>
+                <td height='3'></td>
+              </tr>
+              <tr>
+                <td><div align='left' class='arial09blackbold'><i>consent which I have voluntarily and willingly given in connection with this claim for reimbursement before PhilHealth.</i></div></td>
+              </tr>
+            </table></td>
+            <td width='2'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td colspan='3' height='3'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td width='2'></td>
+            <td width='auto'><div align='left'><table border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td width='10' height='20'></td>
+                <td width='auto' height='20' class='table1Bottom'><div align='center' class='arial10black'>$consentaccname</div></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><div align='center' class='arial09black'>Signature Over Printed Name of Member/ Patient/ Authorized Representative</div></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><div align='center'><table border='0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$consentaccsiarr0"."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$consentaccsiarr1"."</div></td>
+                      </tr>
+                    </table></td>
+
+                    <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$consentaccsiarr3"."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$consentaccsiarr4"."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$consentaccsiarr6"."</div></td>
+
+                    <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$consentaccsiarr7"."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$consentaccsiarr8"."</div></td>
+                      </tr>
+
+                    </table></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$consentaccsiarr9"."</div></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table></div></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><div align='center' class='arial09black'>(Date Signed (month-day-year)</div></td>
+              </tr>
+            </table></div></td>
+            <td width='2'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td colspan='3' height='3'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td width='2'></td>
+            <td width='auto'><div align='left'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td width='15%'  height='20' valign='top'><div align='left' class='arial09black'>Relationship of the<br />representative to the<br />member:/ patient:<br /><br />Reason for signing on<br />behalf of the<br />member:/ patient:</div></td>
+              
+                <td width='30%'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='10' height='10'></td>
+                    <td width='12' height='12' class='table1Top1Bottom1Left1Right'><div align='center' class='arial10blackbold'>$carrtm1</div></td>
+                    <td width='40' height='12' valign='bottom'><div align='left' class='arial09black'>&nbsp;Spouse</div></td>
+                    <td width='12' height='12' class='table1Top1Bottom1Left1Right' valign='bottom'><div align='center' class='arial10blackbold'>$carrtm2</div></td>
+                    <td width='40' height='12' valign='bottom'><div align='left' class='arial09black'>&nbsp;Child</div></td>
+                    <td width='12' height='12' class='table1Top1Bottom1Left1Right' valign='bottom'><div align='center' class='arial10blackbold'>$carrtm3</div></td>
+                    <td width='auto' height='12' valign='bottom'><div align='left' class='arial09black'>&nbsp;Parent</div></td>
+                  </tr>
+                  <tr>
+                    <td height='2' colspan='7'></td>
+                  </tr>
+                  <tr>
+                    <td height='10'></td>
+                    <td height='12' class='table1Top1Bottom1Left1Right'><div align='center' class='arial10blackbold'>$carrtm4</div></td>
+                    <td height='12' valign='bottom'><div align='left' class='arial09black'>&nbsp;Sibling</div></td>
+                    <td height='12' class='table1Top1Bottom1Left1Right' valign='bottom'><div align='center' class='arial10blackbold'>$carrtm5</div></td>
+                    <td height='12' valign='bottom' colspan='3'><div align='left' class='arial09black'>&nbsp;Others, specify $carrtmos</div></td>
+                  </tr>
+                  <tr>
+                    <td height='2' colspan='7'></td>
+                  </tr>
+                  <tr>
+                    <td height='10'></td>
+                    <td height='12' class='table1Top1Bottom1Left1Right'><div align='center' class='arial10blackbold'>$carres1</div></td>
+                    <td height='12' valign='bottom' colspan='5'><div align='left' class='arial09black'>&nbsp;Patient is incapacitated</div></td>
+                  </tr>
+                  <tr>
+                    <td height='2' colspan='7'></td>
+                  </tr>
+                  <tr>
+                    <td height='10'></td>
+                    <td height='12' class='table1Top1Bottom1Left1Right'><div align='center' class='arial10blackbold'>$carres2</div></td>
+                    <td height='12' valign='bottom' colspan='5'><div align='left' class='arial09black'>&nbsp;Other reasons $carresos</div></td>
+
+                  </tr>
+                </table></td>
+                <td width='2%'></td>
+                <td width='35%'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td><div align='left' class='arial09black'>If patient/ representative is unable to write, put right<br />thumbmark. Patient/ representative should be assisted<br />by an HCI representative. Check the appropriate box:</div></td>
+                  </tr>
+                  <tr>
+                    <td height='8'></td>
+                  </tr>
+                  <tr>
+                    <td><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td width='10' height='12'></td>
+                        <td width='12' height='12' class='table1Top1Bottom1Left1Right'><div align='center' class='arial10blackbold'>$caruw1</div></td>
+                        <td width='auto' height='12'><div align='left' class='arial09black'>&nbsp;Patient</div></td>
+                        <td width='12' height='12' class='table1Top1Bottom1Left1Right'><div align='center' class='arial10blackbold'>$caruw2</div></td>
+                        <td width='auto' height='12'><div align='left' class='arial09black'>&nbsp;Representative</div></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table></td>
+                <td width='13%'><div align='left'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td height='70' class='table1Top1Bottom1Left1Right'></td>
+                  </tr>
+                </table></div></td>
+                <td width='5%'></td>
+              </tr>
+            </table></div></td>
+            <td width='2'></td>
+          </tr>
+";
+
+echo "
+        </table></td>
+      </tr>
+";
+
+
+echo "
+      <tr>
+        <td height='20'>&nbsp;</td>
+      </tr>
+";
+
+
+/*BACK-------BACK-------BACK-------BACK-------BACK-------BACK-------BACK-------BACK-------BACK-------BACK*/
+
+$dcname=$doctor;
+
+mysql_connect($cuz->myHost(),$cuz->getUser(),$cuz->getPass());
+mysql_select_db($cuz->getDB());
+$dfsql=mysql_query("SELECT phicacc FROM docfile WHERE name='$dcname'");
+$dfcount=mysql_num_rows($dfsql);
+if($dfcount==0){
+
+$phicacc="";
+
+$dclname="";
+$dcfname="";
+$dcmname="";
+$dcsuffix="";
+
+$pa10 = "";
+$pa11 = "";
+$pa12 = "";
+$pa13 = "";
+$pa14 = "";
+$pa15 = "";
+$pa16 = "";
+$pa17 = "";
+$pa18 = "";
+$pa19 = "";
+$pa110 = "";
+$pa111 = "";
+$pa112 = "";
+$pa113 = "";
+}
+else{
+while($dffetch=mysql_fetch_array($dfsql)){$phicacc=$dffetch['phicacc'];}
+
+mysql_connect($cuz->myHost(),$cuz->getUser(),$cuz->getPass());
+mysql_select_db($cuz->getDB());
+$ddsql=mysql_query("SELECT UPPER(lastname) AS lastname, UPPER(firstname) AS firstname, UPPER(middlename) AS middlename, UPPER(suffix) AS suffix FROM docdetails WHERE phicacc='$phicacc'");
+$ddcount=mysql_num_rows($ddsql);
+if($ddcount==0){
+$dclname="";
+$dcfname="";
+$dcmname="";
+$dcsuffix="";
+
+$pa10 = "";
+$pa11 = "";
+$pa12 = "";
+$pa13 = "";
+$pa14 = "";
+$pa15 = "";
+$pa16 = "";
+$pa17 = "";
+$pa18 = "";
+$pa19 = "";
+$pa110 = "";
+$pa111 = "";
+$pa112 = "";
+$pa113 = "";
+}
+else{
+while($ddfetch=mysql_fetch_array($ddsql)){
+$dclname=$ddfetch['lastname'];
+$dcfname=$ddfetch['firstname'];
+$dcmname=$ddfetch['middlename'];
+$dcsuffix=$ddfetch['suffix'];
+}
+
+$pa1 = str_split($phicacc);
+$pa10 = $pa1[0];
+$pa11 = $pa1[1];
+$pa12 = $pa1[2];
+$pa13 = $pa1[3];
+$pa14 = $pa1[4];
+$pa15 = $pa1[5];
+$pa16 = $pa1[6];
+$pa17 = $pa1[7];
+$pa18 = $pa1[8];
+$pa19 = $pa1[9];
+$pa110 = $pa1[10];
+$pa111 = $pa1[11];
+$pa112 = $pa1[12];
+$pa113 = $pa1[13];
+}
+
+
+}
+
+$pfname1=$dcfname." ".$dcmname." ".$dclname." ".$dcsuffix;
+
+//PF2
+
+$dcname2=$doctor2;
+
+mysql_connect($cuz->myHost(),$cuz->getUser(),$cuz->getPass());
+mysql_select_db($cuz->getDB());
+$df2sql=mysql_query("SELECT phicacc FROM docfile WHERE name='$dcname2'");
+$df2count=mysql_num_rows($df2sql);
+if($df2count==0){
+$phicacc2="";
+
+$dc2lname="";
+$dc2fname="";
+$dc2mname="";
+$dc2suffix="";
+
+$pa20 = "";
+$pa21 = "";
+$pa22 = "";
+$pa23 = "";
+$pa24 = "";
+$pa25 = "";
+$pa26 = "";
+$pa27 = "";
+$pa28 = "";
+$pa29 = "";
+$pa210 = "";
+$pa211 = "";
+$pa212 = "";
+$pa213 = "";
+}
+else{
+while($df2fetch=mysql_fetch_array($df2sql)){$phicacc2=$df2fetch['phicacc'];}
+
+mysql_connect($cuz->myHost(),$cuz->getUser(),$cuz->getPass());
+mysql_select_db($cuz->getDB());
+$dd2sql=mysql_query("SELECT UPPER(lastname) AS lastname, UPPER(firstname) AS firstname, UPPER(middlename) AS middlename, UPPER(suffix) AS suffix FROM docdetails WHERE phicacc='$phicacc2'");
+$dd2count=mysql_num_rows($dd2sql);
+if($dd2count==0){
+$dc2lname="";
+$dc2fname="";
+$dc2mname="";
+$dc2suffix="";
+
+$pa20 = "";
+$pa21 = "";
+$pa22 = "";
+$pa23 = "";
+$pa24 = "";
+$pa25 = "";
+$pa26 = "";
+$pa27 = "";
+$pa28 = "";
+$pa29 = "";
+$pa210 = "";
+$pa211 = "";
+$pa212 = "";
+$pa213 = "";
+}
+else{
+while($dd2fetch=mysql_fetch_array($dd2sql)){
+$dc2lname=$dd2fetch['lastname'];
+$dc2fname=$dd2fetch['firstname'];
+$dc2mname=$dd2fetch['middlename'];
+$dc2suffix=$dd2fetch['suffix'];
+}
+
+$pa2123 = str_split($phicacc2);
+$pa20 = $pa2123[0];
+$pa21 = $pa2123[1];
+$pa22 = $pa2123[2];
+$pa23 = $pa2123[3];
+$pa24 = $pa2123[4];
+$pa25 = $pa2123[5];
+$pa26 = $pa2123[6];
+$pa27 = $pa2123[7];
+$pa28 = $pa2123[8];
+$pa29 = $pa2123[9];
+$pa210 = $pa2123[10];
+$pa211 = $pa2123[11];
+$pa212 = $pa2123[12];
+$pa213 = $pa2123[13];
+}
+
+}
+
+$pfname2=$dc2fname." ".$dc2mname." ".$dc2lname." ".$dc2suffix;
+
+//PF3
+
+$dcname3=$doctor3;
+
+mysql_connect($cuz->myHost(),$cuz->getUser(),$cuz->getPass());
+mysql_select_db($cuz->getDB());
+$df3sql=mysql_query("SELECT phicacc FROM docfile WHERE name='$dcname3'");
+$df3count=mysql_num_rows($df3sql);
+if($df3count==0){
+$phicacc3="";
+
+$dc3lname="";
+$dc3fname="";
+$dc3mname="";
+$dc3suffix="";
+
+$pa30 = "";
+$pa31 = "";
+$pa32 = "";
+$pa33 = "";
+$pa34 = "";
+$pa35 = "";
+$pa36 = "";
+$pa37 = "";
+$pa38 = "";
+$pa39 = "";
+$pa310 = "";
+$pa311 = "";
+$pa312 = "";
+$pa313 = "";
+}
+else{
+while($df3fetch=mysql_fetch_array($df3sql)){$phicacc3=$df3fetch['phicacc'];}
+
+mysql_connect($cuz->myHost(),$cuz->getUser(),$cuz->getPass());
+mysql_select_db($cuz->getDB());
+$dd3sql=mysql_query("SELECT UPPER(lastname) AS lastname, UPPER(firstname) AS firstname, UPPER(middlename) AS middlename, UPPER(suffix) AS suffix FROM docdetails WHERE phicacc='$phicacc3'");
+$dd3count=mysql_num_rows($dd3sql);
+if($dd3count==0){
+$dc3lname="";
+$dc3fname="";
+$dc3mname="";
+$dc3suffix="";
+
+$pa30 = "";
+$pa31 = "";
+$pa32 = "";
+$pa33 = "";
+$pa34 = "";
+$pa35 = "";
+$pa36 = "";
+$pa37 = "";
+$pa38 = "";
+$pa39 = "";
+$pa310 = "";
+$pa311 = "";
+$pa312 = "";
+$pa313 = "";
+}
+else{
+while($dd3fetch=mysql_fetch_array($dd3sql)){
+$dc3lname=$dd3fetch['lastname'];
+$dc3fname=$dd3fetch['firstname'];
+$dc3mname=$dd3fetch['middlename'];
+$dc3suffix=$dd3fetch['suffix'];
+}
+
+$pa3123 = str_split($phicacc3);
+$pa30 = $pa3123[0];
+$pa31 = $pa3123[1];
+$pa32 = $pa3123[2];
+$pa33 = $pa3123[3];
+$pa34 = $pa3123[4];
+$pa35 = $pa3123[5];
+$pa36 = $pa3123[6];
+$pa37 = $pa3123[7];
+$pa38 = $pa3123[8];
+$pa39 = $pa3123[9];
+$pa310 = $pa3123[10];
+$pa311 = $pa3123[11];
+$pa312 = $pa3123[12];
+$pa313 = $pa3123[13];
+}
+
+}
+
+$pfname3=$dc3fname." ".$dc3mname." ".$dc3lname." ".$dc3suffix;
+
+
+$pfdatesigned = date("m-d-Y",strtotime($datesigned));
+
+$pfdatesiarr=str_split($pfdatesigned);
+
+if(($datesigned!="")&&($datesigned!="0000-00-00")){
+$pfdatesiarr0 = $pfdatesiarr[0];
+$pfdatesiarr1 = $pfdatesiarr[1];
+$pfdatesiarr3 = $pfdatesiarr[3];
+$pfdatesiarr4 = $pfdatesiarr[4];
+$pfdatesiarr6 = $pfdatesiarr[6];
+$pfdatesiarr7 = $pfdatesiarr[7];
+$pfdatesiarr8 = $pfdatesiarr[8];
+$pfdatesiarr9 = $pfdatesiarr[9];
+}
+else{
+$pfdatesiarr0 = "";
+$pfdatesiarr1 = "";
+$pfdatesiarr3 = "";
+$pfdatesiarr4 = "";
+$pfdatesiarr6 = "";
+$pfdatesiarr7 = "";
+$pfdatesiarr8 = "";
+$pfdatesiarr9 = "";
+}
+
+
+$pfdatesigned2 = date("m-d-Y",strtotime($datesigned2));
+
+$pfdatesiarr2111=str_split($pfdatesigned2);
+
+if(($datesigned2!="")&&($datesigned2!="0000-00-00")){
+$pfdatesiarr20 = $pfdatesiarr2111[0];
+$pfdatesiarr21 = $pfdatesiarr2111[1];
+$pfdatesiarr23 = $pfdatesiarr2111[3];
+$pfdatesiarr24 = $pfdatesiarr2111[4];
+$pfdatesiarr26 = $pfdatesiarr2111[6];
+$pfdatesiarr27 = $pfdatesiarr2111[7];
+$pfdatesiarr28 = $pfdatesiarr2111[8];
+$pfdatesiarr29 = $pfdatesiarr2111[9];
+}
+else{
+$pfdatesiarr20 = "";
+$pfdatesiarr21 = "";
+$pfdatesiarr23 = "";
+$pfdatesiarr24 = "";
+$pfdatesiarr26 = "";
+$pfdatesiarr27 = "";
+$pfdatesiarr28 = "";
+$pfdatesiarr29 = "";
+}
+
+$pfdatesigned3 = date("m-d-Y",strtotime($datesigned3));
+
+$pfdatesiarr3111=str_split($pfdatesigned3);
+
+if(($datesigned3!="")&&($datesigned3!="0000-00-00")){
+$pfdatesiarr30 = $pfdatesiarr3111[0];
+$pfdatesiarr31 = $pfdatesiarr3111[1];
+$pfdatesiarr33 = $pfdatesiarr3111[3];
+$pfdatesiarr34 = $pfdatesiarr3111[4];
+$pfdatesiarr36 = $pfdatesiarr3111[6];
+$pfdatesiarr37 = $pfdatesiarr3111[7];
+$pfdatesiarr38 = $pfdatesiarr3111[8];
+$pfdatesiarr39 = $pfdatesiarr3111[9];
+}
+else{
+$pfdatesiarr30 = "";
+$pfdatesiarr31 = "";
+$pfdatesiarr33 = "";
+$pfdatesiarr34 = "";
+$pfdatesiarr36 = "";
+$pfdatesiarr37 = "";
+$pfdatesiarr38 = "";
+$pfdatesiarr39 = "";
+}
+
+echo "
+      <tr>
+        <td height='1' class='table1Top1Bottom'></td>
+      </tr>
+
+      <tr>
+        <td><div align='center' class='arial11blackbold'>PART IV - HEALTH CARE PROFESSIONAL INFORMATION</div></td>
+      </tr>
+
+      <tr>
+        <td height='1' class='table1Top1Bottom'></td>
+      </tr>
+
+      <tr>
+        <td><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td colspan='3' height='3'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+          <tr>
+            <td width='2'></td>
+            <td width='auto'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td width='50%' valign='top'><div align='center'><table border'0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='auto' valign='top'><div align='left' class='arial09blackbold'><i>Accreditation No.&nbsp;&nbsp;&nbsp;</i></div></td>
+                    <td><div align='center'><table border='0' cellpadding='0' cellspacing='0'>
+
+
+
+                      <tr>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa10"."</div></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa11"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa12"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa13"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa15"."</div></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa16"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa17"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa18"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa19"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa110"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa111"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                        <td width='11' height='11' class='table1Bottom1Left1Right' valign='bottom'><div align='center' class='arial12black'>"."$pa113"."</div></td>
+                      </tr>
+                    </table></div></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2' height='10'></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2' height='15' class='table1Bottom'><div align='center' class='arial10black'>".strtoupper($pfname1)."</div></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2'><div align='center' class='arial09black'>Signature Over Printed Name</div></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2' height='10'></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2'><div align='center'><table border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr0"."</div></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr1"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr3"."</div></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr4"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr6"."</div></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr7"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr8"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr9"."</div></td>
+                          </tr>
+                        </table></td>
+                      </tr>
+                    </table></div></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2'><div align='center' class='arial09black'>Date Signed (month-day-year)</div></td>
+                  </tr>
+                </table></div></td>
+
+
+
+                <td width='50%' valign='top'><div align='center'><table border'0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='auto' valign='top'><div align='left' class='arial09blackbold'><i>Accreditation No.&nbsp;&nbsp;&nbsp;</i></div></td>
+                    <td><div align='center'><table border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa20"."</div></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa21"."</div></td>
+                          </tr>
+                        </table></td>
+
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa22"."</div></td>
+                          </tr>
+
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa23"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa25"."</div></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa26"."</div></td>
+                          </tr>
+
+                        </table></td>
+
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa27"."</div></td>
+                          </tr>
+                        </table></td>
+
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa28"."</div></td>
+                          </tr>
+
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa29"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa210"."</div></td>
+                          </tr>
+
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa211"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                        <td width='11' height='11' class='table1Bottom1Left1Right' valign='bottom'><div align='center' class='arial12black'>"."$pa213"."</div></td>
+                      </tr>
+                    </table></div></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2' height='10'></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2' height='15' class='table1Bottom'><div align='center' class='arial10black'>".strtoupper($pfname2)."</div></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2'><div align='center' class='arial09black'>Signature Over Printed Name</div></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2' height='10'></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2'><div align='center'><table border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr20"."</div></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr21"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr23"."</div></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr24"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr26"."</div></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr27"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr28"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr29"."</div></td>
+                          </tr>
+                        </table></td>
+                      </tr>
+                    </table></div></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2'><div align='center' class='arial09black'>Date Signed (month-day-year)</div></td>
+                  </tr>
+                </table></div></td>
+              </tr>
+
+              <tr>
+                <td height='20' colspan='2'></td>
+              </tr>
+
+              <tr>
+                <td width='50%' valign='top'><div align='center'><table border'0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='auto' valign='top'><div align='left' class='arial09blackbold'><i>Accreditation No.&nbsp;&nbsp;&nbsp;</i></div></td>
+                    <td><div align='center'><table border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa30"."</div></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa31"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa32"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa33"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa35"."</div></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa36"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa37"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa38"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa39"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa310"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pa311"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                        <td width='11' height='11' class='table1Bottom1Left1Right' valign='bottom'><div align='center' class='arial12black'>"."$pa313"."</div></td>
+                      </tr>
+                    </table></div></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2' height='10'></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2' height='15' class='table1Bottom'><div align='center' class='arial10black'>".strtoupper($pfname3)."</div></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2'><div align='center' class='arial09black'>Signature Over Printed Name</div></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2' height='10'></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2'><div align='center'><table border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr30"."</div></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr31"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>-</div></td>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr33"."</div></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr34"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='13' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>-</span></div></td>
+                        <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr36"."</div></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr37"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr38"."</div></td>
+                          </tr>
+                        </table></td>
+                        <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                          <tr>
+                            <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$pfdatesiarr39"."</div></td>
+                          </tr>
+                        </table></td>
+                      </tr>
+                    </table></div></td>
+                  </tr>
+                  <tr>
+                    <td colspan='2'><div align='center' class='arial09black'>Date Signed (month-day-year)</div></td>
+                  </tr>
+                </table></div></td>
+                <td width='50%'></td>
+              </tr>
+
+            </table></div></td>
+            <td width='2'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+        </table></td>
+      </tr>
+
+      <tr>
+        <td height='20'></td>
+      </tr>
+
+      <tr>
+        <td height='1' class='table1Top1Bottom'></td>
+      </tr>
+
+      <tr>
+        <td><div align='center' class='arial11blackbold'>PART V - PROVIDER INFORMATION AND CERTIFICATION</div></td>
+      </tr>
+
+      <tr>
+        <td height='1' class='table1Top1Bottom'></td>
+      </tr>
+
+
+      <tr>
+        <td height='2'></td>
+      </tr>
+";
+
+$pcasesql=mysql_query("SELECT icdcode FROM finalcaserate WHERE caseno='$caseno' AND level='primary'");
+$pcasecount=mysql_num_rows($pcasesql);
+if($pcasecount==0){
+$pcase="";
+}
+else{
+while($pcasefetch=mysql_fetch_array($pcasesql)){$pcase=$pcasefetch['icdcode'];}
+}
+
+$scasesql=mysql_query("SELECT icdcode FROM finalcaserate WHERE caseno='$caseno' AND level='secondary'");
+$scasecount=mysql_num_rows($scasesql);
+if($scasecount==0){
+$scase="";
+}
+else{
+while($scasefetch=mysql_fetch_array($scasesql)){$scase=$scasefetch['icdcode'];}
+}
+
+echo "
+      <tr>
+        <td><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+          <tr>
+            <td width='2'></td>
+            <td width='auto'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+
+              <tr>
+                <td colspan='6' valign='center'><div align='left' class='arial09blackbold'><u>1. PhilHealth Benefits</u></div></td>
+              </tr>
+              <tr>
+                <td width='100'><div align='center' class='arial09blackbold'></div></td>
+                <td><div align='center' class='arial09blackbold'>ICD 10 or RVS Code</div></td>
+                <td><div align='center' class='arial09blackbold'>a. First Case Rate</div></td>
+                <td width='80' class='table1Bottom'><div align='center' class='arial09blackbold'>$pcase</div></td>
+                <td><div align='center' class='arial09blackbold'>b. Second Case Rate</div></td>
+                <td width='80' class='table1Bottom'><div align='center' class='arial09blackbold'>$scase</div></td>
+              </tr>
+
+            </table></td>
+            <td width='2'></td>
+          </tr>
+        </table></td>
+      </tr>
+
+      <tr>
+        <td height='5'></td>
+      </tr>
+
+      <tr>
+        <td><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+          <tr>
+            <td width='2'></td>
+            <td><div align='left' class='arialnarrow10blackbold'><i>I certify that services rendered were recorded in the patient's chart and health care institution records and that the herein information given are true and correct.</i></div></td>
+            <td width='2'></td>
+          </tr>
+          <tr>
+            <td height='15' colspan='3'></td>
+          </tr>
+          <tr>
+            <td width='2'></td>
+            <td><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td width='40%' class='table1Bottom'><div align='center' class='arial10black'>".strtoupper($hcirep)."</div></td>
+                <td width='2%'></td>
+                <td width='30%' class='table1Bottom'><div align='center' class='arial10black'>".strtoupper($hcidesignation)."</div></td>
+                <td width='2%'></td>
+                <td width='auto'><div align='center'><table border='0' cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$hcidtarr0"."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$hcidtarr1"."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='25' height='11' class='table1Left1Left'><div align='center' class='arial12blackbold'>&nbsp;</div></td>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$hcidtarr3"."</div></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$hcidtarr4"."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='25' height='11' class='table1Left1Left'><div align='center'><span class='arial12blackbold'>&nbsp;</span></div></td>
+                    <td width='11' height='11' class='table1Bottom1Left' valign='bottom'><div align='center' class='arial12black'>"."$hcidtarr6"."</div></td>
+                    <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$hcidtarr7"."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='11' height='11' class='table1Bottom' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$hcidtarr8"."</div></td>
+                      </tr>
+                    </table></td>
+                    <td width='11' height='11' class='table1Bottom1Right' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+                      <tr>
+                        <td height='9' class='table1Left' valign='bottom'><div align='center' class='arial12black'>"."$hcidtarr9"."</div></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table></div></td>
+              </tr>
+
+              <tr>
+                <td><div align='center' class='arial09black'>Signature Over Printed Name Authorized HCI Representative</div></td>
+                <td></td>
+                <td><div align='center' class='arial09black'>Official Capacity / Designation</div></td>
+                <td></td>
+                <td><div align='center' class='arial09black'>Date Signed (month-day-year)</div></td>
+              </tr>
+            </table></td>
+            <td width='2'></td>
+          </tr>
+";
+
+//-----------------------------------------------------------------------------------------------------
+
+echo "
+        </table></td>
+      </tr>
+";
+
+
+echo "
+    </table></td>
+  </tr>
+</table>
+</div>
+";
+
+
+
+
+?> 
+</body>
+</html>

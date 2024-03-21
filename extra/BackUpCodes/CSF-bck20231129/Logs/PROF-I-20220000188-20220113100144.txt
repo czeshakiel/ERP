@@ -1,0 +1,1 @@
+test | `doctor1`='RONALD CERIALES', `datesigned1`='2022-01-13', `copay1`='13440', `doctor2`='RODRIGO A. DUARTE JR', `datesigned2`='2022-01-13', `copay2`='6720', `doctor3`='JULICES F. LAFORTEZA', `datesigned3`='2022-01-13', `copay3`='6720'

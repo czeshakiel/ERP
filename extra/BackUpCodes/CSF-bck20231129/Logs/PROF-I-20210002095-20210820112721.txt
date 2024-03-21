@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='RAUL JERRY Q. ISAGUIRRE', `datesigned1`='2021-08-20', `copay1`='54800', `doctor2`='GIFFORD BAGUIO ABEJO', `datesigned2`='', `copay2`='6000', `doctor3`='JULICES LAFORTEZA', `datesigned3`='', `copay3`='27400'

@@ -1,0 +1,1 @@
+ | `comchoose`='M', `comname`='JOJE GEVEROLA CAMPAÑA', `comcontact`='09074007438', `comdatesigned`='Feb-19-2022', `comrelation`='', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='M', `carname`='JOJE GEVEROLA CAMPAÑA', `cardatesigned`='Feb-19-2022'

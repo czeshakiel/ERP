@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `emppen`='', `empbusinessname`='PHILIPPINE MOTORCYCLE KING INCORPORATED', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210003528'

@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `emppen`='', `empbusinessname`='VISAYAS RAM CYCLES INC', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210002005'

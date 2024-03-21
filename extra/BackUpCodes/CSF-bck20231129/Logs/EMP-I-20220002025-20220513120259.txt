@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='KIDAPAWAN DOCTORS HOSPITAL INCORPORATED', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220002025'

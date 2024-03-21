@@ -1,0 +1,1 @@
+ | `emppen`='200474304938', `empbusinessname`='MERALCO INDUSTRIAL ENGINEERING SERVICES CORP-MIESCOR', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220002776'

@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='MARIE HAZEL T. TALJA', `datesigned1`='2021-11-12', `copay1`='32000', `doctor2`='MERCEDES T. HISO', `datesigned2`='2021-11-12', `copay2`='12500', `doctor3`='', `datesigned3`='', `copay3`='0.00'

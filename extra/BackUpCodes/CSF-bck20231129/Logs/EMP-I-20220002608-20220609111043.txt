@@ -1,0 +1,1 @@
+ | `emppen`='017030001914', `empbusinessname`='LEAD WITH INTEGRITY AND GOOD GOVERNANCE IN HELPING COMMUNITIES FOR HOLISTIC TRANSFORMATION (LIGHT) MICROFINANCE INC - KIDAPAWAN', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220002608'

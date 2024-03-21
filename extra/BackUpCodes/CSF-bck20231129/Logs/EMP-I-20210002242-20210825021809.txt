@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `emppen`='017030000235', `empbusinessname`='BARANGAY GOVERNMENT OF GUBATAN-MAGPET', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20210002242'

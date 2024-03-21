@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `emppen`='202230302048', `empbusinessname`='TAYTAY SA KAUSWAGAN (A MICROFINANCE NGO) INC', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210000982'

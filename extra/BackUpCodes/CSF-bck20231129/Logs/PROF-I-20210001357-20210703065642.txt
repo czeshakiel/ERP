@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='KATHREEN E SEGOCIO', `datesigned1`='2021-07-03', `copay1`='0.00', `doctor2`='JAN NATHLEEN DIZON', `datesigned2`='2021-07-03', `copay2`='0.00', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

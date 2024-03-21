@@ -1,0 +1,1 @@
+LYTEE BACCAY | `doctor1`='GRACE Q. MADIS', `datesigned1`='2021-04-21', `copay1`='0.00', `doctor2`='MERCEDES  T. HISO', `datesigned2`='2021-04-21', `copay2`='0.00', `doctor3`='R.DANA ANDREW B. NATANAGARA', `datesigned3`='2021-04-21', `copay3`='500.00'

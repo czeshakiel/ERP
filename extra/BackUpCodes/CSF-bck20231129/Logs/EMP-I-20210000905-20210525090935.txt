@@ -1,0 +1,1 @@
+JOLANIE PAMAT | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20210000905', '', 'PALAWAN PAWNSHOP INC DOING BUSINESS UNDER THE NAME PALAWAN PAWNSHOP AND PALAWAN EXPRESS PERA PADALA', '', '', '', '') | Employment-Private

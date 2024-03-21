@@ -1,0 +1,1 @@
+ | `emppen`='016000012518', `empbusinessname`='STRELLAS LABOR SERVICE COOPERATIVE', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220001523'

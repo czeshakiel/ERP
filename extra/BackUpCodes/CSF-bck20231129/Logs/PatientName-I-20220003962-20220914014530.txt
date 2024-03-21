@@ -1,0 +1,1 @@
+ | `lastname`='MANDAYANG', `firstname`='FABIAN ', `middlename`='CABANGBANG', `suffix`='JR', `birthdate`='Jul-01-1973', `age`='49', `sex`='M', `patientname`='MANDAYANG FABIAN  JR CABANGBANG', `dateofbirth`='1973-07-01'

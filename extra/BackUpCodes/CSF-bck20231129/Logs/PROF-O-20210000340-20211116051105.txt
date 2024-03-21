@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `doctor1`='ELVIRA C. EMBALSADO', `datesigned1`='2021-11-03', `copay1`='8000', `doctor2`='JULICES LAFORTEZA', `datesigned2`='2021-11-03', `copay2`='7000', `doctor3`='', `datesigned3`='2021-11-16', `copay3`='0.00'

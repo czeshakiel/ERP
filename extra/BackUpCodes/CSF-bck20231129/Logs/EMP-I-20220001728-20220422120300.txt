@@ -1,0 +1,1 @@
+ | `emppen`='140447000003', `empbusinessname`='UNIVERSITY OF SOUTHERN MINDANAO-KIDAPAWAN CITY CAMPUS-COLLEGE OF INDUSTRY AND TECHNOLOGY', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220001728'

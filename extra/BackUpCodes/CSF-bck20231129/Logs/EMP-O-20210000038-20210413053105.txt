@@ -1,0 +1,1 @@
+MIA MALATE | `emppen`='150447000003', `empbusinessname`='CITY GOVERNMENT OF KIDAPAWAN', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='O-20210000038'

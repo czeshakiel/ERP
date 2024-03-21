@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220000525', '', 'SHOGUN MANAGEMENT AND DEVELOPMENT CORP (KIDAPAWAN)', '', '', '', '') | Employment-Private

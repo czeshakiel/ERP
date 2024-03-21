@@ -1,0 +1,1 @@
+ | `emppen`='017030001289', `empbusinessname`='NORTHERN COTABATO CONSTRUCTION & SUPPLY', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220005648'

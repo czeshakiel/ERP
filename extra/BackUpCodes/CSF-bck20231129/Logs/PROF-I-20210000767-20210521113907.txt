@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='JOHN RYAN DIZON', `datesigned1`='2021-05-21', `copay1`='9744', `doctor2`='MARIA JOSEFA  CAMINO-MOJICA', `datesigned2`='2021-05-21', `copay2`='3000', `doctor3`='JANIZA JUMAO-AS VILLALON', `datesigned3`='2021-05-21', `copay3`='7280'

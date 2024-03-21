@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='EDWIN Y. MUDANZA', `datesigned1`='2021-06-19', `copay1`='600', `doctor2`='NELMA S. MAGPUSAO', `datesigned2`='2021-06-19', `copay2`='960', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220002503', '015020001589', 'EAZY CREDIT AND GROW RICH LENDING INC', '', '', '', '') | Employment-Private

@@ -1,0 +1,1 @@
+ | `emppen`='019000023308', `empbusinessname`='IPUAN FARMERS MULTI-PURPOSE COOPERATIVE', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220002847'

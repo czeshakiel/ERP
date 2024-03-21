@@ -1,0 +1,1 @@
+ | `emppen`='151447000001', `empbusinessname`='MUNICIPAL GOVERNMENT OF TULUNAN', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220001551'

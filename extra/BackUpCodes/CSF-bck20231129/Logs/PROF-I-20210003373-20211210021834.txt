@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='HENRY B. MUDANZA JR', `datesigned1`='2021-12-10', `copay1`='0.00', `doctor2`='JAN NATHLEEN DIZON', `datesigned2`='2021-12-10', `copay2`='11760', `doctor3`='JOSE NICANOR P. DEL ROSARIO III', `datesigned3`='2021-12-10', `copay3`='1680'

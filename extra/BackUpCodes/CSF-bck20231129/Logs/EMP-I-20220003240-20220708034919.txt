@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220003240', '140374100007', 'PHILIPPINE ARMY - AFP', '', '', '', '') | Employment-Private

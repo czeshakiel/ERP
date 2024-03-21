@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `doctor1`='EDWIN YANSON MUDANZA', `datesigned1`='2021-12-23', `copay1`='0.00', `doctor2`='GILNORE E. SAMONTE', `datesigned2`='2021-12-23', `copay2`='500.00', `doctor3`='RAUL JERRY Q. ISAGUIRRE', `datesigned3`='2021-12-23', `copay3`='1400.00'

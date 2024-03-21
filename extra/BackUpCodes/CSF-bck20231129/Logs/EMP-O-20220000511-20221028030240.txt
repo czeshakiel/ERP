@@ -1,0 +1,1 @@
+ | `emppen`='200224301857', `empbusinessname`='STANFILCO-DOLE', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='O-20220000511'

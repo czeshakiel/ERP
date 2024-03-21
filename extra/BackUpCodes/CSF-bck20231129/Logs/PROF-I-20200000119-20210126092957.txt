@@ -1,0 +1,1 @@
+ECZEKIEL ABOY, | `doctor1`='CHRISTOPHER C EMBALSADO, MD, MSBA-HA', `datesigned1`='Nov-13-2020', `copay1`='0.00', `doctor2`='BABY ANN G TAPOSOK', `datesigned2`='Nov-14-2020', `copay2`='0.00', `doctor3`='NEIL ROWLAND FORDAN DAYO, MD', `datesigned3`='Nov-15-2020', `copay3`='0.00'

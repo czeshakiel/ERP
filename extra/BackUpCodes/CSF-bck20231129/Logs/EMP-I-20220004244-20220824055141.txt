@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220004244', '', 'DEPARTMENT OF EDUCATION-CARMEN NATIONAL HIGH SCHOOL', '', '', '', '') | Employment-Govt

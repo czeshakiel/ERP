@@ -1,0 +1,1 @@
+LYTEE BACCAY | `doctor1`='NELMA S. MAGPUSAO', `datesigned1`='2021-05-24', `copay1`='3600.00', `doctor2`='SHERYL GRACE LEYSA MUDANZA', `datesigned2`='2021-05-24', `copay2`='780.00', `doctor3`='JANIZA JUMAO-AS VILLALON', `datesigned3`='2021-05-24', `copay3`='6720.00'

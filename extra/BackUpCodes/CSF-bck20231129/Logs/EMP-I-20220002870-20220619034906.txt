@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='SILVER LINK SECURITY AND INVESTIGATIVE SERVICES INC', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220002870'

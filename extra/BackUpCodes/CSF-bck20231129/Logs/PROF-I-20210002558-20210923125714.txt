@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='KARL PAOLO OLIVO DILLERA', `datesigned1`='2021-09-23', `copay1`='3360', `doctor2`='MARIA JOSEFA CAMINO-MOJICA', `datesigned2`='2021-09-23', `copay2`='2000', `doctor3`='HENRY B. MUDANZA JR', `datesigned3`='2021-09-23', `copay3`='500'

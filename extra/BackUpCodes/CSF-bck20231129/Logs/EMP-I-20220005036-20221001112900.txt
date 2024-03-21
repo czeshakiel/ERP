@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220005036', '', 'EVERYDAY ENTERPRISES/KARLA MAY DELA CRUZ GENTAPAN', '', '', '', '') | Employment-Private

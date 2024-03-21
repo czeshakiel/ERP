@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `doctor1`='NELMA S. MAGPUSAO', `datesigned1`='2021-10-13', `copay1`='1280', `doctor2`='RODRIGO A. DUARTE JR', `datesigned2`='2021-10-13', `copay2`='6720', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

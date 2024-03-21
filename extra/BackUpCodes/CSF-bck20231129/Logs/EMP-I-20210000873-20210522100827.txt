@@ -1,0 +1,1 @@
+JOLANIE PAMAT | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20210000873', '', 'COMMUNITY OF LOCAL AGRIBUSINESS PARTNERS IN ILOMAVIS MULTI PURPOSE', '', '', '', '') | Employment-Private

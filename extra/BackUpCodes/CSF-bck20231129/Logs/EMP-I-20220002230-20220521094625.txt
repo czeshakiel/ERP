@@ -1,0 +1,1 @@
+ | `emppen`='200224300312', `empbusinessname`='JONIELS CAKES & PASTRIES-JOCELYN P BALIGYAN', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220002230'

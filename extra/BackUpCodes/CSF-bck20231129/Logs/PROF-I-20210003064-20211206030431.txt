@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='GEMMA DALAPO', `datesigned1`='2021-12-03', `copay1`='21840.00', `doctor2`='NEIL HUMPREY ONGAYO LAQUIHON', `datesigned2`='2021-12-03', `copay2`='3900.00', `doctor3`='JANIZA JUMAO-AS VILLALON', `datesigned3`='2021-12-03', `copay3`='31920.00'

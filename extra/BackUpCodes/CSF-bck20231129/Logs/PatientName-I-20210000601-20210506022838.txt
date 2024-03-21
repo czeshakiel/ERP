@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `lastname`='ESPAÑO', `firstname`='NENITA', `middlename`='TANQUERIDO', `suffix`='', `birthdate`='Jan-25-1960', `age`='61', `sex`='F', `patientname`='ESPAÑO NENITA TANQUERIDO', `dateofbirth`='1960-01-25'

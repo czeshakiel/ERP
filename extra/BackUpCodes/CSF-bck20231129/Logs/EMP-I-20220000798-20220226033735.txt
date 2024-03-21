@@ -1,0 +1,1 @@
+ | `emppen`='017030000398', `empbusinessname`='SAMANTHA\'S TREVELLERS INN-KIDAPAWAN', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220000798'

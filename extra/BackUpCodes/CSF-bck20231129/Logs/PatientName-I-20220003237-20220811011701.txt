@@ -1,0 +1,1 @@
+ | `lastname`='SALIBAY', `firstname`='ARNOLFO', `middlename`='BRUA', `suffix`='', `birthdate`='Jan-24-1968', `age`='54', `sex`='M', `patientname`='SALIBAY ARNOLFO BRUA', `dateofbirth`='1968-01-24'

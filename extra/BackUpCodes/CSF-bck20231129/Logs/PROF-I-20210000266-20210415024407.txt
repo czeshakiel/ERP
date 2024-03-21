@@ -1,0 +1,1 @@
+LYTEE BACCAY | `doctor1`='EDWIN Y. MUDANZA', `datesigned1`='2021-04-15', `copay1`='0.00', `doctor2`='HENRY B. MUDANZA JR', `datesigned2`='2021-04-15', `copay2`='0.00', `doctor3`='NARESH I. BUXANI', `datesigned3`='2021-04-15', `copay3`='650'

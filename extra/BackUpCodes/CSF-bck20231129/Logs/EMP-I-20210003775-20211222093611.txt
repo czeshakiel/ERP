@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `emppen`='', `empbusinessname`='COTABATO ELECTRIC COOPERATIVE INCORPORATED-PPALMA AREA', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210003775'

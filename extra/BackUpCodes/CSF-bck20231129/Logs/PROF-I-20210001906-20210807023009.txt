@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='YVONNE JOIE M. PALMA', `datesigned1`='2021-08-07', `copay1`='0.00', `doctor2`='ROSEDIDA R. RABAYA', `datesigned2`='2021-08-07', `copay2`='0.00', `doctor3`='JULICES LAFORTEZA', `datesigned3`='2021-08-07', `copay3`='0.00'

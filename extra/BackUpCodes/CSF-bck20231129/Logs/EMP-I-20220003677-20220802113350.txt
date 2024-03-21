@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220003677', '141347100001', 'MUNICIPAL GOVERNMENT OF PRESIDENT ROXAS', '', '', '', '') | Employment-Govt

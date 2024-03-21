@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220003401', '', 'MUNICIPAL GOVERNMENT OF DATU PAGLAS', '', '', '', '') | Employment-Govt

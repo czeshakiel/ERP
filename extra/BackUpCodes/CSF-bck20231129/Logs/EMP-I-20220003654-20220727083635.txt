@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220003654', '', 'BARANGAY GOVERNMENT OF POBLACION-KIDAPAWAN CITY', '', '', '', '') | Employment-Govt

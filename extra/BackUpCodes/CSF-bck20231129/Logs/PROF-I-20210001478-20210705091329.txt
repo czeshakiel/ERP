@@ -1,0 +1,1 @@
+SWITZEL JOY SAMBRIA | `doctor1`='GEMMA DALAPO', `datesigned1`='2021-07-05', `copay1`='2340', `doctor2`='JAN NATHLEEN DIZON', `datesigned2`='2021-07-05', `copay2`='3360', `doctor3`='SHERYL GRACE LEYSA MUDANZA', `datesigned3`='2021-07-05', `copay3`='780'

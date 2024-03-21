@@ -1,0 +1,1 @@
+ | `lastname`='DOBLAS', `firstname`='CESAR', `middlename`='SOLIS', `suffix`='JR', `birthdate`='Jan-24-1983', `age`='39', `sex`='M', `patientname`='DOBLAS CESAR JR SOLIS', `dateofbirth`='1983-01-24'

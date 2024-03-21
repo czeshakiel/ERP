@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='RYAN LONZAGA', `datesigned1`='2021-08-07', `copay1`='5250', `doctor2`='JULICES LAFORTEZA', `datesigned2`='2021-08-07', `copay2`='8400', `doctor3`='R.DANA ANDREW B. NATANAGARA', `datesigned3`='2021-08-07', `copay3`='3000'

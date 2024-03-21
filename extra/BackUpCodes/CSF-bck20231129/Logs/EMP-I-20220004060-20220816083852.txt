@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220004060', '', 'COOPERATIVE BANK OF COTABATO', '', '', '', '') | Employment-Private

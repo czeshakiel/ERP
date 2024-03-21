@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='JANIZA JUMAO-AS VILLALON', `datesigned1`='2021-10-06', `copay1`='36960', `doctor2`='NELMA S. MAGPUSAO', `datesigned2`='2021-10-06', `copay2`='1680', `doctor3`='HENRY B. MUDANZA JR', `datesigned3`='2021-10-06', `copay3`='7700'

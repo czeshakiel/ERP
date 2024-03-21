@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='YVONNE JOIE M. PALMA', `datesigned1`='2021-09-18', `copay1`='13440', `doctor2`='JULICES LAFORTEZA', `datesigned2`='2021-09-18', `copay2`='6720', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

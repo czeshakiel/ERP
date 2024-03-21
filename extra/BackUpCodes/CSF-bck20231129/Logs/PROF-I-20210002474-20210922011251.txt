@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='RICHARD LOBATON', `datesigned1`='2021-09-22', `copay1`='560', `doctor2`='AREX E. ACQUIATAN', `datesigned2`='2021-09-22', `copay2`='0.00', `doctor3`='GLENN D SEGOCIO', `datesigned3`='2021-09-22', `copay3`='26880'

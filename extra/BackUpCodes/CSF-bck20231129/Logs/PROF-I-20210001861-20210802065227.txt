@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='GEMMA DALAPO', `datesigned1`='2021-08-02', `copay1`='1350', `doctor2`='R.DANA ANDREW B. NATANAGARA', `datesigned2`='2021-08-02', `copay2`='900', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

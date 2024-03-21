@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220004993', '', 'PAGASA PHILIPPINES FINANCE CORPORATION-(FORMLY:PAGASA PHILIPPINES LENDING COMPANY INC)', '', '', '', '') | Employment-Private

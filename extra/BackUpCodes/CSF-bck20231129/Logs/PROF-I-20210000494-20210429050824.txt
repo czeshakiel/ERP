@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='GEMMA DALAPO', `datesigned1`='2021-04-29', `copay1`='0.00', `doctor2`='R.DANA ANDREW B. NATANAGARA', `datesigned2`='2021-04-29', `copay2`='0.00', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

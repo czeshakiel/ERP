@@ -1,0 +1,1 @@
+SWITZEL JOY SAMBRIA | `doctor1`='GIFFORD BAGUIO ABEJO', `datesigned1`='2021-07-05', `copay1`='350', `doctor2`='R.DANA ANDREW B. NATANAGARA', `datesigned2`='2021-07-05', `copay2`='2700.00', `doctor3`='RODRIGO A. DUARTE JR', `datesigned3`='2021-07-05', `copay3`='2800'

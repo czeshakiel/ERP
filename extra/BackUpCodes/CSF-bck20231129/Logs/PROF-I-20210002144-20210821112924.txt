@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='MARIA JOSEFA CAMINO-MOJICA', `datesigned1`='2021-08-21', `copay1`='1000', `doctor2`='NELMA S. MAGPUSAO', `datesigned2`='2021-08-21', `copay2`='1500', `doctor3`='CHRISTOPHER C. EMBALSADO', `datesigned3`='2021-08-21', `copay3`='500'

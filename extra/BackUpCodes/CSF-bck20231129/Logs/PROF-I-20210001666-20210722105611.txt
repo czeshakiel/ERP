@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='BABY ANN G TAPOSOK', `datesigned1`='2021-07-22', `copay1`='2500', `doctor2`='FLORA MAE Z. JACOBO', `datesigned2`='2021-07-22', `copay2`='0.00', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

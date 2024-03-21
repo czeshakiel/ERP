@@ -1,0 +1,1 @@
+LYTEE BACCAY | `emppen`='', `empbusinessname`='FARMACIA DS', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210000340'

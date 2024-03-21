@@ -1,0 +1,1 @@
+ | `lastname`='CUSAY', `firstname`='RUBY ANN', `middlename`='VELARDE', `suffix`='', `birthdate`='Apr-20-1986', `age`='36', `sex`='F', `patientname`='CUSAY RUBY ANN VELARDE', `dateofbirth`='1986-04-20'

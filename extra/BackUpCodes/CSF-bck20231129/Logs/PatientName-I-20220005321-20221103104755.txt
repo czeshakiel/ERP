@@ -1,0 +1,1 @@
+ | `lastname`='SAMSON', `firstname`='LETICIA', `middlename`='TIMBAL', `suffix`='', `birthdate`='Aug-06-1961', `age`='61', `sex`='F', `patientname`='SAMSON LETICIA TIMBAL', `dateofbirth`='1961-08-06'

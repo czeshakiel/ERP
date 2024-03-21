@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='SHERYL GRACE LEYSA MUDANZA', `datesigned1`='2021-09-02', `copay1`='500', `doctor2`='NELMA S. MAGPUSAO', `datesigned2`='2021-09-02', `copay2`='8000', `doctor3`='AREX E. ACQUIATAN', `datesigned3`='2021-09-02', `copay3`='952'

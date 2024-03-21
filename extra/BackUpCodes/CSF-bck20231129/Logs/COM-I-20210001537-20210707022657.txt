@@ -1,0 +1,1 @@
+MIA MALATE | `comchoose`='M', `comname`='KARL IAN OBEJA CANAG', `comcontact`='09653847457', `comdatesigned`='Jul-07-2021', `comrelation`='', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='M', `carname`='KARL IAN OBEJA CANAG', `cardatesigned`='Jul-07-2021'

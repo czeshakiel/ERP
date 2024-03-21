@@ -1,0 +1,1 @@
+ | `emppen`='017030002222', `empbusinessname`='GOLDEN PARIS GASOLINE STATION', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220000492'

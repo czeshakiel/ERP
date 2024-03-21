@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220001831', '', 'REPUBLIC PAWNSHOPS CORPORATION', '', '', '', '') | Employment-Private

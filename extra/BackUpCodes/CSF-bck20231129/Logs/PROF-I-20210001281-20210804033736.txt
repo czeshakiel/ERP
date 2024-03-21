@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='JULICES LAFORTEZA', `datesigned1`='2021-06-21', `copay1`='0.00', `doctor2`='RONALD CERIALES', `datesigned2`='2021-06-21', `copay2`='0.00', `doctor3`='GEMMA DALAPO', `datesigned3`='2021-06-21', `copay3`='0.00'

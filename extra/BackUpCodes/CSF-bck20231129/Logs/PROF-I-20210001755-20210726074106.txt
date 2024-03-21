@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='JANIZA JUMAO-AS VILLALON', `datesigned1`='2021-07-26', `copay1`='2240', `doctor2`='MARIA JOSEFA CAMINO-MOJICA', `datesigned2`='2021-07-26', `copay2`='1000', `doctor3`='PAULINE JEA VARGAS', `datesigned3`='2020-07-26', `copay3`='560'

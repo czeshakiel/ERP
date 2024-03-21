@@ -1,0 +1,1 @@
+ECZEKIEL ABOY, | `doctor1`='GEFORD . ABEJO', `datesigned1`='Dec-12-2020', `copay1`='0.00', `doctor2`='BABY ANN G TAPOSOK', `datesigned2`='Dec-13-2020', `copay2`='0.00', `doctor3`='', `datesigned3`='Dec-14-2020', `copay3`='0.00'

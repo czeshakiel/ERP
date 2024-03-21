@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='MG GATEWAY SOUTH CORP', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220003110'

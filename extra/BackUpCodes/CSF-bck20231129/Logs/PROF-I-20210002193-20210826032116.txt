@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='NELMA S. MAGPUSAO', `datesigned1`='2021-08-26', `copay1`='3200', `doctor2`='RYAN LONZAGA', `datesigned2`='2021-08-26', `copay2`='2550', `doctor3`='DUANE L. SALUD', `datesigned3`='2021-08-26', `copay3`='850'

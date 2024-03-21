@@ -1,0 +1,1 @@
+ROBELYN ISABEL | `doctor1`='RONALD CERIALES', `datesigned1`='2021-08-23', `copay1`='28000', `doctor2`='JULICES LAFORTEZA', `datesigned2`='2021-08-23', `copay2`='28000', `doctor3`='RODRIGO A. DUARTE JR', `datesigned3`='2021-08-23', `copay3`='25000'

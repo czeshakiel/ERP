@@ -1,0 +1,1 @@
+MIA MALATE | `comchoose`='M', `comname`='STANLEY CALUMAY PINEDA', `comcontact`='09912012720', `comdatesigned`='Oct-14-2021', `comrelation`='', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='M', `carname`='STANLEY CALUMAY PINEDA', `cardatesigned`='Oct-14-2021'

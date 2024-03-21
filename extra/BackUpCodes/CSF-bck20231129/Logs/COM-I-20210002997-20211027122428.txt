@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `comchoose`='M', `comname`='PATRICIO LUMANOG PANILLA', `comcontact`='09666836912', `comdatesigned`='Oct-27-2021', `comrelation`='', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='M', `carname`='PATRICIO LUMANOG PANILLA', `cardatesigned`='Oct-27-2021'

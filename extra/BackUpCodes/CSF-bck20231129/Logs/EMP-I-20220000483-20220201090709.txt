@@ -1,0 +1,1 @@
+ | `emppen`='017030001801', `empbusinessname`='ARANGAY GOVERNMENT OF SAGCUNGAN-PRESIDENT ROXAS', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220000483'

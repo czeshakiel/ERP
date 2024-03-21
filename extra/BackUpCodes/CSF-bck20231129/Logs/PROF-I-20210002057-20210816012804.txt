@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='LILY YAP MUDANZA', `datesigned1`='2021-08-16', `copay1`='25000', `doctor2`='PACHOLO ABELLERA', `datesigned2`='2021-08-16', `copay2`='14000', `doctor3`='PHILLEN D URETA', `datesigned3`='2021-08-16', `copay3`='5000'

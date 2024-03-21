@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='HAZIEL MARK Z. AGUAYO', `datesigned1`='2021-06-22', `copay1`='0.00', `doctor2`='CHRISTOPHER C. EMBALSADO', `datesigned2`='2021-06-22', `copay2`='0.00', `doctor3`='NEIL HUMPREY ONGAYO LAQUIHON', `datesigned3`='2021-06-22', `copay3`='0.00'

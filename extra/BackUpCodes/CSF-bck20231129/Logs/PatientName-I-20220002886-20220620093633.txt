@@ -1,0 +1,1 @@
+ | `lastname`='BADA', `firstname`='ALFREDO', `middlename`='ALQUIZA', `suffix`='', `birthdate`='Aug-11-1968', `age`='53', `sex`='M', `patientname`='BADA ALFREDO ALQUIZA', `dateofbirth`='1968-08-11'

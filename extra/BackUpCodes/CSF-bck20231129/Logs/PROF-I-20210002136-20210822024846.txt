@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `doctor1`='BENILINA O. BADILLA', `datesigned1`='2021-08-22', `copay1`='25760.00', `doctor2`='MERCEDES T. HISO', `datesigned2`='2021-08-22', `copay2`='11500.00', `doctor3`='KATHREEN E SEGOCIO', `datesigned3`='2021-08-22', `copay3`='5750'

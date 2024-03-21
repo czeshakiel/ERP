@@ -1,0 +1,1 @@
+ | `comchoose`='R', `comname`='P. TARHATA S.A. KIRAM III SIAWAN AUSTRIA', `comcontact`='', `comdatesigned`='Jan-24-2022', `comrelation`='', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='R', `carname`='P. TARHATA S.A. KIRAM III SIAWAN AUSTRIA', `cardatesigned`='Jan-24-2022'

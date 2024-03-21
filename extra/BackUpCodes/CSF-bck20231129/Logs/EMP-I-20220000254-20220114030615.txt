@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220000254', '017030000235', 'BARANGAY GOVERNMENT OF GUBATAN-MAGPET', '', '', '', '') | Employment-Govt

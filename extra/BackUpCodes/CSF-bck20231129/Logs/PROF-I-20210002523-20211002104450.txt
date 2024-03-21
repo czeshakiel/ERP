@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='JULICES LAFORTEZA', `datesigned1`='2021-10-02', `copay1`='0.00', `doctor2`='', `datesigned2`='2021-10-02', `copay2`='112', `doctor3`='GRACE Q. MADIS', `datesigned3`='2021-10-02', `copay3`='112'

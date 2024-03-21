@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='ANTHONY TAN DIOKNO', `datesigned1`='2021-06-26', `copay1`='1500', `doctor2`='EDWIN Y. MUDANZA', `datesigned2`='2021-06-26', `copay2`='5250', `doctor3`='GUILLERMO MA. ALCEBAR SALCEDO', `datesigned3`='2021-06-26', `copay3`='8400'

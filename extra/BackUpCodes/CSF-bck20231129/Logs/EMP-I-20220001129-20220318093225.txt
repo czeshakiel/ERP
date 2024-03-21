@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220001129', '', 'FUNDACION ACCION CONTRA EL HAMBRE', '', '', '', '') | Employment-Private

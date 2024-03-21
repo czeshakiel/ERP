@@ -1,0 +1,1 @@
+SWITZEL JOY SAMBRIA | `doctor1`='DUANE L. SALUD', `datesigned1`='2021-07-01', `copay1`='0.00', `doctor2`='JULICES LAFORTEZA', `datesigned2`='2021-07-01', `copay2`='0.00', `doctor3`='GIFFORD BAGUIO ABEJO', `datesigned3`='2021-07-01', `copay3`='0.00'

@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='PAULINE JEA VARGAS', `datesigned1`='2021-05-16', `copay1`='1120', `doctor2`='JOHN RYAN DIZON', `datesigned2`='2021-05-16', `copay2`='9408', `doctor3`='JAN NATHLEEN  DIZON', `datesigned3`='2021-05-16', `copay3`='4704'

@@ -1,0 +1,1 @@
+ECZEKIEL ABOY, | `emppen`='1234567890-=', `empbusinessname`='WALA WALA', `empname`='MARK AL', `empcontactno`='8937749', `empsigdesignation`='SUPERVISOR', `empdatesigned`='' | UPDATE `admission` SET `type`='Self-Employed' WHERE `caseno`='I-20200000119'

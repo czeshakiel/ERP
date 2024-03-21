@@ -1,0 +1,1 @@
+ | `emppen`='141547100001', `empbusinessname`='MUNICIPAL GOVERNMENT OF ANTIPAS', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220000965'

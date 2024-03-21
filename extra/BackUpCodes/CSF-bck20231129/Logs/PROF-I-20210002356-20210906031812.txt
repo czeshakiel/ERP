@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='NELMA S. MAGPUSAO', `datesigned1`='2021-09-06', `copay1`='1920', `doctor2`='SHERYL GRACE LEYSA MUDANZA', `datesigned2`='2021-09-06', `copay2`='400', `doctor3`='HENRY B. MUDANZA JR', `datesigned3`='2021-09-06', `copay3`='960'

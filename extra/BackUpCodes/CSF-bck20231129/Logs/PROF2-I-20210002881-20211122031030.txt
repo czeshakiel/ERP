@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor4`='MARIA JOSEFA CAMINO-MOJICA', `datesigned4`='2021-11-22', `copay4`='15000.00', `doctor5`='NELMA S. MAGPUSAO', `datesigned5`='2021-11-22', `copay5`='24000.00', `doctor6`='RYAN LONZAGA', `datesigned6`='2021-11-22', `copay6`='29120.00'

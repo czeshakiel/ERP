@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `emppen`='', `empbusinessname`='CENTER FOR AGRICULTURE AND RURAL DEVELOPMENT (CARD) INC (A MICROFINANCE NGO)', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210003563'

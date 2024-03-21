@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `emppen`='01730001883', `empbusinessname`='JMT GAS STATION- ARAKAN', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210001953'

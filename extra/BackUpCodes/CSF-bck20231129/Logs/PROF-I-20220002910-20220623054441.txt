@@ -1,0 +1,1 @@
+SWITZEL JOY SAMBRIA | `doctor1`='GEMMA DALAPO', `datesigned1`='2022-06-23', `copay1`='0.00', `doctor2`='NEIL HUMPREY O. LAQUIHON', `datesigned2`='2022-06-23', `copay2`='0.00', `doctor3`='FLORA MAE ZAMBRANO JACOBO', `datesigned3`='2022-06-23', `copay3`='0.00'

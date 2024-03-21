@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220005238', '', 'METRO KIDAPAWAN WATER DISTRICT', '', '', '', '') | Employment-Govt

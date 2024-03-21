@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `doctor1`='HENRY B. MUDANZA JR', `datesigned1`='2021-08-27', `copay1`='2304.00', `doctor2`='NELMA S. MAGPUSAO', `datesigned2`='2021-08-27', `copay2`='4000', `doctor3`='MARIA JOSEFA CAMINO-MOJICA', `datesigned3`='2021-08-27', `copay3`='1000'

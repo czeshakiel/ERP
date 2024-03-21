@@ -1,0 +1,1 @@
+ | `emppen`='011000000360', `empbusinessname`='LIFEBANK MICROFINANCE FOUNDATION INC', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220005086'

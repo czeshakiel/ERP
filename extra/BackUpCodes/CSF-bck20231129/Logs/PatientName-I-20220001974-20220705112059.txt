@@ -1,0 +1,1 @@
+ | `lastname`='TAYONE', `firstname`='FORTUNATO', `middlename`='YBAÑEZ', `suffix`='SR.', `birthdate`='Jun-13-1949', `age`='73', `sex`='M', `patientname`='TAYONE FORTUNATO SR. YBAÑEZ', `dateofbirth`='1949-06-13'

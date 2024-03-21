@@ -1,0 +1,1 @@
+JOLANIE PAMAT | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20210001783', '150447000003', 'CITY GOVERNMENT OF KIDAPAWAN', '', '', '', '') | Employment-Govt

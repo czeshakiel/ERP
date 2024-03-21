@@ -1,0 +1,1 @@
+JOLANIE PAMAT | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20210002610', '017030000488', 'TNALAK MULTIPURPOSE COOPERATIVE (FORMERLY TNALAK LABOR SERVICE COOPERATIVE - KIDAPAWAN)', '', '', '', '') | Employment-Private

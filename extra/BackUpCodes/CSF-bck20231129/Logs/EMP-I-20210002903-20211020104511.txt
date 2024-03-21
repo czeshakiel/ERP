@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `emppen`='019000026818', `empbusinessname`='SUMIFRU (PHILIPPINES) CORPORATION', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210002903'

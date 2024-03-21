@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='FLAGSTAR SECURITY SAFETY AND INVESTIGATION SERVICES INC', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220001573'

@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='RODRIGO A. DUARTE JR', `datesigned1`='2021-09-15', `copay1`='51000', `doctor2`='GIFFORD BAGUIO ABEJO', `datesigned2`='2021-09-15', `copay2`='11200', `doctor3`='JULICES LAFORTEZA', `datesigned3`='-11-30', `copay3`='0.00'

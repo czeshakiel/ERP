@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `comchoose`='R', `comname`='JEMMER MANUMBA', `comcontact`='09512647531', `comdatesigned`='May-14-2021', `comrelation`='Others', `comrelationos`='LIVE IN PARTNER', `comreason`='1', `comreasonos`='', `comuw`='3', `carchoose`='R', `carname`='JEMMER MANUMBA', `cardatesigned`='May-14-2021'

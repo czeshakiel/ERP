@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='DOMINIC LAUS', `datesigned1`='2021-07-02', `copay1`='0.00', `doctor2`='GEMMA DALAPO', `datesigned2`='2021-07-02', `copay2`='900.00', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

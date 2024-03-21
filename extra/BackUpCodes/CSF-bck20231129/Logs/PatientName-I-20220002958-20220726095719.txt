@@ -1,0 +1,1 @@
+ | `lastname`='DOMINISTO', `firstname`='NENITA', `middlename`='PAMA', `suffix`='', `birthdate`='Jan-14-1942', `age`='80', `sex`='F', `patientname`='DOMINISTO NENITA PAMA', `dateofbirth`='1942-01-14'

@@ -1,0 +1,1 @@
+INSERT INTO `packagedetails` (`pckgno`, `code`, `description`, `price`, `autodistro`, `ph1`, `ph2`, `hmo`, `exc`) VALUES ('PCKG-20220929120935', '5708', 'COLONOSCOPY KIT', '7150', '0', '', '', '', '')

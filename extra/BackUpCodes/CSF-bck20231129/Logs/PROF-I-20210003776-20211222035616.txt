@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='CHRISTOPHER C. EMBALSADO', `datesigned1`='2021-12-22', `copay1`='2000', `doctor2`='GEMMA DALAPO', `datesigned2`='2021-12-22', `copay2`='500', `doctor3`='MARIA JOSEFA CAMINO-MOJICA', `datesigned3`='2021-12-22', `copay3`='1000'

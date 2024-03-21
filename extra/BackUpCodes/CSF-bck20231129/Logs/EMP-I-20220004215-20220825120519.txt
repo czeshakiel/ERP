@@ -1,0 +1,1 @@
+ | `emppen`='141447000001', `empbusinessname`='DEPARTMENT OF EDUCATION-TULUNAN NATIONAL HIGH SCHOOL', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220004215'

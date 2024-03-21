@@ -1,0 +1,1 @@
+MIA MALATE | `lastname`='CLARITO', `firstname`='MARITES', `middlename`='MAÑAPAO', `suffix`='', `birthdate`='Apr-23-1973', `age`='47', `sex`='F', `patientname`='CLARITO MARITES MAÑAPAO', `dateofbirth`='1973-04-23'

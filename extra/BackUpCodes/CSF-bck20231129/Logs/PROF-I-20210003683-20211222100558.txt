@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='AREX E. ACQUIATAN', `datesigned1`='2021-12-22', `copay1`='4480', `doctor2`='EDWIN YANSON MUDANZA', `datesigned2`='2021-12-22', `copay2`='3150', `doctor3`='HENRY B. MUDANZA JR', `datesigned3`='2021-12-22', `copay3`='2500'

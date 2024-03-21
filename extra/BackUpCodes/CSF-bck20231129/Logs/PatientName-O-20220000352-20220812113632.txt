@@ -1,0 +1,1 @@
+ | `lastname`='CATAMPUNGAN', `firstname`='RENATO', `middlename`='DULACA', `suffix`='JR', `birthdate`='Mar-29-1972', `age`='50', `sex`='M', `patientname`='CATAMPUNGAN RENATO JR DULACA', `dateofbirth`='1972-03-29'

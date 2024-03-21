@@ -1,0 +1,1 @@
+MIA MALATE | `doctor4`='CHRISTOPHER C. EMBALSADO', `datesigned4`='2021-07-30', `copay4`='2000.00', `doctor5`='NEIL HUMPREY ONGAYO LAQUIHON', `datesigned5`='2021-07-30', `copay5`='200.00', `doctor6`='JOHN RYAN DIZON', `datesigned6`='2021-07-30', `copay6`='1344.00'

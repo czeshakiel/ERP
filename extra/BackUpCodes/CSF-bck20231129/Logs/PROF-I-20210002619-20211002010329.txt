@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='ROMMEL VARGAS', `datesigned1`='2021-10-02', `copay1`='0.00', `doctor2`='RODRIGO A. DUARTE JR', `datesigned2`='2021-10-02', `copay2`='0.00', `doctor3`='RYAN LONZAGA', `datesigned3`='2021-10-02', `copay3`='0.00'

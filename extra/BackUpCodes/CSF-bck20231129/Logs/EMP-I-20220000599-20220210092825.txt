@@ -1,0 +1,1 @@
+ | `emppen`='151038000001', `empbusinessname`='MUNICIPAL GOVERNMENT OF PAGALUNGAN', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220000599'

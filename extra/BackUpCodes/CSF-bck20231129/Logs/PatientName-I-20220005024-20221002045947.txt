@@ -1,0 +1,1 @@
+ | `lastname`='SALVADOR', `firstname`='HASSELL GRACE', `middlename`='SUBIBE', `suffix`='', `birthdate`='Dec-19-1983', `age`='38', `sex`='F', `patientname`='SALVADOR HASSELL GRACE SUBIBE', `dateofbirth`='1983-12-19'

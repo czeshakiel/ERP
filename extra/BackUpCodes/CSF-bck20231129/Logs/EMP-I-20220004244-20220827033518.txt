@@ -1,0 +1,1 @@
+ | `emppen`='140247000001', `empbusinessname`='DEPARTMENT OF EDUCATION-CARMEN NATIONAL HIGH SCHOOL', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220004244'

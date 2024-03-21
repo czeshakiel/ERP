@@ -1,0 +1,1 @@
+LYTEE BACCAY | `doctor1`='RODRIGO A. DUARTE JR', `datesigned1`='2021-10-08', `copay1`='14000', `doctor2`='JULICES LAFORTEZA', `datesigned2`='2021-10-08', `copay2`='19000', `doctor3`='HAZIEL MARK Z. AGUAYO', `datesigned3`='2021-10-08', `copay3`='39200'

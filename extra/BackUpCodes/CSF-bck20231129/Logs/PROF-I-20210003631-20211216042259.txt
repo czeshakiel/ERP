@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='EDWIN YANSON MUDANZA', `datesigned1`='2021-12-16', `copay1`='600', `doctor2`='GEMMA DALAPO', `datesigned2`='2021-12-16', `copay2`='1500', `doctor3`='GIFFORD BAGUIO ABEJO', `datesigned3`='2021-12-16', `copay3`='350'

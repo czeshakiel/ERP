@@ -1,0 +1,1 @@
+ | `emppen`='210276000324', `empbusinessname`='PRIME POWER MANPOWER SERVICES', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220005188'

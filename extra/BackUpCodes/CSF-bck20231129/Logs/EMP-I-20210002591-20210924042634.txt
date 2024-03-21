@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20210002591', '', 'COTABATO ELECTRIC COOPERATIVE INC', '', '', '', '') | Employment-Private

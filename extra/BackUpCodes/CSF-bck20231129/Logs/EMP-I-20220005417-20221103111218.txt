@@ -1,0 +1,1 @@
+ | `emppen`='016000001714', `empbusinessname`='DAVAO MANPOWER INC', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220005417'

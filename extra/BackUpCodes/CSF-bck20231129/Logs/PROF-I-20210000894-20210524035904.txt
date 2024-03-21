@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='JANIZA JUMAO-AS VILLALON', `datesigned1`='2021-05-24', `copay1`='2240', `doctor2`='JOHN RYAN DIZON', `datesigned2`='2021-05-24', `copay2`='1344', `doctor3`='SHERYL GRACE LEYSA MUDANZA', `datesigned3`='2021-05-24', `copay3`='0.00'

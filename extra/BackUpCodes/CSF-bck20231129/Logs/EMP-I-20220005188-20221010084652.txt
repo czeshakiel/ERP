@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220005188', '', 'PRIME POWER MANPOWER SERVICES', '', '', '', '') | Employment-Private

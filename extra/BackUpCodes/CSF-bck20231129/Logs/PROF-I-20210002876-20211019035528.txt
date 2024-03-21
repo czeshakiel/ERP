@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='YVONNE JOIE M. PALMA', `datesigned1`='2021-10-19', `copay1`='560', `doctor2`='JULICES LAFORTEZA', `datesigned2`='2021-10-19', `copay2`='560', `doctor3`='ALTHEA SIENNA N FERIDO', `datesigned3`='2021-10-19', `copay3`='560'

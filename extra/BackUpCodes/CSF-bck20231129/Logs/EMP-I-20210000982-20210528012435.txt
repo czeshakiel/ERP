@@ -1,0 +1,1 @@
+JOLANIE PAMAT | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20210000982', '', 'TAYTAY SA KAUSWAGAN (A MICROFINANCE NGO) INC', '', '', '', '') | Employment-Private

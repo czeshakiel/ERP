@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='PERA MULTIPURPOSE COOPERATIVE (PERA)', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='O-20220000363'

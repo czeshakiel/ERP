@@ -1,0 +1,1 @@
+ | `emppen`='017000004112', `empbusinessname`='BARANGAY GOVERNMENT OF INAC-MAGPET', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220002296'

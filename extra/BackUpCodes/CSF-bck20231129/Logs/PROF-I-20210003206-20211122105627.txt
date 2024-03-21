@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='ALTHEA SIENNA N FERIDO', `datesigned1`='2021-11-22', `copay1`='20900', `doctor2`='JULICES LAFORTEZA', `datesigned2`='2021-11-22', `copay2`='5600', `doctor3`='NARESH I. BUXANI', `datesigned3`='2021-11-22', `copay3`='650'

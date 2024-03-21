@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `emppen`='003000020129', `empbusinessname`='ADVANCED AGRISOLUTIONS PHILIPPINES CORPORATION-(FORMLY:AGRISOLUTIONS PHILIPPINES INC)', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210001572'

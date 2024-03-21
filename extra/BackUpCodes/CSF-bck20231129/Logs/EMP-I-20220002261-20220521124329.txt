@@ -1,0 +1,1 @@
+ | `emppen`='017030001358', `empbusinessname`='LAKE CITI LENDING INVESTOR INC- KIDAPAWAN', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220002261'

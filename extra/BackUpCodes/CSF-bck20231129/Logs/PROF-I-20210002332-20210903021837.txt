@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='PAULINE JEA VARGAS', `datesigned1`='2021-09-03', `copay1`='3560', `doctor2`='AREX E. ACQUIATAN', `datesigned2`='2021-09-03', `copay2`='952', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

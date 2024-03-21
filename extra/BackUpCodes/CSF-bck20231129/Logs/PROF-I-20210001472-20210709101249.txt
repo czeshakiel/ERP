@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='CHRISTOPHER C. EMBALSADO', `datesigned1`='2021-07-09', `copay1`='3200', `doctor2`='R.DANA ANDREW B. NATANAGARA', `datesigned2`='2021-07-09', `copay2`='16636', `doctor3`='NELMA S. MAGPUSAO', `datesigned3`='2021-07-09', `copay3`='5600'

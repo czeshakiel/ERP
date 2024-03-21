@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='BARANGAY GOVERNMENT OF LABUO PRESIDENT ROXAS', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='O-20220000448'

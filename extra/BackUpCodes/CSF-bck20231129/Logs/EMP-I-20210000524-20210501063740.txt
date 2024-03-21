@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `emppen`='017030000099', `empbusinessname`='DPGM MARKETING', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210000524'

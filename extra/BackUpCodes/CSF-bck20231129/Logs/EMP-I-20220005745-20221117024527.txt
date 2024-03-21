@@ -1,0 +1,1 @@
+ | `emppen`='001030000757', `empbusinessname`='HC CONSUMER FINANCE PHILIPPINES INC (HOMER HCI HOLDINGS PHILIPPINES INC)', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220005745'

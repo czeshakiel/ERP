@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220005536', '', 'NOTRE DAME OF KIDAPAWAN COLLEGE', '', '', '', '') | Employment-Private

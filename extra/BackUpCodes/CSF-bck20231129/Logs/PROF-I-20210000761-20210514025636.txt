@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='MARIA JOSEFA  CAMINO-MOJICA', `datesigned1`='2021-05-14', `copay1`='0.00', `doctor2`='JOHN RYAN DIZON', `datesigned2`='2021-05-14', `copay2`='0.00', `doctor3`='JANIZA  VILLALON', `datesigned3`='2021-05-14', `copay3`='0.00'

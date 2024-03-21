@@ -1,0 +1,1 @@
+JOLANIE PAMAT | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20210002389', '017030002154', 'MC HIRO REALTY CORPORATION-KIDAPAWAN CITY', '', '', '', '') | Employment-Private

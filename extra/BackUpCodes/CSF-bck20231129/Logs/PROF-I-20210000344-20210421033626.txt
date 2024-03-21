@@ -1,0 +1,1 @@
+LYTEE BACCAY | `doctor1`='HENRY B. MUDANZA JR', `datesigned1`='2021-04-21', `copay1`='0.00', `doctor2`='MARIE HAZEL  T. TALJA', `datesigned2`='2021-04-21', `copay2`='2420.00', `doctor3`='SHERYL GRACE LEYSA MUDANZA', `datesigned3`='2021-04-21', `copay3`='450.00'

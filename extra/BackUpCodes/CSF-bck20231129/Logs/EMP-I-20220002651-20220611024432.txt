@@ -1,0 +1,1 @@
+ | `emppen`='150498000002', `empbusinessname`='MUNICIPAL GOVERNMENT OF MATALAM', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220002651'

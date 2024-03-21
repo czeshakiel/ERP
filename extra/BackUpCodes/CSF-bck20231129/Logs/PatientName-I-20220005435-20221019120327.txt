@@ -1,0 +1,1 @@
+ | `lastname`='ARELLANO', `firstname`='TEOFILO', `middlename`='MONTIFALCO', `suffix`='SR', `birthdate`='Oct-25-1946', `age`='75', `sex`='M', `patientname`='ARELLANO TEOFILO SR MONTIFALCO', `dateofbirth`='1946-10-25'

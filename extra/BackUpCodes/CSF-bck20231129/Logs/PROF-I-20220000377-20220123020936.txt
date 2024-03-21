@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='GIFFORD BAGUIO ABEJO', `datesigned1`='2022-01-23', `copay1`='8000', `doctor2`='PACHOLO PALMA ABELLERA', `datesigned2`='2022-01-23', `copay2`='8960', `doctor3`='JANIZA JUMAO-AS VILLALON', `datesigned3`='2022-01-23', `copay3`='2240'

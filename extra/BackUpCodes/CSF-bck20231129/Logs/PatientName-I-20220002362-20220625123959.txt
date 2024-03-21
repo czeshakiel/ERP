@@ -1,0 +1,1 @@
+ | `lastname`='ORTEGA', `firstname`='MIRALUNA', `middlename`='PALMA', `suffix`='', `birthdate`='Apr-26-1956', `age`='66', `sex`='F', `patientname`='ORTEGA MIRALUNA PALMA', `dateofbirth`='1956-04-26'

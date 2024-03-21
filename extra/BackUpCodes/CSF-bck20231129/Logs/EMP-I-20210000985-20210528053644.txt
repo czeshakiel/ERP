@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `emppen`='200847300003', `empbusinessname`='COTABATO ELECTRIC COOPERATIVE INC', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20210000985'

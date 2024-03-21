@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='ROSEDIDA R. RABAYA', `datesigned1`='2021-08-09', `copay1`='25000', `doctor2`='PACHOLO ABELLERA', `datesigned2`='2021-08-09', `copay2`='14000', `doctor3`='BENILINA O. BADILLA', `datesigned3`='2021-08-09', `copay3`='6250.00'

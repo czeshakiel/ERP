@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220004175', '', 'MARMARAS NAVIGATION LTD/MARSAMAN MANNING AGENCY INC', '', '', '', '') | Employment-Private

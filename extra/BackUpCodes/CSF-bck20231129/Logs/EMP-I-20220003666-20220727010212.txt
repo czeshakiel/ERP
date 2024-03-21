@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='METRO KIDAPAWAN WATER DISTRICT', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220003666'

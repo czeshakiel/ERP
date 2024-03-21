@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='JULICES LAFORTEZA', `datesigned1`='2021-10-29', `copay1`='22400', `doctor2`='RAUL JERRY Q. ISAGUIRRE', `datesigned2`='2021-10-29', `copay2`='44800', `doctor3`='HENRY B. MUDANZA JR', `datesigned3`='2021-10-29', `copay3`='1780'

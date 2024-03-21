@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='UNDER THE NAME AND STYLE OF PALAWAN PAWNSHOP AND PALAWAN EXPRESS PERA PADALA', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220006081'

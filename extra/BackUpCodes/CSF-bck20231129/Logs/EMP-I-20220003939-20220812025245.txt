@@ -1,0 +1,1 @@
+ | `emppen`='140374100005', `empbusinessname`='BUREAU OF FIRE PROTECTION- NHQ', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220003939'

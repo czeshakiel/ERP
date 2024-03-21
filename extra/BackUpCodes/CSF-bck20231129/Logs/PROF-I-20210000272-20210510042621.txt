@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='AREX E. ACQUIATAN', `datesigned1`='2021-05-10', `copay1`='11200.00', `doctor2`='EDWIN Y. MUDANZA', `datesigned2`='2021-05-10', `copay2`='25000', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

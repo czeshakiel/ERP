@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='CHRISTOPHER C. EMBALSADO', `datesigned1`='2022-01-23', `copay1`='0.00', `doctor2`='NEIL HUMPREY O. LAQUIHON', `datesigned2`='2022-01-23', `copay2`='0.00', `doctor3`='GIFFORD BAGUIO ABEJO', `datesigned3`='2022-01-23', `copay3`='700'

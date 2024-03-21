@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='PAULINE JEA VARGAS', `datesigned1`='', `copay1`='2800.00', `doctor2`='NARESH I. BUXANI', `datesigned2`='', `copay2`='67200.00', `doctor3`='GUILLERMO MA. ALCEBAR SALCEDO', `datesigned3`='', `copay3`='33600.00'

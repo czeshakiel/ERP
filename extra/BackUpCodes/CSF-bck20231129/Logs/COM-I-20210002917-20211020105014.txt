@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `comchoose`='R', `comname`='ROMEL B. NONOL', `comcontact`='09100419753', `comdatesigned`='Oct-20-2021', `comrelation`='Spouse', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='R', `carname`='ROMEL B. NONOL', `cardatesigned`='Oct-20-2021'

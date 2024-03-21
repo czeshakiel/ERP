@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='GEMMA DALAPO', `datesigned1`='2021-12-13', `copay1`='2400', `doctor2`='JOHN RYAN DIZON', `datesigned2`='2021-12-13', `copay2`='1120', `doctor3`='AREX E. ACQUIATAN', `datesigned3`='2021-12-13', `copay3`='0.00'

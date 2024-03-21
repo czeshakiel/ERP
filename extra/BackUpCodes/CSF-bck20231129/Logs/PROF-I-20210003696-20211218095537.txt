@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='BENILINA O. BADILLA', `datesigned1`='2021-12-18', `copay1`='5000', `doctor2`='MERCEDES T. HISO', `datesigned2`='2021-12-18', `copay2`='10000', `doctor3`='ROSEDIDA R. RABAYA', `datesigned3`='2021-12-18', `copay3`='20000'

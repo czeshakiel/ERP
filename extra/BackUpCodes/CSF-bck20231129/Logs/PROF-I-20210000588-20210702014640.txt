@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='GEMMA DALAPO', `datesigned1`='2021-05-18', `copay1`='1328', `doctor2`='R.DANA ANDREW B. NATANAGARA', `datesigned2`='2021-05-18', `copay2`='7976', `doctor3`='MARIA JOSEFA CAMINO-MOJICA', `datesigned3`='2021-05-18', `copay3`='1000'

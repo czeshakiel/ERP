@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220001723', '', 'DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS 12 - EQUIPMENT MANAGEMENT DIVISION - COTABATO CITY', '', '', '', '') | Employment-Govt

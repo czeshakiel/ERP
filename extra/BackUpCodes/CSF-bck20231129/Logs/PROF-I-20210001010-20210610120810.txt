@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `doctor1`='RYAN LONZAGA', `datesigned1`='2021-06-10', `copay1`='33600', `doctor2`='GIFFORD BAGUIO ABEJO', `datesigned2`='2021-06-10', `copay2`='0.00', `doctor3`='JULICES LAFORTEZA', `datesigned3`='2021-06-10', `copay3`='32'

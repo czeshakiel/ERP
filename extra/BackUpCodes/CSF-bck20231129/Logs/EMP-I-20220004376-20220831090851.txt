@@ -1,0 +1,1 @@
+ | `emppen`='200276302074', `empbusinessname`='EAST WEST RURAL BANK INC', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220004376'

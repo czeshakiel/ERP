@@ -1,0 +1,1 @@
+ | `lastname`='CASTRO', `firstname`='ANGEL CASHIEL', `middlename`='BELASA', `suffix`='', `birthdate`='Mar-26-2005', `age`='17', `sex`='F', `patientname`='CASTRO ANGEL CASHIEL BELASA', `dateofbirth`='2005-03-26'

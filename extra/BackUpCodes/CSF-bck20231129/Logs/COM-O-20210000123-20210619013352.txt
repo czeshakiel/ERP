@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `comchoose`='M', `comname`='JEFFI YBAÑEZ DESIERTO', `comcontact`='09381982072', `comdatesigned`='Jun-19-2021', `comrelation`='', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='M', `carname`='JEFFI YBAÑEZ DESIERTO', `cardatesigned`='Jun-19-2021'

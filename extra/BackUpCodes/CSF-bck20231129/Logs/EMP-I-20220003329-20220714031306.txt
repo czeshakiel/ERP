@@ -1,0 +1,1 @@
+ | `emppen`='230276001256', `empbusinessname`='SEMIRARA MINING AND POWER CORPORATION', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220003329'

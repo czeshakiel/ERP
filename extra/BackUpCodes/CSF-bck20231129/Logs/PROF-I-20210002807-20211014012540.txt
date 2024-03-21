@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='MARIA JOSEFA CAMINO-MOJICA', `datesigned1`='2021-10-14', `copay1`='4000', `doctor2`='SHERYL GRACE LEYSA MUDANZA', `datesigned2`='2021-10-14', `copay2`='500', `doctor3`='HENRY B. MUDANZA JR', `datesigned3`='2021-10-14', `copay3`='1500'

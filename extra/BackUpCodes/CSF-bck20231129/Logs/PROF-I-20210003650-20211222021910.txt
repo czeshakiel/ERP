@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='EDWIN YANSON MUDANZA', `datesigned1`='2021-12-22', `copay1`='5250', `doctor2`='JOEYLIN A.PARCON', `datesigned2`='2021-12-22', `copay2`='3300', `doctor3`='PACHOLO PALMA ABELLERA', `datesigned3`='2021-12-22', `copay3`='8400'

@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `emppen`='', `empbusinessname`='MUNICIPAL GOVERNMENT OF MAGPET', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20210001253'

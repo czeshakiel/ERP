@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='PH GLOBAL JET EXPRESS INC DOING BUSINESS UNDER THE NAME AND STYLE OF J&T EXPRESS', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220001993'

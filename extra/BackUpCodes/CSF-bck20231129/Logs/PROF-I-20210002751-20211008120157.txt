@@ -1,0 +1,1 @@
+LYTEE BACCAY | `doctor1`='CHRISTOPHER C. EMBALSADO', `datesigned1`='2021-10-08', `copay1`='1500', `doctor2`='NARESH I. BUXANI', `datesigned2`='2021-10-08', `copay2`='650', `doctor3`='GEMMA DALAPO', `datesigned3`='2021-10-08', `copay3`='0.00'

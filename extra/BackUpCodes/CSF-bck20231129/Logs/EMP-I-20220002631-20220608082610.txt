@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220002631', '', 'COTABATO FOUNDATION COLLEGE OF SCIENCE AND TECHNOLOGY', '', '', '', '') | Employment-Govt

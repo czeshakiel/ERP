@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='JULICES LAFORTEZA', `datesigned1`='2021-10-30', `copay1`='0.00', `doctor2`='HAZIEL MARK Z. AGUAYO', `datesigned2`='2021-10-30', `copay2`='0.00', `doctor3`='GIFFORD BAGUIO ABEJO', `datesigned3`='2021-10-30', `copay3`='4032'

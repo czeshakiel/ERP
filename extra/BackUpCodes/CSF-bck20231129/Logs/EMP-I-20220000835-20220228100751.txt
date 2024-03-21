@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220000835', '', 'MUNICIPAL GOVERNMENT OF ANTIPAS', '', '', '', '') | Employment-Govt

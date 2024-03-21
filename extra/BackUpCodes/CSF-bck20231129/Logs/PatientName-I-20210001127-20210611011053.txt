@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `lastname`='GAMALE', `firstname`='RAMON', `middlename`='NAMUAG', `suffix`='', `birthdate`='Nov-18-1957', `age`='63', `sex`='M', `patientname`='GAMALE RAMON NAMUAG', `dateofbirth`='1957-11-18'

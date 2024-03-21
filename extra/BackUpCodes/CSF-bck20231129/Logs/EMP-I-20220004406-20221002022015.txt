@@ -1,0 +1,1 @@
+ | `emppen`='017030002217', `empbusinessname`='DR R A M ALBUTRA GENERAL HOSPITAL', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220004406'

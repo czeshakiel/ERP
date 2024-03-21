@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220004952', '', 'DEPARTMENT OF EDUCATION KIDAPAWAN CITY DIVISION', '', '', '', '') | Employment-Govt

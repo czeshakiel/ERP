@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='AJ HI-TIME HOTEL & RESTAURANT', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220004892'

@@ -1,0 +1,1 @@
+SWITZEL JOY SAMBRIA | `doctor1`='JOEYLIN A. PARCON', `datesigned1`='2021-06-30', `copay1`='1500', `doctor2`='JULICES LAFORTEZA', `datesigned2`='2021-06-30', `copay2`='3480', `doctor3`='RODRIGO A. DUARTE JR', `datesigned3`='2021-06-30', `copay3`='8960'

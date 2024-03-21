@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='R.DANA ANDREW B. NATANAGARA', `datesigned1`='2021-05-13', `copay1`='2000.00', `doctor2`='RODRIGO A. DUARTE JR', `datesigned2`='2021-05-13', `copay2`='11130.00', `doctor3`='GEMMA DALAPO', `datesigned3`='2021-05-13', `copay3`='400.00'

@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor4`='JOSE NICANOR P. DEL ROSARIO III', `datesigned4`='2021-06-23', `copay4`='3360.00', `doctor5`='MARIA JOSEFA CAMINO-MOJICA', `datesigned5`='2021-06-23', `copay5`='14000.00', `doctor6`='NELMA S. MAGPUSAO', `datesigned6`='2021-06-23', `copay6`='27000.00'

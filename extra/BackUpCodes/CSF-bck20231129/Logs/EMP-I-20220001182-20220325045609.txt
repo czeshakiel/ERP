@@ -1,0 +1,1 @@
+ | `emppen`='150498000001', `empbusinessname`='MUNICIPAL GOVERNMENT OF MLANG', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220001182'

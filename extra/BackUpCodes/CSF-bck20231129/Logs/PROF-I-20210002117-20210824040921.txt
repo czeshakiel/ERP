@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='JOHN RYAN DIZON', `datesigned1`='2021-08-24', `copay1`='1680', `doctor2`='WILFRED JR. C. ARTES', `datesigned2`='2021-08-24', `copay2`='0.00', `doctor3`='JAN NATHLEEN DIZON', `datesigned3`='2021-08-24', `copay3`='2690'

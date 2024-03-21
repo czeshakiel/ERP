@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220002608', '', 'LEAD WITH INTEGRITY AND GOOD GOVERNANCE IN HELPING COMMUNITIES FOR HOLISTIC TRANSFORMATION (LIGHT) MICROFINANCE INC - KIDAPAWAN', '', '', '', '') | Employment-Private

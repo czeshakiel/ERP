@@ -1,0 +1,1 @@
+MIA MALATE | `emppen`='016000000539', `empbusinessname`='SOUTH DAVAO DEVELOPMENT CO INC-AGRI BASED', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210002974'

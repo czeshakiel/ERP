@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='GIFFORD BAGUIO ABEJO', `datesigned1`='2021-10-28', `copay1`='24000', `doctor2`='JANIZA JUMAO-AS VILLALON', `datesigned2`='2021-10-28', `copay2`='3360', `doctor3`='NARESH I. BUXANI', `datesigned3`='2021-10-28', `copay3`='67200'

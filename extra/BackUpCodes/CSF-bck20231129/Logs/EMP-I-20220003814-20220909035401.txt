@@ -1,0 +1,1 @@
+ | `emppen`='200374301865', `empbusinessname`='ASIA UNITED BANK CORPORATION', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220003814'

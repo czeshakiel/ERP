@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='PAULINE JEA VARGAS', `datesigned1`='2021-12-04', `copay1`='1680', `doctor2`='RYAN LONZAGA', `datesigned2`='2021-12-04', `copay2`='11200', `doctor3`='VANINA H. JAVIER', `datesigned3`='2021-12-04', `copay3`='2220'

@@ -1,0 +1,1 @@
+MIA MALATE | `emppen`='', `empbusinessname`='DEPARTMENT OF EDUCATION-MAGUINDANAO DIVISION OFFFICE', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20210001756'

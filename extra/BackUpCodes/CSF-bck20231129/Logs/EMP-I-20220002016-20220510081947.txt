@@ -1,0 +1,1 @@
+ | `emppen`='160447000001', `empbusinessname`='NATIONAL IRRIGATION ADMINISTRATION-COTABATO PROVINCIAL OFFICE', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220002016'

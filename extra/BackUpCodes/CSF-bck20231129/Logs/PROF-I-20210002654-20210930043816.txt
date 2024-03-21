@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='MARIE HAZEL T. TALJA', `datesigned1`='2021-09-30', `copay1`='392', `doctor2`='HENRY B. MUDANZA JR', `datesigned2`='2021-09-30', `copay2`='1000', `doctor3`='EDWIN YANSON MUDANZA', `datesigned3`='2021-09-30', `copay3`='0.00'

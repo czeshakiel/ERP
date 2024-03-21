@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `emppen`='', `empbusinessname`='MUNICIPAL GOVERNMENT OF MLANG', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20210001046'

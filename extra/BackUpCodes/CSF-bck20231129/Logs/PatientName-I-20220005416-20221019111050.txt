@@ -1,0 +1,1 @@
+ | `lastname`='MANCERA', `firstname`='MA LORNA', `middlename`='NUÑEZ', `suffix`='', `birthdate`='Feb-25-1954', `age`='68', `sex`='F', `patientname`='MANCERA MA LORNA NUÑEZ', `dateofbirth`='1954-02-25'

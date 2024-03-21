@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='HENRY B. MUDANZA JR', `datesigned1`='2021-11-16', `copay1`='1200', `doctor2`='KARL PAOLO OLIVO DILLERA', `datesigned2`='2021-11-16', `copay2`='3360', `doctor3`='', `datesigned3`='2021-11-16', `copay3`='0.00'

@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='RODRIGO A. DUARTE JR', `datesigned1`='2021-10-16', `copay1`='0.00', `doctor2`='DUANE L. SALUD', `datesigned2`='2021-10-16', `copay2`='784', `doctor3`='HAZIEL MARK Z. AGUAYO', `datesigned3`='2021-10-16', `copay3`='0.00'

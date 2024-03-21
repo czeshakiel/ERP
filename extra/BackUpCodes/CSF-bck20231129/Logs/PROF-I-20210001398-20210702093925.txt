@@ -1,0 +1,1 @@
+SWITZEL JOY SAMBRIA | `doctor1`='EDWIN Y. MUDANZA', `datesigned1`='2021-07-02', `copay1`='480', `doctor2`='GEMMA DALAPO', `datesigned2`='2021-07-02', `copay2`='1724', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220006102', '', 'MT APO BIRTHING HOME & CLINIC-MAKILALA', '', '', '', '') | Employment-Private

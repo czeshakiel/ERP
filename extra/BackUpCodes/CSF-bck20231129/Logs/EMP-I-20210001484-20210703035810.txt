@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20210001484', '', 'PHILIPPINE ARMY - AFP', '', '', '', '') | Employment-Govt

@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='PROGRESSIA MANPOWER SERVICES - RHEAN GROUP OF COMPANIES', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220002206'

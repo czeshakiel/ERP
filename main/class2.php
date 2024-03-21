@@ -1,0 +1,95 @@
+<?php
+session_start();
+
+include($_SERVER['DOCUMENT_ROOT'].'/ERP/main/connection.php');
+
+$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+if(strpos($url, "index.php")!==false){$url = str_replace("index.php", "", $url); echo"<script>window.location='$url';</script>";}
+
+$sql = $conn->query("select * from ipaddress");
+while($result = $sql->fetch_assoc()){$ip = $result['ipaddress'];}
+$ipadd = "http://".$ip."/ERP/main/";
+$myip = $_SERVER['REMOTE_ADDR'];
+$arv_ip = $_SERVER['HTTP_HOST'];
+
+$sqlxx = "SELECT * from heading";
+$resultxx = $conn->query($sqlxx);
+while($rowxx = $resultxx->fetch_assoc()) {
+$heading=$rowxx['heading'];
+$address=$rowxx['address'];
+$telno=$rowxx['telno'];
+$softwarename=$rowxx['designation'];
+}
+
+$sqlxxx = "SELECT * from mission";
+$resultxxx = $conn->query($sqlxxx);
+while($rowxxx = $resultxxx->fetch_assoc()) {
+$mission=$rowxxx['mission'];
+$vision=$rowxxx['vision'];
+}
+
+// ----------------------------------------------
+if(isset($_SESSION["username"])){$user=$_SESSION["username"];}else{$user="";}
+if(isset($_SESSION["userunique"])){$userunique=$_SESSION["userunique"];}else{$userunique="";}
+if(isset($_SESSION["password"])){$password=$_SESSION["password"];}else{$password="";}
+if(isset($_SESSION["dept"])){$dept=strtoupper($_SESSION["dept"]);}else{$dept="";}
+if(isset($_SESSION["branch"])){$branch=$_SESSION["branch"];}else{$branch="";}
+if(isset($_GET['view'])){$view=$_GET['view'];}else{$view="";}
+if(isset($_GET["modulex"])){$modulex=$_GET["modulex"];}else{$modulex="";}
+if(isset($_GET['mm'])){$mm = $_GET['mm'];}else{$mm=date("m");}
+if(isset($_GET['dd'])){$dd = $_GET['dd'];}else{$mm=date("d");}
+if(isset($_GET['yy'])){$yy = $_GET['yy'];}else{$mm=date("Y");}
+if(isset($_GET['nursename'])){$user=$_GET['nursename'];}
+if(isset($_GET['st'])){$dept=$_GET['st'];}
+//$datax = "&username=".$user."&userunique=".$userunique."&dept=".$dept."&branch=".$branch."&mm=".$mm."&dd=".$dd."&yy=".$yy;
+//$_SESSION['datax'] = $datax;
+// ----------------------------------------------
+
+if(isset($_GET['caseno'])){
+$caseno=$_GET['caseno'];
+if($caseno!=""){
+$sql22 = "SELECT * from admission, patientprofile where admission.patientidno=patientprofile.patientidno and caseno='$caseno'";
+$result22 = $conn->query($sql22);
+while($row22 = $result22->fetch_assoc()) {
+$patientidno=$row22['patientidno'];
+$lname=$row22['lastname'];
+$fname=$row22['firstname'];
+$mname=$row22['middlename'];
+$ptname = $lname.", ".$fname." ".$mname;
+$ptname2 = $ptname."_".$caseno;
+} }
+}
+
+if((isset($_SESSION['userunique']))&&(isset($_SESSION['password']))&&(isset($_SESSION['password']))){
+if($dept=="DOC-OTHERS"){
+$xx = $conn->query("select * from nsauthdoctors where station='$dept' and username='$userunique' and password='$password'");
+while($xx1 = $xx->fetch_assoc()){$empid =$xx1['empid'];}
+
+$resulta22 = $conn->query("select * from docfile where code='$empid'");
+while($rowa22 = $resulta22->fetch_assoc()) {$position =$rowa22['specialization'];}
+
+}else{
+$xx = $conn->query("select * from nsauth where station='$dept' and username='$userunique' and password='$password'");
+while($xx1 = $xx->fetch_assoc()){$empid =$xx1['empid'];}
+
+$resulta22 = $conn->query("select * from nsauthemployees where empid='$empid'");
+while($rowa22 = $resulta22->fetch_assoc()) {$position =$rowa22['position']; $gender =$rowa22['gender'];}
+}
+
+if($position=="" or $position==" "){$position="Staff";}
+if($gender=="MALE" or $gender=="M"){$ppic = "avatar11";}else{$ppic="avatar13";}
+}
+else{
+  $position="";
+  $ppic = "avatar13";
+}
+
+//-----------------------------------------------
+class database {
+public $setip = '192.168.0.100:100';
+public function setIP(){return $this->setip;}
+}
+//-----------------------------------------------
+include($_SERVER['DOCUMENT_ROOT'].'/ERP/main/model.php');
+?>

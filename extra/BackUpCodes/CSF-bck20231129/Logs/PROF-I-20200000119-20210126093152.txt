@@ -1,0 +1,1 @@
+ECZEKIEL ABOY, | `doctor1`='MALOU E ERMAC, MD', `datesigned1`='2021-11-30', `copay1`='0.00', `doctor2`='ARVIN VICENTE P LOMUGDA, MD', `datesigned2`='2020-11-30', `copay2`='0.00', `doctor3`='SHERLITO M PENIDA, MD', `datesigned3`='2020-11-30', `copay3`='0.00'

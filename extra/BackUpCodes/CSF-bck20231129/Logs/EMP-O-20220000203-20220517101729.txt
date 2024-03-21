@@ -1,0 +1,1 @@
+ | `emppen`='110474001001', `empbusinessname`='BUREAU OF JAIL MANAGEMENT AND PENOLOGY', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='O-20220000203'

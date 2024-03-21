@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220001184', '201653300064', 'EIGHT UNDER PAR (PAWNSHOP OPERATOR) INC DOING BUSINESS UNDER THE NAME AND STYLE OF PALAWAN PAWNSHOP AND PALAWAN EXPRESS PERA PADALA', '', '', '', '') | Employment-Private

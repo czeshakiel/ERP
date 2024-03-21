@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='MAKILALA MEDICAL SPECIALISTS HOSPITAL INCORPORATED', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220002618'

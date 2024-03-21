@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `emppen`='', `empbusinessname`='STANFILCO - A DIVISION OF DOLE PHILS INC', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210000639'

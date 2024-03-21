@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `doctor1`='GIFFORD BAGUIO ABEJO', `datesigned1`='2021-06-19', `copay1`='500.00', `doctor2`='MALOU EDAR ERMAC', `datesigned2`='2021-06-19', `copay2`='0.00', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

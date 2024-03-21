@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `comchoose`='R', `comname`='ISAGANI S. SUGURAN', `comcontact`='09989872130', `comdatesigned`='Oct-23-2021', `comrelation`='Spouse', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='R', `carname`='ISAGANI S. SUGURAN', `cardatesigned`='Oct-23-2021'

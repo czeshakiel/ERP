@@ -1,0 +1,1 @@
+ | `emppen`='008030012048', `empbusinessname`='GMP CONNECT PLUS CORP', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220005307'

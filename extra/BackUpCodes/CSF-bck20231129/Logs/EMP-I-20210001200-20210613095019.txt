@@ -1,0 +1,1 @@
+MIA MALATE | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20210001200', '', 'COTABATO FOUNDATION COLLEGE OF SCIENCE AND TECHNOLOGY', '', '', '', '') | Employment-Govt

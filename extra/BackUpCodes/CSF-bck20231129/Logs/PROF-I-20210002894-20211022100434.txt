@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='PAULINE JEA VARGAS', `datesigned1`='2021-10-22', `copay1`='112', `doctor2`='JANIZA JUMAO-AS VILLALON', `datesigned2`='2021-10-22', `copay2`='1120', `doctor3`='JOHN RYAN DIZON', `datesigned3`='-11-30', `copay3`='1120'

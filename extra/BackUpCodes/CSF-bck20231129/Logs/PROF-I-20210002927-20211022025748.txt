@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='GLENN D SEGOCIO', `datesigned1`='2021-10-22', `copay1`='9510', `doctor2`='TOM A LLANTO', `datesigned2`='2021-10-22', `copay2`='500', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

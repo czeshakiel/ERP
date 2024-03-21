@@ -1,0 +1,1 @@
+ | `emppen`='017030002425', `empbusinessname`='FEDERLAND SECURITY AGENCY CO', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='O-20220000546'

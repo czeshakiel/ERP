@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='TECUALA MINISAWMILL AND WOODWORK/G SAN CONSTRUCTION AND SUPPLY-CESAR O TECUALA', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220003067'

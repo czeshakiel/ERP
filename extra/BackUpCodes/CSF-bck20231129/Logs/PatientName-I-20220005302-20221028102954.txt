@@ -1,0 +1,1 @@
+ | `lastname`='ARTISTA', `firstname`='JONATHAN', `middlename`='SALVADOR', `suffix`='JR', `birthdate`='Oct-27-1980', `age`='42', `sex`='M', `patientname`='ARTISTA JONATHAN JR SALVADOR', `dateofbirth`='1980-10-27'

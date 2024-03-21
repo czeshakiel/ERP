@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='BABY ANN G TAPOSOK', `datesigned1`='2021-06-21', `copay1`='2000', `doctor2`='EDWIN Y. MUDANZA', `datesigned2`='2021-06-21', `copay2`='0.00', `doctor3`='PACHOLO ABELLERA', `datesigned3`='2021-06-21', `copay3`='7500'

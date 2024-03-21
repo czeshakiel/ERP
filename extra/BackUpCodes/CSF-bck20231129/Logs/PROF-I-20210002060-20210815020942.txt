@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='GEMMA DALAPO', `datesigned1`='2021-08-15', `copay1`='1950', `doctor2`='R.DANA ANDREW B. NATANAGARA', `datesigned2`='2021-08-15', `copay2`='650', `doctor3`='AREX E. ACQUIATAN', `datesigned3`='2021-08-15', `copay3`='952'

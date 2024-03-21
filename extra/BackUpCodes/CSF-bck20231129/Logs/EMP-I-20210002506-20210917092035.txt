@@ -1,0 +1,1 @@
+MIA MALATE | `emppen`='230447000009', `empbusinessname`='COTABATO MEMORIAL PARK INCORPORATED', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210002506'

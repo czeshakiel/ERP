@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='3F FRIENDLY SHOPPERS CORPORATION - KIDAPAWAN BRANCH', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220004487'

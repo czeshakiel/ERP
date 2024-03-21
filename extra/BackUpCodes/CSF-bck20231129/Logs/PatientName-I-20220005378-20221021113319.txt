@@ -1,0 +1,1 @@
+ | `lastname`='CONCEPCION', `firstname`='KRISTINE JOY', `middlename`='QUIÑONES', `suffix`='', `birthdate`='Feb-11-1991', `age`='31', `sex`='F', `patientname`='CONCEPCION KRISTINE JOY QUIÑONES', `dateofbirth`='1991-02-11'

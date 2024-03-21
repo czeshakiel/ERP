@@ -1,0 +1,1 @@
+test | `doctor4`='MARIA JOSEFA CAMINO-MOJICA', `datesigned4`='2022-04-19', `copay4`='8000.00', `doctor5`='JANIZA JUMAO-AS VILLALON', `datesigned5`='2022-04-19', `copay5`='15120.00', `doctor6`='AREX E. ACQUIATAN', `datesigned6`='2022-04-19', `copay6`='16800.00'

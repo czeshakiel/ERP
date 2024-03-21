@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='JOEYLIN A.PARCON', `datesigned1`='2021-12-15', `copay1`='600', `doctor2`='GIFFORD BAGUIO ABEJO', `datesigned2`='2021-12-15', `copay2`='500', `doctor3`='', `datesigned3`='', `copay3`='0.00'

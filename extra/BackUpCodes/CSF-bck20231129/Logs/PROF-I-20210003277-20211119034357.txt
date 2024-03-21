@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='GRACE S. CAOAGDAN-PINEDA', `datesigned1`='2021-11-19', `copay1`='23000', `doctor2`='GUILLERMO MA. ALCEBAR SALCEDO', `datesigned2`='2021-11-19', `copay2`='5750', `doctor3`='MERCEDES T. HISO', `datesigned3`='2021-11-19', `copay3`='11500'

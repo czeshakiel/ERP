@@ -1,0 +1,1 @@
+ | `comchoose`='R', `comname`='ROI BLANZ ELICAN CASTRO', `comcontact`='09385612599', `comdatesigned`='Dec-24-2021', `comrelation`='', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='R', `carname`='ROI BLANZ ELICAN CASTRO', `cardatesigned`='Dec-24-2021'

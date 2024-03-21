@@ -1,0 +1,1 @@
+ROBELYN ISABEL | `doctor1`='RODRIGO A. DUARTE JR', `datesigned1`='2020-04-23', `copay1`='28000', `doctor2`='GIFFORD BAGUIO ABEJO', `datesigned2`='2020-04-23', `copay2`='8750', `doctor3`='CHRISTINE MAE SANTOS', `datesigned3`='2020-04-23', `copay3`='14000'

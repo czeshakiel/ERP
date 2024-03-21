@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='CITY GOVERNMENT OF KIDAPAWAN', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220001676'

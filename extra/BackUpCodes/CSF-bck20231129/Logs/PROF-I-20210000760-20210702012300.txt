@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='SHERYL GRACE LEYSA MUDANZA', `datesigned1`='2021-05-18', `copay1`='1800', `doctor2`='HENRY B. MUDANZA JR', `datesigned2`='2021-05-18', `copay2`='450', `doctor3`='NELMA S. MAGPUSAO', `datesigned3`='2021-05-18', `copay3`='2400'

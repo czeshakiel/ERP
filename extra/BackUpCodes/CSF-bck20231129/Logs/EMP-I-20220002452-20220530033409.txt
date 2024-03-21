@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='BARANGAY GOVERNMENT OF LAMPAYAN-MATALAM', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220002452'

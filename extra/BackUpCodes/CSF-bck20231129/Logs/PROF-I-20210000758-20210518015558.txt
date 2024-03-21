@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='DUANE L. SALUD', `datesigned1`='2021-05-18', `copay1`='0.00', `doctor2`='GIFFORD BAGUIO ABEJO', `datesigned2`='2021-05-18', `copay2`='0.00', `doctor3`='JANIZA  VILLALON', `datesigned3`='2021-05-18', `copay3`='0.00'

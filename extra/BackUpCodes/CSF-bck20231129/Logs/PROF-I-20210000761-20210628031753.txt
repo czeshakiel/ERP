@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='MARIA JOSEFA CAMINO-MOJICA', `datesigned1`='2021-05-14', `copay1`='1000', `doctor2`='JOHN RYAN DIZON', `datesigned2`='2021-05-14', `copay2`='1344', `doctor3`='JANIZA JUMAO-AS VILLALON', `datesigned3`='2021-05-14', `copay3`='3360.00'

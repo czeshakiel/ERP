@@ -1,0 +1,1 @@
+MIA MALATE | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20210003467', '200474300043', 'KIDAPAWAN MEDICAL SPECIALISTS CENTER INCORPORATED', '', '', '', '') | Employment-Private

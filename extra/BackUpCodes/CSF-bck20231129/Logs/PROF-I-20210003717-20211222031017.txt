@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='CHRISTOPHER C. EMBALSADO', `datesigned1`='2021-12-22', `copay1`='2100', `doctor2`='GEMMA DALAPO', `datesigned2`='2021-12-22', `copay2`='0.00', `doctor3`='JANIZA JUMAO-AS VILLALON', `datesigned3`='2021-12-22', `copay3`='0.00'

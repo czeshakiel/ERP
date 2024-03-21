@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='GIFFORD BAGUIO ABEJO', `datesigned1`='2021-09-30', `copay1`='39200', `doctor2`='JULICES LAFORTEZA', `datesigned2`='2021-09-30', `copay2`='19600', `doctor3`='RYAN LONZAGA', `datesigned3`='2021-09-30', `copay3`='17000'

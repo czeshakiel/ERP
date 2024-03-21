@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `emppen`='', `empbusinessname`='ADVENTURERS MULTI PURPOSE COOPERATIVE', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210002178'

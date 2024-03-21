@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='AREX E. ACQUIATAN', `datesigned1`='2021-10-28', `copay1`='5600', `doctor2`='GEMMA DALAPO', `datesigned2`='2021-10-28', `copay2`='4200', `doctor3`='RODRIGO A. DUARTE JR', `datesigned3`='2021-10-28', `copay3`='10080'

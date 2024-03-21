@@ -1,0 +1,1 @@
+ | `lastname`='TERANTE', `firstname`='PERFECTA', `middlename`='BALDERAZ', `suffix`='', `birthdate`='Oct-09-1936', `age`='85', `sex`='F', `patientname`='TERANTE PERFECTA BALDERAZ', `dateofbirth`='1936-10-09'

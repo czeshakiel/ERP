@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='HENRY B. MUDANZA JR', `datesigned1`='2021-08-25', `copay1`='0.00', `doctor2`='KARL PAOLO OLIVO DILLERA', `datesigned2`='2021-08-25', `copay2`='5376', `doctor3`='SHERYL GRACE LEYSA MUDANZA', `datesigned3`='2021-08-25', `copay3`='0.00'

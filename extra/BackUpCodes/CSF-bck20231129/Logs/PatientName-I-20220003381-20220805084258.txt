@@ -1,0 +1,1 @@
+ | `lastname`='MONDIA', `firstname`='TERESITA', `middlename`='SADJE', `suffix`='', `birthdate`='Jun-10-1943', `age`='79', `sex`='F', `patientname`='MONDIA TERESITA SADJE', `dateofbirth`='1943-06-10'

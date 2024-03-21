@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='MUNICIPAL GOVERNEMENT OF DATU PAGLAS', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='O-20220000155'

@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='MUNICIPAL GOVERNMENT OF CARMEN', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220002119'

@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='HAZIEL MARK Z. AGUAYO', `datesigned1`='2021-10-01', `copay1`='44800', `doctor2`='JULICES LAFORTEZA', `datesigned2`='2021-10-01', `copay2`='22400', `doctor3`='HENRY B. MUDANZA JR', `datesigned3`='2021-10-01', `copay3`='2000'

@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `emppen`='151046000002', `empbusinessname`='PROVINCIAL GOVERNMENT OF NEGROS ORIENTAL', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20210002006'

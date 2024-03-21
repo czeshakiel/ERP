@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='MAKILALA NATIONAL HIGH SCHOOL', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='O-20220000485'

@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='RYAN LONZAGA', `datesigned1`='2021-10-24', `copay1`='4480', `doctor2`='HENRY B. MUDANZA JR', `datesigned2`='2021-10-24', `copay2`='500', `doctor3`='GIFFORD BAGUIO ABEJO', `datesigned3`='2021-10-24', `copay3`='24000'

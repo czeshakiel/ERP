@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='GIFFORD BAGUIO ABEJO', `datesigned1`='2021-08-13', `copay1`='56000', `doctor2`='RYAN LONZAGA', `datesigned2`='-11-30', `copay2`='28000', `doctor3`='JULICES LAFORTEZA', `datesigned3`='-11-30', `copay3`='0.00'

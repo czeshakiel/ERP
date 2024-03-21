@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='SHERYL GRACE LEYSA MUDANZA', `datesigned1`='2021-07-09', `copay1`='450', `doctor2`='MARIA JOSEFA CAMINO-MOJICA', `datesigned2`='2021-07-09', `copay2`='4000', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

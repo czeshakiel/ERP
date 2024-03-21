@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `emppen`='017020000089', `empbusinessname`='COTABATO ELECTRIC COOPERATIVE INC-PPALMA AREA', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='O-20210000084'

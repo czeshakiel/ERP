@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='GRACE S. CAOAGDAN-PINEDA', `datesigned1`='2021-07-14', `copay1`='2420', `doctor2`='JANIZA JUMAO-AS VILLALON', `datesigned2`='2021-07-14', `copay2`='0.00', `doctor3`='SHERYL GRACE LEYSA MUDANZA', `datesigned3`='2021-07-14', `copay3`='0.00'

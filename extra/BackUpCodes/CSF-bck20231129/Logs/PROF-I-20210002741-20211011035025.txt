@@ -1,0 +1,1 @@
+LYTEE BACCAY | `doctor1`='GEMMA DALAPO', `datesigned1`='2021-10-11', `copay1`='0.00', `doctor2`='EDWIN YANSON MUDANZA', `datesigned2`='2021-10-11', `copay2`='0.00', `doctor3`='CHRISTOPHER C. EMBALSADO', `datesigned3`='2021-10-11', `copay3`='0.00'

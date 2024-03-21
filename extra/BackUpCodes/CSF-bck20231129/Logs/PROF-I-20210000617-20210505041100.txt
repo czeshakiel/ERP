@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='JAN NATHLEEN   DIZON', `datesigned1`='2021-05-05', `copay1`='1344.00', `doctor2`='PAULINE JEA VARGAS', `datesigned2`='2021-05-05', `copay2`='360', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

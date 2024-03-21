@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='INTERWORKS MANPOWER SERVICES-BERNADETH SINAJON SORIA', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220005809'

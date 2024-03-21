@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='AREX E. ACQUIATAN', `datesigned1`='2021-05-12', `copay1`='3920.00', `doctor2`='GEMMA DALAPO', `datesigned2`='2021-05-12', `copay2`='1328.00', `doctor3`='GERRY A. REYES', `datesigned3`='2021-05-12', `copay3`='500.00'

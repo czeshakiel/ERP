@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `emppen`='', `empbusinessname`='SPD JOBS INC- (FORMLY: SP DELORAYA JOB CONTRACTING AND CONSULTANCY SERVICES INC)', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210003800'

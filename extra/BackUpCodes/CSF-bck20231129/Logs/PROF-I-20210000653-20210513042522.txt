@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='HAZIEL MARK Z. AGUAYO', `datesigned1`='2021-05-13', `copay1`='2240', `doctor2`='EDWIN Y. MUDANZA', `datesigned2`='2021-05-13', `copay2`='0.00', `doctor3`='JAN NATHLEEN   DIZON', `datesigned3`='2021-05-13', `copay3`='2352'

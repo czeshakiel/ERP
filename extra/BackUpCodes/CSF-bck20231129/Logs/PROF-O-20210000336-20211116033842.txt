@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `doctor1`='VANINA H. JAVIER', `datesigned1`='2021-10-27', `copay1`='2000', `doctor2`='', `datesigned2`='2021-11-16', `copay2`='0.00', `doctor3`='', `datesigned3`='2021-11-16', `copay3`='0.00'

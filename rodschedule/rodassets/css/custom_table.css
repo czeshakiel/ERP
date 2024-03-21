@@ -1,0 +1,79 @@
+.wrap .one_totwo {
+  float: left;
+}
+#calendar {
+width: 1100px;
+}
+
+#station_rod table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em; /* normalize cross-browser */
+  font-family: sans-serif;
+  min-width: 100px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+#station_rod td, th{
+  border: 1px solid #ddd;
+  vertical-align: top;
+  text-align: center;
+}
+#station_rod thead #erhght {
+  height: 64px;
+}
+#station_rod thead #erhght1 {
+  height: 30px;
+}
+#station_rod .thtext_er {
+  font-size: 20px;
+  background-color: #F5F8F6;
+  color: #ffffff;
+  text-align: center;
+  border: none;
+}
+#station_rod .thtext_er1 {
+  border: none;
+  background: #F5F8F6;
+}
+#station_rod td, th{
+  position: relative;
+}
+#station_rod tbody tr {
+    border-bottom: 1px solid #dddddd;
+    height: 900px;
+}
+.spn-border span {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  display: block;
+  border-radius: 2px;
+  background: #5f5fa1;
+  position: relative;
+}
+.span_er{
+  margin-top: 33px;
+}
+.spn-border .spn1{
+  margin-top: 25px;
+}
+#station_rod tbody #trone{
+  height: 159px;
+}
+#station_rod tbody #trtwo {
+  height: 162px;
+}
+#station_rod tbody #trthree {
+  height: 162px;
+}
+#station_rod tbody #trfour {
+  height: 160px;
+}
+#station_rod tbody #trfive {
+  height: 162px;
+}
+#station_rod tbody #trsix {
+  height: 162px;
+}
+

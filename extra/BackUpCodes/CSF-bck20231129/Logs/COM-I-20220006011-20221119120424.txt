@@ -1,0 +1,1 @@
+ | `comchoose`='M', `comname`='KARL IMUND YECYEC DIRECTO', `comcontact`='', `comdatesigned`='Nov-19-2022', `comrelation`='', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='M', `carname`='KARL IMUND YECYEC DIRECTO', `cardatesigned`='Nov-19-2022'

@@ -1,0 +1,1 @@
+ | `comchoose`='M', `comname`='ROSMARITES BARADAN QUIDATO', `comcontact`='09516586089', `comdatesigned`='Feb-26-2022', `comrelation`='', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='M', `carname`='ROSMARITES BARADAN QUIDATO', `cardatesigned`='Feb-26-2022'

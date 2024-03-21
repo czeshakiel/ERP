@@ -1,0 +1,1 @@
+SWITZEL JOY SAMBRIA | `doctor1`='GRACE S. CAOAGDAN-PINEDA', `datesigned1`='2021-07-05', `copay1`='0.00', `doctor2`='PACHOLO ABELLERA', `datesigned2`='2021-07-05', `copay2`='', `doctor3`='PHILLEN D URETA', `datesigned3`='2021-07-05', `copay3`='0.00'

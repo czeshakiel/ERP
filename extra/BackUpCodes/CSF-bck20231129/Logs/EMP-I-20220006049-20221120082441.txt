@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220006049', '', 'DEPARTMENT OF EDUCATION-MAGPET NATIONAL HIGH SCHOOL', '', '', '', '') | Employment-Govt

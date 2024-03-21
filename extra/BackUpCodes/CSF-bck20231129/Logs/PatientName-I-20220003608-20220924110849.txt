@@ -1,0 +1,1 @@
+ | `lastname`='LOPEZ', `firstname`='KIM VINCENT', `middlename`='GALICIA', `suffix`='', `birthdate`='Jul-14-2022', `age`='0', `sex`='M', `patientname`='LOPEZ KIM VINCENT GALICIA', `dateofbirth`='2022-07-14'

@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='MARIE HAZEL T. TALJA', `datesigned1`='2021-05-20', `copay1`='20160.00', `doctor2`='MERCEDES T. HISO', `datesigned2`='2021-05-20', `copay2`='9000.00', `doctor3`='PHILLEN D URETA', `datesigned3`='2021-05-20', `copay3`='4000.00'

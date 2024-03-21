@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='JANIZA JUMAO-AS VILLALON', `datesigned1`='2021-04-19', `copay1`='1120', `doctor2`='R.DANA ANDREW B. NATANAGARA', `datesigned2`='2021-04-19', `copay2`='1560.00', `doctor3`='NEIL HUMPREY ONGAYO LAQUIHON', `datesigned3`='2021-04-19', `copay3`='0.00'

@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='PHILLEN D URETA', `datesigned1`='2021-08-13', `copay1`='5000', `doctor2`='GRACE S. CAOAGDAN-PINEDA', `datesigned2`='2021-08-13', `copay2`='18000.00', `doctor3`='MERCEDES T. HISO', `datesigned3`='2021-08-13', `copay3`='10000.00'

@@ -1,0 +1,1 @@
+ | `emppen`='017000000239', `empbusinessname`='COTABATO SUGAR CENTRAL CO INCORPORATED', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220002717'

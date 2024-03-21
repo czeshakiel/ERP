@@ -1,0 +1,1 @@
+ | `emppen`='019000003331', `empbusinessname`='SCHOOL FOR LIFE INC', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220001645'

@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='NELMA S. MAGPUSAO', `datesigned1`='2021-07-20', `copay1`='800', `doctor2`='HENRY B. MUDANZA JR', `datesigned2`='2021-07-20', `copay2`='780', `doctor3`='MARIA JOSEFA CAMINO-MOJICA', `datesigned3`='2021-07-20', `copay3`='500'

@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='MARIA JOSEFA CAMINO-MOJICA', `datesigned1`='2021-09-28', `copay1`='500', `doctor2`='GEMMA DALAPO', `datesigned2`='2021-09-28', `copay2`='1600', `doctor3`='', `datesigned3`='-11-30', `copay3`='0.00'

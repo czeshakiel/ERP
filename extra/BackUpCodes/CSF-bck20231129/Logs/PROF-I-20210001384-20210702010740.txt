@@ -1,0 +1,1 @@
+SWITZEL JOY SAMBRIA | `doctor1`='MARIA JOSEFA CAMINO-MOJICA', `datesigned1`='2021-07-02', `copay1`='1000', `doctor2`='NEIL HUMPREY ONGAYO LAQUIHON', `datesigned2`='2021-07-02', `copay2`='0.00', `doctor3`='HAZIEL MARK Z. AGUAYO', `datesigned3`='2021-07-02', `copay3`='500'

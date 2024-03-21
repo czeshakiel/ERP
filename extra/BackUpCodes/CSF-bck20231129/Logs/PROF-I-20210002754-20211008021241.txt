@@ -1,0 +1,1 @@
+LYTEE BACCAY | `doctor1`='YVONNE JOIE M. PALMA', `datesigned1`='2021-10-08', `copay1`='560', `doctor2`='ROSEDIDA R RABAYA', `datesigned2`='2021-10-08', `copay2`='6500', `doctor3`='JULICES LAFORTEZA', `datesigned3`='2021-10-08', `copay3`='560'

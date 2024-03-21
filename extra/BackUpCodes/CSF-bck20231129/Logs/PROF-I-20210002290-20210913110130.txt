@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='JANIZA JUMAO-AS VILLALON', `datesigned1`='2021-09-13', `copay1`='18480', `doctor2`='SHERYL GRACE LEYSA MUDANZA', `datesigned2`='2021-09-13', `copay2`='1300', `doctor3`='HENRY B. MUDANZA JR', `datesigned3`='2021-09-13', `copay3`='7280'

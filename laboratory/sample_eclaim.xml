@@ -1,0 +1,153 @@
+<eCLAIMS 
+    pUserName=":DUMMYSWCERTID" 
+    pUserPassword="" 
+    pHospitalCode="111111" 
+    pHospitalEmail="email@yahoo.com">
+    <eTRANSMITTAL 
+        pHospitalTransmittalNo="111111-20230711-1" 
+        pTotalClaims="1">
+        <CLAIM 
+            pClaimNumber="111111-01-01-20211-1" 
+            pTrackingNumber=""
+            pPhilhealthClaimType="ALL-CASE-RATE"
+            pPatientType="I"
+            pIsEmergency="N">
+            <CF1 pMemberPIN="10123456789"
+                   pMemberLastName="SAMPLE LN"
+                   pMemberFirstName="SAMPLE FN"
+                   pMemberSuffix=""
+                   pMemberMiddleName="SAMPLE MN"
+                   pMemberBirthDate="03-30-1968"
+                   pMemberShipType="G"
+                   pMailingAddress="A"
+                   pZipCode="1950"
+                   pMemberSex="F"
+                   pLandlineNo="6080043"
+                   pMobileNo=""
+                   pEmailAddress=""
+                   pPatientIs="M"
+                   pPatientPIN="10123456789"
+                   pPatientLastName="SAMPLE LN"
+                   pPatientFirstName="SAMPLE FN"
+                   pPatientSuffix=""
+                   pPatientMiddleName="SAMPLE MN"
+                   pPatientBirthDate="03-30-1968"
+                   pPatientSex="F"
+                   pPEN=""
+                   pEmployerName=""/>
+            <CF2
+                pPatientReferred="Y"
+                pReferredIHCPAccreCode="H92007103"
+                pAdmissionDate="01-01-2021" 
+                pAdmissionTime="01:00:00PM" 
+                pDischargeDate="01-05-2021"
+                pDischargeTime="03:00:00PM"
+                pDisposition="I"
+                pExpiredDate=""
+                pExpiredTime=""
+                pReferralIHCPAccreCode=""
+                pReferralReasons=""
+                pAccommodationType="N">
+                <DIAGNOSIS
+                    pAdmissionDiagnosis="PNEUMONIA">
+                    <DISCHARGE
+                        pDischargeDiagnosis="END STAGE RENAL DISEASE">
+                        <ICDCODE pICDCode="I50.0"/>
+                        <RVSCODES
+                            pRelatedProcedure="ENTEROLYSIS"
+                            pRVSCode="44005"
+                            pProcedureDate="08-26-2009" 
+                            pLaterality="L"/>
+                    </DISCHARGE>
+                    <DISCHARGE
+                        pDischargeDiagnosis="DENGUE">
+                        <ICDCODE pICDCode="A90.0"/>
+                    </DISCHARGE>
+                </DIAGNOSIS>
+                <SPECIAL>
+                </SPECIAL>
+                <PROFESSIONALS
+                    pDoctorAccreCode="0505-0505050-5"
+                    pDoctorLastName="HCP LN" 
+                    pDoctorFirstName="HCP FN" 
+                    pDoctorMiddleName="HCP MN" 
+                    pDoctorSuffix=""
+                    pWithCoPay="Y"
+                    pDoctorCoPay="0"
+                    pDoctorSignDate="05-25-2018" />
+                <CONSUMPTION
+                    pEnoughBenefits="Y">
+                    <BENEFITS
+                        pTotalHCIFees="1000"
+                        pTotalProfFees="1000"
+                        pGrandTotal="2000"/>
+                </CONSUMPTION>
+            </CF2>
+            <ALLCASERATE>
+                <CASERATE pCaseRateCode="CR0136"
+                          pICDCode="I50.0"
+                          pRVSCode=""
+                          pCaseRateAmount="15700.00" />
+            </ALLCASERATE>
+            <PARTICULARS>
+                <DRGMED 
+                    pPurchaseDate="08-26-2009"
+                    pDrugCode="X0001234" 
+                    pPNDFCode="" 
+                    pGenericName="PARACETAMOL" 
+                    pBrandName="GAYAGESIC" 
+                    pPreparation="TABLET 250MG" 
+                    pQuantity="3"/>
+                <DRGMED 
+                    pPurchaseDate="08-26-2009"
+                    pDrugCode="X0001235" 
+                    pPNDFCode="" 
+                    pGenericName="PARACETAMOL" 
+                    pBrandName="GAYAGESIC" 
+                    pPreparation="TABLET 250MG" 
+                    pQuantity="3"/>
+                <XLSO 
+                    pDiagnosticDate="08-26-2009"
+                    pDiagnosticType="IMAGING" 
+                    pDiagnosticName="ULTRASOUND" 
+                    pQuantity="2"/>
+                <XLSO 
+                    pDiagnosticDate="08-26-2009"
+                    pDiagnosticType="IMAGING" 
+                    pDiagnosticName="ULTRASOUND" 
+                    pQuantity="2"/>
+            </PARTICULARS>
+            <RECEIPTS>
+                <RECEIPT
+                    pCompanyName="COMPANY"
+                    pCompanyTIN="123-456-789"
+                    pBIRPermitNumber="X1234546789"
+                    pReceiptNumber="00001"
+                    pReceiptDate="08-25-2009"
+                    pVATExemptSale="0.00"
+                    pVAT="12.00"
+                    pTotal="100.00">    
+                    <ITEM
+                        pQuantity="10"
+                        pUnitPrice="5"
+                        pDescription="BIOGESIC"
+                        pAmount="50.00"/>
+                    <ITEM
+                        pQuantity="5"
+                        pUnitPrice="10"
+                        pDescription="NEOZEP"
+                        pAmount="50.00"/>
+                </RECEIPT>
+            </RECEIPTS>
+            <DOCUMENTS>
+                <DOCUMENT 
+                    pDocumentType="CSF"
+                    pDocumentURL="http://172.21.0.191:88/files/SAMPLE_CSF.pdf.enc"/>
+				<DOCUMENT 
+                    pDocumentType="ESA"
+                    pDocumentURL="http://172.21.0.191:88/files/SAMPLE_ESOA.xml.enc"/>
+            </DOCUMENTS>
+        </CLAIM>
+    </eTRANSMITTAL>
+  </eCLAIMS>    
+

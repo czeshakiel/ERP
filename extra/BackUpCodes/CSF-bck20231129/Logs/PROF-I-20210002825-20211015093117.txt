@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='EDWIN YANSON MUDANZA', `datesigned1`='2021-10-15', `copay1`='0.00', `doctor2`='GEMMA DALAPO', `datesigned2`='2021-10-15', `copay2`='0.00', `doctor3`='CHRISTOPHER C. EMBALSADO', `datesigned3`='2021-10-15', `copay3`='0.00'

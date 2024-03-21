@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='HENRY B. MUDANZA JR', `datesigned1`='2021-09-26', `copay1`='2200', `doctor2`='R.DANA ANDREW B. NATANAGARA', `datesigned2`='2021-09-26', `copay2`='0', `doctor3`='RODRIGO A. DUARTE JR', `datesigned3`='2021-09-26', `copay3`='10080'

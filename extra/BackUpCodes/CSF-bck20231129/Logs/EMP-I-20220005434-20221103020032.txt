@@ -1,0 +1,1 @@
+ | `emppen`='002000003533', `empbusinessname`='GAWAD KALINGA COMMUNITY DEVELOPMENT FOUNDATION', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220005434'

@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='PAULINE JEA V. VARGAS', `datesigned1`='2021-12-27', `copay1`='112', `doctor2`='RODRIGO A. DUARTE JR', `datesigned2`='2021-12-27', `copay2`='10080', `doctor3`='AREX E. ACQUIATAN', `datesigned3`='2021-12-27', `copay3`='0.00'

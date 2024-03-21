@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor4`='RYAN LONZAGA', `datesigned4`='2021-10-13', `copay4`='560.00', `doctor5`='JULICES LAFORTEZA', `datesigned5`='2021-10-13', `copay5`='19600.00', `doctor6`='NEIL PURACAN', `datesigned6`='2021-10-13', `copay6`='39200.00'

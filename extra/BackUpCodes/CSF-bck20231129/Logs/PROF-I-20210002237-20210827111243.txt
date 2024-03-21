@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `doctor1`='PAULINE JEA VARGAS', `datesigned1`='2021-08-27', `copay1`='0.00', `doctor2`='JANIZA JUMAO-AS VILLALON', `datesigned2`='2021-08-27', `copay2`='1680', `doctor3`='KARL PAOLO OLIVO DILLERA', `datesigned3`='2021-08-27', `copay3`='5040'

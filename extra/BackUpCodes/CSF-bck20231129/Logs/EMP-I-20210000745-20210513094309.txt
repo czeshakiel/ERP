@@ -1,0 +1,1 @@
+JOLANIE PAMAT | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20210000745', '', 'KIDAPAWAN MEDICAL SPECIALISTS CENTER INCORPORATED', '', '', '', '') | Employment-Private

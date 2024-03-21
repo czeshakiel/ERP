@@ -1,0 +1,1 @@
+ | `emppen`='140498100069', `empbusinessname`='NATIONAL COMMISSION ON INDIGENOUS PEOPLES-REGIONAL OFFICE NO 12', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220001302'

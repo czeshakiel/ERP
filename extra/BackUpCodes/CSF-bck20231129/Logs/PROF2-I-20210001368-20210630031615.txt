@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `doctor4`='CHRISTOPHER C. EMBALSADO', `datesigned4`='2021-06-30', `copay4`='3000.00', `doctor5`='', `datesigned5`='2021-06-30', `copay5`='', `doctor6`='JANIZA JUMAO-AS VILLALON', `datesigned6`='2021-06-30', `copay6`='5600.00'

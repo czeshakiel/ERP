@@ -1,0 +1,1 @@
+LYTEE BACCAY | `doctor1`='HENRY B. MUDANZA JR', `datesigned1`='2021-08-16', `copay1`='4050.00', `doctor2`='MARIA JOSEFA CAMINO-MOJICA', `datesigned2`='2021-08-16', `copay2`='10400.00', `doctor3`='JOSE NICANOR P. DEL ROSARIO III', `datesigned3`='2021-08-16', `copay3`='1120.00'

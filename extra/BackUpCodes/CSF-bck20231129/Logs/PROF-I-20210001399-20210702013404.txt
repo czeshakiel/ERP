@@ -1,0 +1,1 @@
+SWITZEL JOY SAMBRIA | `doctor1`='CHRISTOPHER C. EMBALSADO', `datesigned1`='2021-07-02', `copay1`='2500', `doctor2`='NEIL HUMPREY ONGAYO LAQUIHON', `datesigned2`='2021-07-02', `copay2`='0.00', `doctor3`='R.DANA ANDREW B. NATANAGARA', `datesigned3`='2021-07-02', `copay3`='0.00'

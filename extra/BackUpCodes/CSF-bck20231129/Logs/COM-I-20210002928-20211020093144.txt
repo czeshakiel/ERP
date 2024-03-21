@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `comchoose`='R', `comname`='ANECITA M. VALDEZ', `comcontact`='09099789900', `comdatesigned`='Oct-20-2021', `comrelation`='Spouse', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='R', `carname`='ANECITA M. VALDEZ', `cardatesigned`='Oct-20-2021'

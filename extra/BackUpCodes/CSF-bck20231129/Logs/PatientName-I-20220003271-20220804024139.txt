@@ -1,0 +1,1 @@
+ | `lastname`='MAGNO', `firstname`='AZARIAH BRIELLE', `middlename`='VICTORIANO', `suffix`='', `birthdate`='Aug-07-2020', `age`='1', `sex`='F', `patientname`='MAGNO AZARIAH BRIELLE VICTORIANO', `dateofbirth`='2020-08-07'

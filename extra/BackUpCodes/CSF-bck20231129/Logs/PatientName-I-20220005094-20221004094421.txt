@@ -1,0 +1,1 @@
+ | `lastname`='DAQUIPIL', `firstname`='VIRGINIA', `middlename`='OMADLE', `suffix`='', `birthdate`='Dec-22-1948', `age`='73', `sex`='F', `patientname`='DAQUIPIL VIRGINIA OMADLE', `dateofbirth`='1948-12-22'

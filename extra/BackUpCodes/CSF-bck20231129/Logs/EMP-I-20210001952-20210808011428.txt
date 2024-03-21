@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `emppen`='231047000002', `empbusinessname`='PARTNER RURAL BANK (COTABATO) INC-MLANG BRANCH', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210001952'

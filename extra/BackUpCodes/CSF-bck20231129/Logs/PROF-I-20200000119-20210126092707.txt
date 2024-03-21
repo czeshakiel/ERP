@@ -1,0 +1,1 @@
+ECZEKIEL ABOY, | `doctor1`='GEFORD . ABEJO', `datesigned1`='Jan-27-2021', `copay1`='0.00', `doctor2`='BABY ANN G TAPOSOK', `datesigned2`='Jan-27-2021', `copay2`='0.00', `doctor3`='APOLONIO S. BERNARDO MD, FPCR, FUSP, Fellow-CTMRI', `datesigned3`='Jan-27-2021', `copay3`='0.00'

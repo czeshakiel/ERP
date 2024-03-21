@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='SCORING APOSTLE MOTORCYCLE PARTS AND ACCESSORIES', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20220001284'

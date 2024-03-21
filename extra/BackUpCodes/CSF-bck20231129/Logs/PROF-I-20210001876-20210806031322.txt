@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='RONALD CERIALES', `datesigned1`='2021-08-06', `copay1`='22400', `doctor2`='JULICES LAFORTEZA', `datesigned2`='2021-08-06', `copay2`='11200', `doctor3`='RODRIGO A. DUARTE JR', `datesigned3`='2021-08-06', `copay3`='500'

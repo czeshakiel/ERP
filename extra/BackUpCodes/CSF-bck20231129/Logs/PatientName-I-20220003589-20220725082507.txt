@@ -1,0 +1,1 @@
+ | `lastname`='GALAN', `firstname`='JOSE', `middlename`='MISTICA', `suffix`='JR', `birthdate`='Jul-04-1945', `age`='77', `sex`='M', `patientname`='GALAN JOSE JR MISTICA', `dateofbirth`='1945-07-04'

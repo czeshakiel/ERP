@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220005244', '', 'DEPARTMENT OF EDUCATION-MATALAM NATIONAL HIGH SCHOOL', '', '', '', '') | Employment-Govt

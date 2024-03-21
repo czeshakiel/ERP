@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20210003824', '', 'M LHUILLIER PAWNSHOP & JEWELRY STORE-DAVAO BRANCH', '', '', '', '') | Employment-Private

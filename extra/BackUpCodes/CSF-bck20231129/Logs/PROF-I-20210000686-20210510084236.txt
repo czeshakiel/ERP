@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='', `datesigned1`='', `copay1`='0.00', `doctor2`='NELMA S. MAGPUSAO', `datesigned2`='-11-30', `copay2`='0.00', `doctor3`='', `datesigned3`='', `copay3`='0.00'

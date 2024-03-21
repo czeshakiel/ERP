@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `lastname`='KAMAMANG', `firstname`='NAFER', `middlename`='PASANDALAN', `suffix`='', `birthdate`='Dec-20-2019', `age`='1', `sex`='M', `patientname`='KAMAMANG NAFER PASANDALAN', `dateofbirth`='2019-12-20'

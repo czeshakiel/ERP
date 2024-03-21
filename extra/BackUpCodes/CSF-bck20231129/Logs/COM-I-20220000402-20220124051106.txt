@@ -1,0 +1,1 @@
+ | `comchoose`='M', `comname`='JOELBE TORREON BOLAÑO', `comcontact`='09510483797/09515745291', `comdatesigned`='Jan-24-2022', `comrelation`='', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='M', `carname`='JOELBE TORREON BOLAÑO', `cardatesigned`='Jan-24-2022'

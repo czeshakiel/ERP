@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='GEMMA DALAPO', `datesigned1`='2021-08-24', `copay1`='3000.00', `doctor2`='JAN NATHLEEN DIZON', `datesigned2`='2021-08-24', `copay2`='10080.00', `doctor3`='JANIZA JUMAO-AS VILLALON', `datesigned3`='2021-08-24', `copay3`='8400.00'

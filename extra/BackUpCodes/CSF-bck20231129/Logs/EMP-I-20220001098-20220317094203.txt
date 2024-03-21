@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220001098', '', 'KIDAPAWAN MEDICAL SPECIALISTS CENTER INCORPORATED', '', '', '', '') | Employment-Private

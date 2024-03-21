@@ -1,0 +1,1 @@
+ | `emppen`='141847000003', `empbusinessname`='DEPARTMENT OF EDUCATION-GREENFIELD NATIONAL HIGH SCHOOL', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='I-20220004748'

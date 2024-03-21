@@ -1,0 +1,1 @@
+ | `doctor1`='FLORA MAE ZAMBRANO JACOBO', `datesigned1`='2021-11-10', `copay1`='1.00', `doctor2`='ALTHEA SIENNA N FERIDO', `datesigned2`='2021-11-10', `copay2`='2.00', `doctor3`='PACHOLO PALMA ABELLERA', `datesigned3`='2021-11-10', `copay3`='0.00'

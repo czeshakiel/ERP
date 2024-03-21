@@ -1,0 +1,1 @@
+JOLANIE PAMAT | `doctor1`='NEIL HUMPREY ONGAYO LAQUIHON', `datesigned1`='2021-11-08', `copay1`='1500', `doctor2`='RYAN LONZAGA', `datesigned2`='2021-11-08', `copay2`='0.00', `doctor3`='RONALD CERIALES', `datesigned3`='2021-11-08', `copay3`='16800'

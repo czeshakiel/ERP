@@ -1,0 +1,1 @@
+MIA MALATE | `doctor1`='GIFFORD BAGUIO ABEJO', `datesigned1`='2021-12-23', `copay1`='320', `doctor2`='JAN NATHLEEN DIZON', `datesigned2`='2021-12-23', `copay2`='1344', `doctor3`='NEIL HUMPREY ONGAYO LAQUIHON', `datesigned3`='2021-12-23', `copay3`='0.00'

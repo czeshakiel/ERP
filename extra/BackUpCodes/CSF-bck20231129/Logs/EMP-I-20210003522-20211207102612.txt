@@ -1,0 +1,1 @@
+LUCHIE AGOSTO | `emppen`='017000005562', `empbusinessname`='STA CATALINA CREDIT COOPERATIVE', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='I-20210003522'

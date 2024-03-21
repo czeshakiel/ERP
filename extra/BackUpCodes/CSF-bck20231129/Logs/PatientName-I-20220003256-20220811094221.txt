@@ -1,0 +1,1 @@
+ | `lastname`='ALCARIOTO', `firstname`='NAPOLEON', `middlename`='ALFISCAR', `suffix`='SR.', `birthdate`='Dec-21-1947', `age`='74', `sex`='M', `patientname`='ALCARIOTO NAPOLEON SR. ALFISCAR', `dateofbirth`='1947-12-21'

@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='R.DANA ANDREW B. NATANAGARA', `datesigned1`='', `copay1`='7500.00', `doctor2`='SHERYL GRACE LEYSA MUDANZA', `datesigned2`='', `copay2`='8700', `doctor3`='MARIA JOSEFA CAMINO-MOJICA', `datesigned3`='', `copay3`='13720'

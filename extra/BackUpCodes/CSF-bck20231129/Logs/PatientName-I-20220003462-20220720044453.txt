@@ -1,0 +1,1 @@
+ | `lastname`='DE LA CRUZ', `firstname`='PEDRO', `middlename`='PANTALEON', `suffix`='', `birthdate`='Jan-18-1935', `age`='87', `sex`='M', `patientname`='DE LA CRUZ PEDRO PANTALEON', `dateofbirth`='1935-01-18'

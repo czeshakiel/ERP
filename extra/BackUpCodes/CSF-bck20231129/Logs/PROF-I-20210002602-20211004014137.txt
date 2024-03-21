@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='NARESH I. BUXANI', `datesigned1`='2021-10-04', `copay1`='45000', `doctor2`='JULICES LAFORTEZA', `datesigned2`='2021-10-04', `copay2`='25200', `doctor3`='JANIZA JUMAO-AS VILLALON', `datesigned3`='2021-10-04', `copay3`='8400'

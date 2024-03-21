@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220005963', '', 'KING MULTIPURPOSE COOPERATIVE (KING MPC)', '', '', '', '') | Employment-Private

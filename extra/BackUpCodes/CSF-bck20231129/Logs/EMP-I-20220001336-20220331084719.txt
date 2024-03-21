@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220001336', '', 'ST MARYS ACADEMY OF KIDAPAWAN FORMERLY- NOTRE DAME OF KIDAPAWAN', '', '', '', '') | Employment-Private

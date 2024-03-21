@@ -1,0 +1,1 @@
+ | `comchoose`='R', `comname`='ALMOKRI S. KARIM', `comcontact`='09261591909', `comdatesigned`='Jan-02-2022', `comrelation`='Spouse', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='2'

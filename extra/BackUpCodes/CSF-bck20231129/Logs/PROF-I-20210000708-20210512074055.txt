@@ -1,0 +1,1 @@
+LOVIE MARIE BARRETE | `doctor1`='R.DANA ANDREW B. NATANAGARA', `datesigned1`='2021-05-12', `copay1`='1350', `doctor2`='', `datesigned2`='', `copay2`='0.00', `doctor3`='', `datesigned3`='', `copay3`='0.00'

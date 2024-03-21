@@ -1,0 +1,1 @@
+ | `lastname`='BELLARMINO', `firstname`='ROGELIO', `middlename`='VENTURADO', `suffix`='', `birthdate`='Dec-01-1951', `age`='70', `sex`='M', `patientname`='BELLARMINO ROGELIO VENTURADO', `dateofbirth`='1951-12-01'

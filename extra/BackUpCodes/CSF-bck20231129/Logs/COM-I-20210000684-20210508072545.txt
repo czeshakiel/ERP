@@ -1,0 +1,1 @@
+MIA MALATE | `comchoose`='R', `comname`='JERRY BEDANIA JR.', `comcontact`='09752025574', `comdatesigned`='May-08-2021', `comrelation`='Spouse', `comrelationos`='', `comreason`='', `comreasonos`='', `comuw`='3', `carchoose`='R', `carname`='JERRY BEDANIA JR.', `cardatesigned`='May-08-2021'

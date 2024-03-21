@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220000262', '150247000001', 'MUNICIPAL GOVERNMENT OF CARMEN', '', '', '', '') | Employment-Govt

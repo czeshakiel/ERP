@@ -1,0 +1,1 @@
+INSERT INTO `packagedetails` (`pckgno`, `code`, `description`, `price`) VALUES ('PCKG-20220331012215', 'L197p-3', 'Urinalysis', '55')

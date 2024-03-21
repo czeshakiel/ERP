@@ -1,0 +1,1 @@
+ | (`caseno`, `emppen`, `empbusinessname`, `empname`, `empcontactno`, `empsigdesignation`, `empdatesigned`) VALUES ('I-20220003717', '', 'COTABATO ELECTRIC COOPERATIVE INC', '', '', '', '') | Employment-Private

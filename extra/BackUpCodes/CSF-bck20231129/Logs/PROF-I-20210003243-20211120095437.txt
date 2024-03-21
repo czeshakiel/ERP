@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='RICHARD LOBATON', `datesigned1`='2021-11-20', `copay1`='15000', `doctor2`='GIFFORD BAGUIO ABEJO', `datesigned2`='2021-11-20', `copay2`='7400', `doctor3`='GUILLERMO MA. ALCEBAR SALCEDO', `datesigned3`='2021-11-20', `copay3`='7500'

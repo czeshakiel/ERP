@@ -1,0 +1,1 @@
+ | `lastname`='ALONSAGAY', `firstname`='MICHAEL', `middlename`='MAGBANUA', `suffix`='', `birthdate`='Feb-19-1939', `age`='83', `sex`='M', `patientname`='ALONSAGAY MICHAEL MAGBANUA', `dateofbirth`='1939-02-19'

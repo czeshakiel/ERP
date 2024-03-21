@@ -1,0 +1,1 @@
+MA. TERESITA VILLACARLOS | `doctor1`='FIDELISMA MARI L. AMPARO', `datesigned1`='2021-08-20', `copay1`='28000', `doctor2`='EDWIN Y. MUDANZA', `datesigned2`='2021-08-20', `copay2`='8750', `doctor3`='CHRISTINE MAE SANTOS', `datesigned3`='2021-08-20', `copay3`='14000'

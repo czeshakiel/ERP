@@ -1,0 +1,1 @@
+ | `emppen`='017030001991', `empbusinessname`='DEPARTMENT OF EDUCATION KIDAPAWAN CITY', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Govt' WHERE `caseno`='O-20220000353'

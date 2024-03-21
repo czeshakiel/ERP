@@ -1,0 +1,1 @@
+ | `emppen`='', `empbusinessname`='CONCENTRIX CVG PHILIPPINES INC(CONVERGYS PHILIPPINES INC)', `empname`='', `empcontactno`='', `empsigdesignation`='', `empdatesigned`='' | UPDATE `admission` SET `type`='Employment-Private' WHERE `caseno`='O-20220000085'
