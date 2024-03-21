@@ -27,3 +27,17 @@
 		</tr>
 	</table>
 </div>
+<br><br>
+<div>
+	<table width="100%" border="0">
+		<tr>
+			<td><b>Prepared by:</b></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><b><?=$this->session->fullname;?></b></td>
+		</tr>
+	</table>
+</div>
